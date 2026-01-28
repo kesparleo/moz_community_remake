@@ -11,30 +11,27 @@ export interface ListaItem {
   logo: string;
   title: string;
   description: string;
-  website: string;
+  website?: string;
   social: SocialLinks;
 }
 
 export const listaData: ListaItem[] = [
   {
     logo: '/assets/images/logo1.png',
-    title: 'Moz Comunidade A',
-    description: 'Uma comunidade dedicada a partilhar conhecimento em SEO e marketing digital.',
-    website: 'https://comunidadea.com',
+    title: 'GDG - Google Developers Group',
+    description: 'GDG Maputo é uma comunidade local para desenvolvedores interessados em tecnologias da Google. Em Moçambique, GDG encontra-se em 3 cidades: Maputo, Beira e Tete.',
     social: {
-      facebook: 'https://facebook.com/comunidadea',
-      twitter: 'https://twitter.com/comunidadea',
-      instagram: 'https://instagram.com/comunidadea'
+      facebook: 'https://pt-br.facebook.com/groups/gdgmaputo/'
     }
   },
   {
     logo: '/assets/images/logo2.png',
-    title: 'Moz Comunidade B',
-    description: 'Focada em tecnologias web e desenvolvimento front-end.',
+    title: 'QA Community Moz',
+    description: 'A primeira comunidade moçambicana dedicada a Quality Assurance (QA) e Testes Automatizados, criada para unir profissionais, partilhar conhecimento e elevar a qualidade do software no país.',
     website: 'https://comunidadeb.com',
     social: {
-      twitter: 'https://twitter.com/comunidadeb',
-      linkedin: 'https://linkedin.com/company/comunidadeb'
+      whatsapp: 'https://chat.whatsapp.com/BO6tJjlxMyXB2K4AMPPlVm',
+      linkedin: 'https://www.linkedin.com/company/qa-community-moz/'
     }
   },
   {
@@ -48,6 +45,28 @@ export const listaData: ListaItem[] = [
       twitter: 'https://x.com/PyLadiesMaputo',
       linkedin: 'https://www.linkedin.com/company/pyladies-maputo/',
       whatsapp: 'https://chat.whatsapp.com/IVxKNCPTbZH9xbjpHxuBA2'
+    }
+  },
+  {
+    logo: '',
+    title: 'DSAI For Moz',
+    description: 'Somos uma comunidade moçambicana dedicada a promover Data Science, Artificial Intelligence (AI) e inovação tecnológica. Junte-se a nós para aprender, compartilhar e crescer no mundo dos dados e da inteligência artificial!',
+    website: 'https://dsai.co.mz/',
+    social: {
+      whatsapp: 'https://chat.whatsapp.com/IcqlFviLiHIBD3DBNBXfgc',
+      linkedin: 'https://www.linkedin.com/company/dsai-for-moz'
+    }
+  },
+  {
+    logo: '',
+    title: 'Django Girls Moz',
+    description: 'Django Girls é um workshop com duração de um dia, sobre programação em Python e Django focado especialmente para mulheres',
+    website: 'https://dsai.co.mz/',
+    social: {
+      whatsapp: 'https://chat.whatsapp.com/7ufLDMUUPFO54UHmqH8rR8',
+      linkedin: 'https://www.linkedin.com/company/djangogirlsmoz',
+      twitter: 'https://twitter.com/djangogirlsmoz',
+      instagram: 'https://www.instagram.com/djangogirlsmoz/'
     }
   }
 ];
