@@ -1,18 +1,26 @@
-function App() {
+import Footer from "./components/Footer/Footer";
+import Hero from "./components/Hero/Hero";
+import Communities from "./components/List/List";
+import Navbar from "./components/Navbar/Navbar";
 
+function App() {
   return (
     <>
-      fontes:
-      <ol>
-        <li>
-          Comunities site: <a href="https://mozcomunidades.web.app/" target="_blank">Site</a>
-        </li>
-        <li>
-          Github: <a href="https://github.com/RichaldoElias/ComunidadesMoz?tab=readme-ov-file#QA-Community-Moz" target="_blank">Informations</a>
-        </li>
-      </ol>
+      <Navbar/>
+      <Hero
+        title={"MozComunidades"}
+        description={
+          "Está pagina foi criada única e esclusivamente para listar as comunidades de técnologia e programação existêntes em Moçambique. É provavel que não estejam todas na lista para isso criamos um meio de submisão via (PR) de comunidades para posterior publicação na página."
+        }
+        buttonText={"Apreciar"}
+        buttonUrl={"#communities"}
+      />
+
+      <Communities/>
+      
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
