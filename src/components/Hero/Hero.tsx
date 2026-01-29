@@ -21,7 +21,7 @@ const Hero: React.FC<HeroProps> = ({ title, description, buttonText, buttonUrl, 
             {buttonText}
           </a>
           <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="hero__github">
-            Contribua <FaGithub className="hero__github-icon" />
+            Deixe uma estrela <FaGithub className="hero__github-icon" />
           </a>
         </div>
       </div>

@@ -1,0 +1,25 @@
+.collaborate {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 26px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.collaborate:hover {
+  background-color: #222;
+  transform: translateY(-2px);
+}
+
+.collaborate-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+

@@ -39,6 +39,28 @@
   display: none;
 }
 
+@media (min-width: 64rem) and (max-width: 1280px) {
+  .navbar {
+    padding: 0 80px;
+    height: 80px;
+  }
+
+  .navbar__links {
+    gap: 20px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navbar {
+    padding: 0 80px;
+    height: 80px;
+  }
+
+  .navbar__links {
+    gap: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar {
     padding: 0 40px;

@@ -1,4 +1,4 @@
-.lista {
+.list {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -6,7 +6,7 @@
   background-color: #fcfcfc;
 }
 
-.lista__item {
+.list__item {
   display: flex;
   gap: 20px;
   align-items: flex-start;
@@ -28,42 +28,42 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
 }
 
-.lista__header {
+.list__header {
   margin-bottom: 2rem;
 }
 
-.lista__heading {
+.list__heading {
   margin: 0;
   font-size: 1.8rem;
   margin-top: 1.5rem;
 }
 
-.lista__heading .destaque {
+.list__heading .destaque {
   color: #ee7d21;
 }
 
-.lista__heading .secundario {
+.list__heading .secundario {
   color: #1d3557;
 }
 
-.lista__intro {
+.list__intro {
   color: #555;
   font-size: 1rem;
   margin-top: 0.25rem;
 }
 
-.lista__content {
+.list__content {
   max-width: 800px;
   padding-left: 20px;
 }
 
-.lista__title {
+.list__title {
   font-size: 1.5rem;
   margin-bottom: 10px;
   color: #333;
 }
 
-.lista__description {
+.list__description {
   font-size: 1rem;
   margin-bottom: 10px;
   color: #888;
@@ -73,35 +73,35 @@ span {
   color: #777;
 }
 
-.lista__link {
+.list__link {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   margin-bottom: 12px;
 }
 
-.lista__website {
+.list__website {
   color: #888;
   text-decoration: none;
 }
 
-.lista__website:hover {
+.list__website:hover {
   text-decoration: underline;
 }
 
-.lista__no-website {
+.list__no-website {
   color: #aaa;
   font-style: italic;
   cursor: default;
 }
 
-.lista__social {
+.list__social {
   display: flex;
   gap: 30px;
   margin-top: 8px;
 }
 
-.lista__social-icon {
+.list__social-icon {
   width: 50px;
   height: 50px;
   display: flex;
@@ -116,39 +116,39 @@ span {
   transition: all 0.3s;
 }
 
-.lista__social-icon:hover {
+.list__social-icon:hover {
   background-color: var(--hover-color, #ee7d21);
   color: #fff;
   transform: scale(1.01);
 }
 
-.lista__item {
+.list__item {
   border-bottom: 1px solid #ddd;
   padding-bottom: 20px;
 }
 
 @media (min-width: 64rem) and (max-width: 1280px) {
-  .lista {
+  .list {
     padding: 4rem clamp(2rem, 6vw, 8rem);
   }
 
-  .lista__item {
+  .list__item {
     gap: 1.5rem;
   }
 }
 
 
 @media (min-width: 48rem) and (max-width: 64rem) {
-  .lista {
+  .list {
     padding: 3.75rem clamp(1.5rem, 8vw, 25rem);
     text-align: center;
   }
-  .lista__item {
+  .list__item {
     flex-direction: column;
     align-items: center;
   }
 
-  .lista__logo {
+  .list__logo {
     width: 60px;
     height: 60px;
     display: flex;
@@ -156,7 +156,7 @@ span {
     justify-content: center;
   }
 
-  .lista__social {
+  .list__social {
     display: flex;
     gap: 30px;
     margin-top: 8px;
@@ -165,16 +165,16 @@ span {
 }
 
 @media (max-width: 768px) {
-  .lista {
+  .list {
     padding: 3.75rem clamp(1.5rem, 8vw, 25rem);
     text-align: center;
   }
-  .lista__item {
+  .list__item {
     flex-direction: column;
     align-items: center;
   }
 
-  .lista__logo {
+  .list__logo {
     width: 60px;
     height: 60px;
     display: flex;
@@ -182,10 +182,11 @@ span {
     justify-content: center;
   }
 
-  .lista__social {
+  .list__social {
     display: flex;
-    gap: 30px;
+    gap: 10px;
     margin-top: 8px;
     justify-content: center;
+    flex-wrap: wrap;
   }
 }

@@ -1,3 +1,4 @@
+import CollaborationInbox from "./components/Collaborate/CollaborateButton";
 import Footer from "./components/Footer/Footer";
 import Hero from "./components/Hero/Hero";
 import Communities from "./components/List/List";
@@ -14,6 +15,7 @@ function App() {
         buttonText={"Apreciar"}
         buttonUrl={"#communities"} githubUrl={"https://github.com/kesparleo/moz_community_remake"}/>
       <Communities/>
+      <CollaborationInbox/>
       <Footer />
       <ScrollTopButton/>
     </>
