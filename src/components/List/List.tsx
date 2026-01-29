@@ -1,4 +1,4 @@
-import React, { type JSX } from "react";
+import React, { useState, type JSX } from "react";
 import "./List.css";
 import { listaData, type ListaItem } from "../../data/community";
 import {
@@ -10,8 +10,9 @@ import {
   FaLink,
   FaGithub,
   FaTelegram,
-  FaYoutube
+  FaYoutube,
 } from "react-icons/fa";
+import SearchBar from "../SearchBar/SearchBar";
 
 const iconMap: { [key: string]: JSX.Element } = {
   facebook: <FaFacebookF />,
@@ -36,6 +37,12 @@ const socialOrder = [
 ];
 
 const Communities: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState<string>("");
+
+  const filteredData = listaData.filter(item =>
+    item.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <section id="communities" className="list">
       <header className="list__header">
@@ -46,8 +53,9 @@ const Communities: React.FC = () => {
         <p className="list__intro">
           Lista de Comunidades de Tecnologia e Programação em Moçambique
         </p>
+        <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       </header>
-      {listaData.map((item: ListaItem, index: number) => (
+      {filteredData.map((item: ListaItem, index: number) => (
         <div key={index} className="list__item">
           <img
             src={
@@ -96,6 +104,9 @@ const Communities: React.FC = () => {
           </div>
         </div>
       ))}
+      {filteredData.length === 0 && (
+        <p className="list__no-results">Nenhuma comunidade encontrada.</p>
+      )}
     </section>
   );
 };
