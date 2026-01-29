@@ -8,11 +8,11 @@ const Footer: React.FC = () => {
     <footer id='foot' className="footer">
       <div className="footer__content">
         <div className="footer__bottom">
-          <p>© {currentYear} Moz Comunidades. Todos os direitos reservados.</p>
+          <p>© {currentYear} MozComunities. Todos os direitos reservados.</p>
         </div>
         <div className="footer__author">
           <p>
-            Feito por: <a href="https://seusite.com" target="_blank" rel="noopener noreferrer">Seu Nome</a>
+            Créditos: <a href="https://seusite.com" target="_blank" rel="noopener noreferrer">Tu</a>
           </p>
         </div>
       </div>

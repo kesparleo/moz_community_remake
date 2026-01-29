@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding: 50px 20px;
+  padding: 60px 400px;
+  background-color: #fcfcfc;
 }
 
 .lista__item {
@@ -11,16 +12,49 @@
   align-items: flex-start;
 }
 
-.lista__logo {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  border-radius: 10px;
+.list__logo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
   flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+}
+
+.list__logo:hover {
+  cursor: pointer;
+  border-radius: 0%;
+  transform: scale(1.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.lista__header {
+  margin-bottom: 2rem;
+}
+
+.lista__heading {
+  margin: 0;
+  font-size: 1.8rem;
+  margin-top: 1.5rem;
+}
+
+.lista__heading .destaque {
+  color: #ee7d21;
+}
+
+.lista__heading .secundario {
+  color: #1d3557;
+}
+
+.lista__intro {
+  color: #555;
+  font-size: 1rem;
+  margin-top: 0.25rem;
 }
 
 .lista__content {
-  max-width: 600px;
+  max-width: 800px;
+  padding-left: 20px;
 }
 
 .lista__title {
@@ -32,48 +66,68 @@
 .lista__description {
   font-size: 1rem;
   margin-bottom: 10px;
-  color: #555;
+  color: #888;
+}
+
+span {
+  color: #777;
+}
+
+.lista__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
 }
 
 .lista__website {
-  display: inline-block;
-  margin-bottom: 10px;
-  color: #ff6f61;
+  color: #888;
   text-decoration: none;
-  font-weight: bold;
 }
 
 .lista__website:hover {
   text-decoration: underline;
 }
 
+.lista__no-website {
+  color: #aaa;
+  font-style: italic;
+  cursor: default;
+}
+
 .lista__social {
   display: flex;
-  gap: 10px;
+  gap: 30px;
+  margin-top: 8px;
 }
 
 .lista__social-icon {
-  width: 30px;
-  height: 30px;
-  background-color: #eee;
+  width: 50px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid #ccc;
   border-radius: 50%;
-  color: #333;
+  color: #888;
   font-weight: bold;
-  text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   text-decoration: none;
-  transition: background-color 0.3s;
+  transition: all 0.3s;
 }
 
 .lista__social-icon:hover {
-  background-color: #ff6f61;
+  background-color: var(--hover-color, #ee7d21);
   color: #fff;
+  transform: scale(1.01);
 }
 
-/* ===== Responsividade ===== */
+.lista__item {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+
 @media (max-width: 768px) {
   .lista__item {
     flex-direction: column;
