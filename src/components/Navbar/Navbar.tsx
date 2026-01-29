@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
       <div className={`navbar__links ${menuOpen ? 'active' : ''}`}>
         <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
         <a href="#communities" onClick={() => setMenuOpen(false)}>List</a>
-        <a href="#foot" onClick={() => setMenuOpen(false)}>Contact</a>
+        <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
       </div>
 
       <div className="navbar__hamburger" onClick={toggleMenu}><FaBars /></div>

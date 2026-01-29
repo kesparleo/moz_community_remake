@@ -5,14 +5,14 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer id='foot' className="footer">
+    <footer className="footer">
       <div className="footer__content">
         <div className="footer__bottom">
           <p>© {currentYear} ... Todos os direitos reservados.</p>
         </div>
         <div className="footer__author">
           <p>
-            Créditos: <a href="https://seusite.com" target="_blank" rel="noopener noreferrer">Tu</a>
+            Créditos: <a href="" target="_blank" rel="noopener noreferrer">...</a>
           </p>
         </div>
       </div>
