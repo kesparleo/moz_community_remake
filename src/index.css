@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -11,6 +11,7 @@ html {
 }
 
 body {
+  font-family: 'Bellota', sans-serif;
   line-height: 1.6;
   color: #333;
 }

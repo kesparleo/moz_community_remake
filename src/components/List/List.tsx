@@ -46,21 +46,25 @@ const Communities: React.FC = () => {
               "https://mozcomunidades.web.app/images/comunities/logo.png"
             }
             alt={item.title}
-            className="lista__logo"
+            className="list__logo"
           />
           <div className="lista__content">
             <h3 className="lista__title">{item.title}</h3>
             <p className="lista__description">{item.description}</p>
             <span className="lista__link">
               <FaLink />{" "}
-              <a
-                className="lista__website"
-                href={item.website}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {item.website?.replace(/^(https?:\/\/)?(www\.)?/, "")}
-              </a>
+              {item.website ? (
+                <a
+                  className="lista__website"
+                  href={item.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {item.website.replace(/^(https?:\/\/)?(www\.)?/, "")}
+                </a>
+              ) : (
+                <span className="lista__no-website">sem site</span>
+              )}
             </span>
             <div className="lista__social">
               {socialOrder.map((key) =>
@@ -71,6 +75,9 @@ const Communities: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`lista__social-icon lista__social-${key}`}
+                    style={
+                      { "--hover-color": item.color } as React.CSSProperties
+                    }
                   >
                     {iconMap[key]}
                   </a>

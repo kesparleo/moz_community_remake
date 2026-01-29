@@ -12,12 +12,20 @@
   align-items: flex-start;
 }
 
-.lista__logo {
+.list__logo {
   width: 100px;
   height: 100px;
   object-fit: cover;
   border-radius: 50%;
   flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+}
+
+.list__logo:hover {
+  cursor: pointer;
+  border-radius: 0%;
+  transform: scale(1.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
 }
 
 .lista__header {
@@ -81,6 +89,12 @@ span {
   text-decoration: underline;
 }
 
+.lista__no-website {
+  color: #aaa;
+  font-style: italic;
+  cursor: default;
+}
+
 .lista__social {
   display: flex;
   gap: 30px;
@@ -103,7 +117,7 @@ span {
 }
 
 .lista__social-icon:hover {
-  background-color: #ee7d21;
+  background-color: var(--hover-color, #ee7d21);
   color: #fff;
   transform: scale(1.01);
 }
