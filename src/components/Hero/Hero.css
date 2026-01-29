@@ -1,12 +1,12 @@
 .hero {
   height: 100vh;
   width: 100%;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/assets/images/hero-bg.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://mozcomunidades.web.app/images/background/4.jpg') center/cover no-repeat;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   text-align: left;
-  padding-left: 150px;
+  padding: 400px;
   color: #fff;
 }
 
@@ -25,20 +25,49 @@
   line-height: 1.5;
 }
 
-.hero__button {
-  display: inline-block;
+.hero__buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.hero__button, .hero__github {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   padding: 12px 30px;
-  background-color: #ff6f61;
-  color: #fff;
-  text-decoration: none;
   font-weight: bold;
+  text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s, transform 0.2s;
 }
 
+.hero__button {
+  background-color: #ee7d21;
+  border-radius: 40px;
+  color: #fff;
+}
+
 .hero__button:hover {
-  background-color: #ffa07a;
+  background-color: #e4904b;
   transform: translateY(-2px);
+}
+
+.hero__github {
+  background-color: transparent;
+  border-radius: 40px;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.hero__github:hover {
+  background-color: #fff;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+.hero__github-icon {
+  font-size: 1.1rem;
 }
 
 @media (max-width: 1024px) {

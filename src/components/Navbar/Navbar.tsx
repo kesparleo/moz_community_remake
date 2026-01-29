@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars } from 'react-icons/fa';
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isTop, setIsTop] = useState(true); // se está no topo
+  const [isTop, setIsTop] = useState(true);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
-  // Detecta scroll
   useEffect(() => {
     const handleScroll = () => {
-      setIsTop(window.scrollY < 10); // topo = menos de 10px scroll
+      setIsTop(window.scrollY < 10);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -28,9 +27,7 @@ const Navbar: React.FC = () => {
         <a href="#foot" onClick={() => setMenuOpen(false)}>Contact</a>
       </div>
 
-      <div className="navbar__hamburger" onClick={toggleMenu}>
-        {menuOpen ? <FaTimes /> : <FaBars />}
-      </div>
+      <div className="navbar__hamburger" onClick={toggleMenu}><FaBars /></div>
     </nav>
   );
 };
