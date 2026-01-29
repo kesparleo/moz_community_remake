@@ -1,3 +1,18 @@
+:root {
+  --navbar-height: 5rem;
+  --space-inline: clamp(1.5rem, 8vw, 25rem);
+  --gap-links: 1.875rem;
+  --transition-fast: 0.3s;
+}
+
+@media (max-width: 48rem) {
+  :root {
+    --navbar-height: 4.375rem;
+    --space-inline: 1.5rem;
+    --gap-links: 1.25rem;
+  }
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -8,10 +23,7 @@
   align-items: center;
   padding: 0 400px;
   z-index: 100;
-  transition:
-    background-color 0.3s,
-    height 0.3s,
-    color 0.3s;
+  transition: background-color --transition-fast, height --transition-fast, color --transition-fast;
   font-family: Arial, sans-serif;
 }
 
@@ -66,7 +78,7 @@
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: max-height 0.4s ease, opacity 0.4s ease;
+    transition: max-height 0.4s ease, opacity --transition-fast ease;
     border-radius: 0 0 8px 8px;
     z-index: 99;
     background-color: #fff;
@@ -75,7 +87,7 @@
   .navbar__links a {
     color: #000;
     display: block;
-    transition: background-color 0.3s;
+    transition: background-color --transition-fast;
   }
 
   .navbar__links.active {

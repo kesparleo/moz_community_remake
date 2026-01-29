@@ -25,3 +25,19 @@
 .footer__author a:hover {
   color: #ffa07a;
 }
+
+@media (min-width: 48rem) and (max-width: 64rem) {
+  .footer {
+    padding: 3rem clamp(2rem, 6vw, 6rem);
+  }
+
+  .footer__author {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  .footer {
+    padding: 2.5rem 1.5rem;
+  }
+}

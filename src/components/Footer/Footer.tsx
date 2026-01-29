@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
     <footer id='foot' className="footer">
       <div className="footer__content">
         <div className="footer__bottom">
-          <p>© {currentYear} MozComunities. Todos os direitos reservados.</p>
+          <p>© {currentYear} ... Todos os direitos reservados.</p>
         </div>
         <div className="footer__author">
           <p>
