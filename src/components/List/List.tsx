@@ -1,6 +1,6 @@
 import React, { useState, type JSX } from "react";
 import "./List.css";
-import { listaData, type ListaItem } from "../../data/community";
+import { listaData, type Category, type ListaItem } from "../../data/community";
 import {
   FaFacebookF,
   FaTwitter,
@@ -11,8 +11,13 @@ import {
   FaGithub,
   FaTelegram,
   FaYoutube,
+  FaCode,
+  FaBrain,
+  FaDatabase,
+  FaNetworkWired,
 } from "react-icons/fa";
 import SearchBar from "../SearchBar/SearchBar";
+import CategorySelector from "../CategorySelector/CategorySelector";
 
 const iconMap: { [key: string]: JSX.Element } = {
   facebook: <FaFacebookF />,
@@ -23,6 +28,13 @@ const iconMap: { [key: string]: JSX.Element } = {
   github: <FaGithub />,
   telegram: <FaTelegram />,
   youtube: <FaYoutube />
+};
+
+export const categoryIconMap: Record<Category, JSX.Element> = {
+  "Coding": <FaCode />,
+  "Artificial Intelligence": <FaBrain />,
+  "Data": <FaDatabase />,
+  "Networks": <FaNetworkWired />
 };
 
 const socialOrder = [
@@ -39,9 +51,18 @@ const socialOrder = [
 const Communities: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
 
-  const filteredData = listaData.filter(item =>
-    item.title.toLowerCase().includes(searchTerm.toLowerCase())
+  const [selectedCategory, setSelectedCategory] = useState<Category | "">("");
+
+  const allCategories = Array.from(
+    new Set(listaData.flatMap(item => item.categories))
   );
+
+  const filteredData = listaData.filter(item => {
+    const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = !selectedCategory || item.categories.includes(selectedCategory);
+    return matchesSearch && matchesCategory;
+  });
+
 
   return (
     <section id="communities" className="list">
@@ -53,7 +74,14 @@ const Communities: React.FC = () => {
         <p className="list__intro">
           Lista de Comunidades de Tecnologia e Programação em Moçambique
         </p>
-        <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+        <div className="list__actions">
+          <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+          <CategorySelector
+            categories={allCategories}
+            selectedCategory={selectedCategory}
+            setSelectedCategory={setSelectedCategory}
+          />
+        </div>
       </header>
       {filteredData.map((item: ListaItem, index: number) => (
         <div key={index} className="list__item">
@@ -67,6 +95,13 @@ const Communities: React.FC = () => {
           />
           <div className="list__content">
             <h3 className="list__title">{item.title}</h3>
+            <div className="list__categories">
+              {item.categories.map((cat) => (
+                <span key={cat} className="list__category">
+                  {cat}
+                </span>
+              ))}
+            </div>
             <p className="list__description">{item.description}</p>
             <span className="list__link">
               <FaLink />{" "}

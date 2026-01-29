@@ -1,3 +1,9 @@
+export type Category =
+  | "Coding"
+  | "Artificial Intelligence"
+  | "Data"
+  | "Networks";
+
 export interface SocialLinks {
   facebook?: string;
   twitter?: string;
@@ -17,6 +23,7 @@ export interface ListaItem {
   website?: string;
   social: SocialLinks;
   color: String;
+  categories: Category[];
 }
 
 export const listaData: ListaItem[] = [
@@ -29,7 +36,8 @@ export const listaData: ListaItem[] = [
       whatsapp: 'https://chat.whatsapp.com/BO6tJjlxMyXB2K4AMPPlVm',
       linkedin: 'https://www.linkedin.com/company/qa-community-moz/'
     },
-    color: '#31378aff'
+    color: '#31378aff',
+    categories: ['Coding']
   },
   {
     logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQFtj0fOo53rkQ/company-logo_200_200/company-logo_200_200/0/1695041071092?e=1771459200&v=beta&t=FK0UsiTT_DFA43z-7SqaME2-Jaq2SreuuDYaE8OjdxE',
@@ -43,7 +51,8 @@ export const listaData: ListaItem[] = [
       whatsapp: 'https://chat.whatsapp.com/IVxKNCPTbZH9xbjpHxuBA2',
       github: 'https://github.com/pyladies-maputo'
     },
-    color: '#6e318aff'
+    color: '#6e318aff',
+    categories: ['Coding']
   },
   {
     logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQEq9FQO8CF3cg/company-logo_200_200/company-logo_200_200/0/1729162204438/dsai_for_moz_logo?e=1771459200&v=beta&t=nQUQeTZmjqYh1fzvri1vONGMd3GjeGGpj8pA5t-ksoo',
@@ -55,7 +64,8 @@ export const listaData: ListaItem[] = [
       linkedin: 'https://www.linkedin.com/company/dsai-for-moz'
     }
     ,
-    color: '#3498db'
+    color: '#3498db',
+    categories: ['Artificial Intelligence']
   },
   {
     logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQFu68cby66G8w/company-logo_100_100/company-logo_100_100/0/1682616794107/djangogirlsmoz_logo?e=1771459200&v=beta&t=qgc_Iy3Q4-MqIj68IX51WvfpghRjyzUXGoPxWtZi1EM',
@@ -68,7 +78,8 @@ export const listaData: ListaItem[] = [
       twitter: 'https://twitter.com/djangogirlsmoz',
       instagram: 'https://www.instagram.com/djangogirlsmoz'
     },
-    color: '#e98834ff'
+    color: '#e98834ff',
+    categories: ['Coding']
   },
   {
     logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQEJWR8lFdk6yw/company-logo_200_200/company-logo_200_200/0/1698048505986?e=1771459200&v=beta&t=33Eek2w7C_8tMSIxhW0mJKHGAWvhw3mUrdopZrvHhg4',
@@ -85,7 +96,8 @@ export const listaData: ListaItem[] = [
       whatsapp: 'https://chat.whatsapp.com/LqHu2T0jIJT74U8Q04gKEn',
       github: 'https://github.com/mozdevz'
     },
-    color: '#5e5e5eff'
+    color: '#5e5e5eff',
+    categories: ['Coding']
   },
   {
     logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQFYkGScKvniSA/company-logo_200_200/company-logo_200_200/0/1728759049864/data_driven_communitymz_logo?e=1771459200&v=beta&t=_WLPuqdHsPl6QpGaDzq6HCgZVGX5PJXpz1ti_pfiCLk',
@@ -95,7 +107,8 @@ export const listaData: ListaItem[] = [
     social: {
       linkedin: 'https://www.linkedin.com/company/data-driven-communitymz',
     },
-    color: ''
+    color: '',
+    categories: ['Data']
   },
   {
     logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQE1eJmFJGGJfg/company-logo_200_200/company-logo_200_200/0/1724060766992/maputo_frontenders_logo?e=1771459200&v=beta&t=WnKLhla8YenTe_QCE-3GpCGiwh4ETuGZknVUQFul7kY',
@@ -109,7 +122,8 @@ export const listaData: ListaItem[] = [
       youtube: 'https://www.youtube.com/@mptfrontenders',
       github: 'https://github.com/Maputo-Frontenders'
     },
-    color: '#000'
+    color: '#000',
+    categories: ['Coding']
   },
   {
     logo: 'https://media.licdn.com/dms/image/v2/C4E0BAQE5yJ5cQ9PJcw/company-logo_200_200/company-logo_200_200/0/1680002627533?e=1771459200&v=beta&t=qLsSZp-asWguFQD94rZqUQhu72FPNwxHvZEj6foKI_Y',
@@ -124,7 +138,8 @@ export const listaData: ListaItem[] = [
       linkedin: 'https://www.linkedin.com/company/fluttermoz',
       github: 'https://github.com/mozflutter'
     },
-    color: '#1abc9c'
+    color: '#1abc9c',
+    categories: ['Coding']
   },
   {
     logo: 'https://mozcomunidades.web.app/images/comunities/laravelmaputocommunity.png',
@@ -134,7 +149,8 @@ export const listaData: ListaItem[] = [
     social: {
       whatsapp: 'https://chat.whatsapp.com/BBsDgZGoLZmBEyVXZS8fy2',
     },
-    color: '#c0392b'
+    color: '#c0392b',
+    categories: ['Coding']
   },
   {
     logo: 'https://mozcomunidades.web.app/images/comunities/jsmaputocommunity.png',
@@ -147,7 +163,8 @@ export const listaData: ListaItem[] = [
       facebook: 'https://facebook.com/jsmaputocommunity',
       whatsapp: 'https://chat.whatsapp.com/1ZXaVqxGSM99MbMbnqPtur'
     },
-    color: '#8dca2bff'
+    color: '#8dca2bff',
+    categories: ['Coding']
   },
   {
     logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQHhhbAfhW4cDg/company-logo_200_200/B4DZV80e8OHwAQ-/0/1741555890716?e=1771459200&v=beta&t=sWSsyC-HCzqfeoWruwjFhtU__IKPid45p1vTTU2QOCc',
@@ -158,7 +175,8 @@ export const listaData: ListaItem[] = [
       linkedin: 'https://www.linkedin.com/company/mozcyber',
       instagram: 'https://www.instagram.com/mozcyberr'
     },
-    color: '#141414ff'
+    color: '#141414ff',
+    categories: ['Networks']
   },
   {
     logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQFdIuuYirXEnw/company-logo_200_200/B4EZkY7TnrHoAI-/0/1757059825212?e=1771459200&v=beta&t=2xZTMVo9ultY3eItWs-bdVNwqY1_2o80opX4ScZog8A',
@@ -170,6 +188,7 @@ export const listaData: ListaItem[] = [
       instagram: 'https://www.instagram.com/infra.mz/',
       whatsapp: 'https://l.instagram.com/?u=https%3A%2F%2Fchat.whatsapp.com%2FL6ktaUPCW3NJxdRy87bTHH%3Fmode%3Dems_copy_c%26utm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnCeXvdaqobN3uiq7DYxG-Vt57iGulem6mc34LZUmTtdxctjUDYYFJhlPnGmc_aem_6nvBhup7oYOOZNObhcobcg&e=AT07whnG8FgGGfAk1lU52dwys1s1KjXq1_3aiojCSEAO5AEVRbfEXdd31g1bVElKxItc0WeGGAXUcKQ_E26qYXd1i4X1Q-aMyHAYBMWKqA'
     },
-    color: '#133b10ff'
+    color: '#133b10ff',
+    categories: ['Networks']
   }
 ];
