@@ -1,4 +1,4 @@
-import React, { useState, type JSX } from "react";
+import React, { useState, useEffect, type JSX } from "react";
 import "./List.css";
 import { listaData, type Category, type ListaItem } from "../../data/community";
 import {
@@ -15,6 +15,7 @@ import {
   FaBrain,
   FaDatabase,
   FaNetworkWired,
+  FaShieldAlt,
 } from "react-icons/fa";
 import SearchBar from "../SearchBar/SearchBar";
 import CategorySelector from "../CategorySelector/CategorySelector";
@@ -34,7 +35,8 @@ export const categoryIconMap: Record<Category, JSX.Element> = {
   "Coding": <FaCode />,
   "Artificial Intelligence": <FaBrain />,
   "Data": <FaDatabase />,
-  "Networks": <FaNetworkWired />
+  "Networks": <FaNetworkWired />,
+  "Cybersecurity": <FaShieldAlt />
 };
 
 const socialOrder = [
@@ -57,12 +59,22 @@ const Communities: React.FC = () => {
     new Set(listaData.flatMap(item => item.categories))
   );
 
-  const filteredData = listaData.filter(item => {
+  const [shuffledData, setShuffledData] = useState<ListaItem[]>([]);
+
+  useEffect(() => {
+    const shuffled = [...listaData];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    setShuffledData(shuffled);
+  }, []);
+
+  const filteredData = shuffledData.filter(item => {
     const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = !selectedCategory || item.categories.includes(selectedCategory);
     return matchesSearch && matchesCategory;
   });
-
 
   return (
     <section id="communities" className="list">
@@ -98,6 +110,7 @@ const Communities: React.FC = () => {
             <div className="list__categories">
               {item.categories.map((cat) => (
                 <span key={cat} className="list__category">
+                  {categoryIconMap[cat as Category]}
                   {cat}
                 </span>
               ))}

@@ -2,7 +2,8 @@ export type Category =
   | "Coding"
   | "Artificial Intelligence"
   | "Data"
-  | "Networks";
+  | "Networks"
+  | "Cybersecurity";
 
 export interface SocialLinks {
   facebook?: string;
@@ -176,7 +177,7 @@ export const listaData: ListaItem[] = [
       instagram: 'https://www.instagram.com/mozcyberr'
     },
     color: '#141414ff',
-    categories: ['Networks']
+    categories: ['Networks', 'Cybersecurity']
   },
   {
     logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQFdIuuYirXEnw/company-logo_200_200/B4EZkY7TnrHoAI-/0/1757059825212?e=1771459200&v=beta&t=2xZTMVo9ultY3eItWs-bdVNwqY1_2o80opX4ScZog8A',

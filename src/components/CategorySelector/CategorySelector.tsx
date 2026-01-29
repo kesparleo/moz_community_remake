@@ -3,9 +3,9 @@ import './CategorySelector.css';
 import type { Category } from "../../data/community";
 
 interface CategorySelectorProps {
-  categories: Category[];           // agora é Category[]
-  selectedCategory: Category | "";  // mesma tipagem do estado
-  setSelectedCategory: (category: Category | "") => void; // aceita vazio
+  categories: Category[];
+  selectedCategory: Category | "";
+  setSelectedCategory: (category: Category | "") => void;
 }
 
 const CategorySelector: React.FC<CategorySelectorProps> = ({
@@ -29,7 +29,7 @@ const CategorySelector: React.FC<CategorySelectorProps> = ({
           <li
             className="category-selector__item"
             onClick={() => {
-              setSelectedCategory(""); // "Todas"
+              setSelectedCategory("");
               setOpen(false);
             }}
           >
