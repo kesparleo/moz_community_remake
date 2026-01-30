@@ -3,6 +3,8 @@
   flex-direction: column;
   gap: 30px;
   padding: 60px 400px;
+  background-color: var(--gray-025);
+  color: var(--gra-300);
 }
 
 .list__item {
@@ -31,8 +33,25 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid var(--gray-200);
   padding-bottom: 20px;
+}
+
+.list__title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--gray-800);
+}
+
+.list__description {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: var(--gray-500);
+}
+
+.list__website {
+  color: var(--gray-500);
+  text-decoration: none;
 }
 
 .list__heading {
@@ -42,15 +61,15 @@
 }
 
 .list__heading .destaque {
-  color: #ee7d21;
+  color: var(--orange-600);
 }
 
 .list__heading .secundario {
-  color: #555;
+  color: var(--gray-700);
 }
 
 .list__intro {
-  color: #555;
+  color: var(--gray-700);
   font-size: 1rem;
   margin-top: 0.25rem;
 }
@@ -60,20 +79,8 @@
   padding-left: 20px;
 }
 
-.list__title {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.list__description {
-  font-size: 1rem;
-  margin-bottom: 10px;
-  color: #888;
-}
-
 span {
-  color: #777;
+  color: var(--gray-600);
 }
 
 .list__link {
@@ -83,17 +90,12 @@ span {
   margin-bottom: 12px;
 }
 
-.list__website {
-  color: #888;
-  text-decoration: none;
-}
-
 .list__website:hover {
   text-decoration: underline;
 }
 
 .list__no-website {
-  color: #aaa;
+  color: var(--gray-400);
   font-style: italic;
   cursor: default;
 }
@@ -111,9 +113,9 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #ccc;
+  border: 1px solid var(--gray-400);
   border-radius: 50%;
-  color: #888;
+  color: var(--gray-400);
   font-weight: bold;
   font-size: 0.95rem;
   text-decoration: none;
@@ -122,12 +124,12 @@ span {
 
 .list__social-icon:hover {
   background-color: var(--hover-color, #ee7d21);
-  color: #fff;
+  color: var(--white);
   transform: scale(1.01);
 }
 
 .list__item {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--gray-200);
   padding-bottom: 20px;
 }
 
@@ -144,9 +146,10 @@ span {
 }
 
 .list__category {
-  background-color: #f0f0f0;
-  color: #333;
-  padding: 4px 10px;
+  background-color: var(--gray-100);
+  color: var(--gray-800);
+  padding: 10px;
+  margin: 10px 0;
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 500;
@@ -163,8 +166,8 @@ span {
 
 .list__contact-button {
   padding: 10px 24px;
-  color: #777;
-  border: 1px solid #777;
+  color: var(--gray-500);
+  border: 1px solid var(--gray-500);
   border-radius: 100px;
   text-decoration: none;
   font-weight: 600;
@@ -172,7 +175,7 @@ span {
 }
 
 .list__contact-button:hover {
-  background-color: #f4f4f4;
+  background-color: var(--gray-075);
   transform: translateY(-1px);
 }
 

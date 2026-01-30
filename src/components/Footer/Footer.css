@@ -1,73 +1,36 @@
 .footer {
-  background-color: #1c1c1e;
-  color: #f1f1f1;
-  padding: 60px 0;
+  background-color: var(--dark-bg);
+  color: var(--white);
+  padding: 80px 0;
 }
 
 .footer__content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  align-items: center; 
 }
 
-.footer__author a {
-  color: #ff6f61;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.footer__author a:hover {
-  color: #ffa07a;
+.footer__bottom p {
+  color: white;
 }
 
 .footer__link {
   background: none;
   border: none;
-  color: #ff6f61;
+  color: var(--accent-red);
   cursor: pointer;
-  font: inherit;
-}
-
-.footer__credits {
-  position: relative;
-  display: inline-block;
-}
-
-.popover {
-  position: absolute;
-  bottom: 250%;
-  left: 0;
-  background: #fff;
-  color: #222;
-  padding: 12px 14px;
-  border-radius: 4px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-  z-index: 10;
-}
-
-.popover a {
-  color: #1d3557;
   text-decoration: none;
 }
 
-.popover a:hover {
-  text-decoration: underline;
-}
-
-
 @media (min-width: 48rem) and (max-width: 64rem) {
   .footer {
-    padding: 3rem clamp(2rem, 6vw, 6rem);
-  }
-
-  .footer__author {
-    font-size: 0.9rem;
+    padding: 4rem clamp(2rem, 6vw, 6rem);
   }
 }
 
 @media (max-width: 48rem) {
   .footer {
-    padding: 2.5rem 1.5rem;
+    padding: 3.5rem 3rem;
+    text-align: center;
   }
 }

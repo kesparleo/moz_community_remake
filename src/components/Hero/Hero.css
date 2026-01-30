@@ -9,6 +9,15 @@
   padding: 400px;
 }
 
+.hero__text {
+  color: var(--special-hero);
+}
+
+[data-theme="dark"] .hero {
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+              url('https://mozcomunidades.web.app/images/background/4.jpg') center/cover no-repeat;
+}
+
 .hero__content {
   max-width: 700px;
 }
@@ -42,26 +51,26 @@
 }
 
 .hero__button {
-  background-color: #ee7d21;
+  background-color: var(--orange-600);
   border-radius: 40px;
-  color: #fff;
+  color: var(--special-hero);
 }
 
 .hero__button:hover {
-  background-color: #e4904b;
+  background-color: var(--orange-500);
   transform: translateY(-2px);
 }
 
 .hero__github {
   background-color: transparent;
   border-radius: 40px;
-  border: 1px solid #fff;
-  color: #fff;
+  border: 1px solid var(--special-hero);
+  color: var(--special-hero);
 }
 
 .hero__github:hover {
-  background-color: #fff;
-  color: #000;
+  background-color: #222;
+  color: var(--special-hero);
   transform: translateY(-2px);
 }
 

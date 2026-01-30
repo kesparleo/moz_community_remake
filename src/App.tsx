@@ -13,7 +13,7 @@ function App() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
 
   useEffect(() => {
-    document.body.className = theme;
+    document.body.setAttribute("data-theme", theme);
   }, [theme]);
   return (
     <>
