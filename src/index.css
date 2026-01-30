@@ -15,3 +15,15 @@ body {
   line-height: 1.6;
   color: #333;
 }
+
+.hero__text {
+  color: #fff;
+}
+
+.list__backgroun.light {
+  background-color: #fcfcfc;
+}
+
+.list__backgroun.dark {
+  background-color: #333333;
+}

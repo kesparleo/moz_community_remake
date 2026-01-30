@@ -25,8 +25,18 @@
 }
 
 .navbar--scrolled .navbar__logo,
-.navbar--scrolled .navbar__links a {
+.navbar--scrolled .navbar__links a,
+.navbar--scrolled .navbar__icons,
+.navbar--scrolled .navbar__icons .theme-toggle .icon,
+.navbar--scrolled .navbar__icons .language-toggle,
+.navbar--scrolled .navbar__icons .language-toggle .lang {
   color: #000;
+}
+
+.navbar--scrolled .navbar__links a:hover,
+.navbar--scrolled .navbar__icons .theme-toggle .icon:hover,
+.navbar--scrolled .navbar__icons .language-toggle .lang:hover {
+  color: #ee7d21;
 }
 
 .navbar__links {
@@ -48,10 +58,41 @@
   color: #ee7d21;
 }
 
-
 .navbar__hamburger {
   display: none;
 }
+
+.navbar__icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  color: #fff;
+}
+
+.theme-toggle {
+  display: flex;
+  gap: 10px;
+}
+.theme-toggle .icon {
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: color 0.3s;
+}
+.theme-toggle .icon:hover {
+  color: #ee7d21;
+}
+
+.language-toggle {
+  display: flex;
+  gap: 5px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.language-toggle .lang:hover {
+  color: #ee7d21;
+}
+
 
 @media (min-width: 64rem) and (max-width: 1280px) {
   .navbar {

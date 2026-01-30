@@ -3,7 +3,6 @@
   flex-direction: column;
   gap: 30px;
   padding: 60px 400px;
-  background-color: #fcfcfc;
 }
 
 .list__item {
@@ -157,6 +156,26 @@ span {
   gap: 6px;
 }
 
+.list__contact {
+  margin-top: 16px;
+  display: flex;
+}
+
+.list__contact-button {
+  padding: 10px 24px;
+  color: #777;
+  border: 1px solid #777;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.list__contact-button:hover {
+  background-color: #f4f4f4;
+  transform: translateY(-1px);
+}
+
 @media (min-width: 64rem) and (max-width: 1280px) {
   .list {
     padding: 4rem clamp(2rem, 6vw, 8rem);
@@ -187,6 +206,10 @@ span {
   .list__social {
     justify-content: center;
   }
+
+  .list__contact {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -211,6 +234,11 @@ span {
   }
 
   .list__categories {
+    justify-content: center;
+  }
+
+  .list__contact {
+    display: flex;
     justify-content: center;
   }
 }

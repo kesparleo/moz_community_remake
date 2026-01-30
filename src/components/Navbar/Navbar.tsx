@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaSun, FaMoon } from "react-icons/fa";
 
 interface NavItem {
   id: string;
@@ -10,12 +10,16 @@ interface NavItem {
 interface NavProps {
   title: string;
   items: NavItem[];
+  theme: "light" | "dark";
+  setTheme: React.Dispatch<React.SetStateAction<"light" | "dark">>;
 }
 
-const Navbar: React.FC<NavProps> = ({ title, items }) => {
+const Navbar: React.FC<NavProps> = ({ title, items, theme, setTheme }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isTop, setIsTop] = useState(true);
   const [activeSection, setActiveSection] = useState<string>("");
+
+  const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
 
   useEffect(() => {
     const sections = document.querySelectorAll<HTMLElement>("section[id]");
@@ -45,6 +49,16 @@ const Navbar: React.FC<NavProps> = ({ title, items }) => {
       <div className="navbar__logo">{title}</div>
 
       <div className={`navbar__links ${menuOpen ? "active" : ""}`}>
+        <div className="navbar__icons">
+          <div className="theme-toggle" onClick={toggleTheme}>
+            {theme === "light" ? (
+              <FaSun className="icon" title="Tema claro" />
+            ) : (
+              <FaMoon className="icon" title="Tema escuro" />
+            )}
+          </div>
+        </div>
+
         {items.map((item) => (
           <a
             key={item.id}
