@@ -1,6 +1,6 @@
-import React, { type JSX } from "react";
+import React, { useState, useEffect, type JSX } from "react";
 import "./List.css";
-import { listaData, type ListaItem } from "../../data/community";
+import { listaData, type Category, type ListaItem } from "../../data/community";
 import {
   FaFacebookF,
   FaTwitter,
@@ -10,8 +10,15 @@ import {
   FaLink,
   FaGithub,
   FaTelegram,
-  FaYoutube
+  FaYoutube,
+  FaCode,
+  FaBrain,
+  FaDatabase,
+  FaNetworkWired,
+  FaShieldAlt,
 } from "react-icons/fa";
+import SearchBar from "../SearchBar/SearchBar";
+import CategorySelector from "../CategorySelector/CategorySelector";
 
 const iconMap: { [key: string]: JSX.Element } = {
   facebook: <FaFacebookF />,
@@ -22,6 +29,14 @@ const iconMap: { [key: string]: JSX.Element } = {
   github: <FaGithub />,
   telegram: <FaTelegram />,
   youtube: <FaYoutube />
+};
+
+export const categoryIconMap: Record<Category, JSX.Element> = {
+  "Coding": <FaCode />,
+  "Artificial Intelligence": <FaBrain />,
+  "Data": <FaDatabase />,
+  "Networks": <FaNetworkWired />,
+  "Cybersecurity": <FaShieldAlt />
 };
 
 const socialOrder = [
@@ -36,6 +51,31 @@ const socialOrder = [
 ];
 
 const Communities: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState<string>("");
+
+  const [selectedCategory, setSelectedCategory] = useState<Category | "">("");
+
+  const allCategories = Array.from(
+    new Set(listaData.flatMap(item => item.categories))
+  );
+
+  const [shuffledData, setShuffledData] = useState<ListaItem[]>([]);
+
+  useEffect(() => {
+    const shuffled = [...listaData];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    setShuffledData(shuffled);
+  }, []);
+
+  const filteredData = shuffledData.filter(item => {
+    const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = !selectedCategory || item.categories.includes(selectedCategory);
+    return matchesSearch && matchesCategory;
+  });
+
   return (
     <section id="communities" className="list">
       <header className="list__header">
@@ -46,8 +86,16 @@ const Communities: React.FC = () => {
         <p className="list__intro">
           Lista de Comunidades de Tecnologia e Programação em Moçambique
         </p>
+        <div className="list__actions">
+          <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+          <CategorySelector
+            categories={allCategories}
+            selectedCategory={selectedCategory}
+            setSelectedCategory={setSelectedCategory}
+          />
+        </div>
       </header>
-      {listaData.map((item: ListaItem, index: number) => (
+      {filteredData.map((item: ListaItem, index: number) => (
         <div key={index} className="list__item">
           <img
             src={
@@ -59,6 +107,14 @@ const Communities: React.FC = () => {
           />
           <div className="list__content">
             <h3 className="list__title">{item.title}</h3>
+            <div className="list__categories">
+              {item.categories.map((cat) => (
+                <span key={cat} className="list__category">
+                  {categoryIconMap[cat as Category]}
+                  {cat}
+                </span>
+              ))}
+            </div>
             <p className="list__description">{item.description}</p>
             <span className="list__link">
               <FaLink />{" "}
@@ -96,6 +152,9 @@ const Communities: React.FC = () => {
           </div>
         </div>
       ))}
+      {filteredData.length === 0 && (
+        <p className="list__no-results">Nenhuma comunidade encontrada.</p>
+      )}
     </section>
   );
 };

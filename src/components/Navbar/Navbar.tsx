@@ -1,33 +1,65 @@
-import React, { useState, useEffect } from 'react';
-import './Navbar.css';
-import { FaBars } from 'react-icons/fa';
+import React, { useState, useEffect } from "react";
+import "./Navbar.css";
+import { FaBars } from "react-icons/fa";
 
-const Navbar: React.FC = () => {
+interface NavItem {
+  id: string;
+  label: string;
+}
+
+interface NavProps {
+  title: string;
+  items: NavItem[];
+}
+
+const Navbar: React.FC<NavProps> = ({ title, items }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isTop, setIsTop] = useState(true);
-
-  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const [activeSection, setActiveSection] = useState<string>("");
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsTop(window.scrollY < 10);
+    const sections = document.querySelectorAll<HTMLElement>("section[id]");
+
+    const onScroll = () => {
+      const scrollY = window.scrollY;
+      setIsTop(scrollY < 10);
+
+      const scrollPos = scrollY + 120;
+
+      sections.forEach((sec) => {
+        if (
+          scrollPos >= sec.offsetTop &&
+          scrollPos < sec.offsetTop + sec.offsetHeight
+        ) {
+          setActiveSection(sec.id);
+        }
+      });
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
-    <nav className={`navbar ${isTop ? 'navbar--top' : 'navbar--scrolled'}`}>
-      <div className="navbar__logo">MozComun</div>
+    <nav className={`navbar ${isTop ? "navbar--top" : "navbar--scrolled"}`}>
+      <div className="navbar__logo">{title}</div>
 
-      <div className={`navbar__links ${menuOpen ? 'active' : ''}`}>
-        <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
-        <a href="#communities" onClick={() => setMenuOpen(false)}>List</a>
-        <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+      <div className={`navbar__links ${menuOpen ? "active" : ""}`}>
+        {items.map((item) => (
+          <a
+            key={item.id}
+            href={`#${item.id}`}
+            onClick={() => setMenuOpen(false)}
+            className={activeSection === item.id ? "navbar__action" : ""}
+          >
+            {item.label}
+          </a>
+        ))}
       </div>
 
-      <div className="navbar__hamburger" onClick={toggleMenu}><FaBars /></div>
+      <div className="navbar__hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+        <FaBars />
+      </div>
     </nav>
   );
 };

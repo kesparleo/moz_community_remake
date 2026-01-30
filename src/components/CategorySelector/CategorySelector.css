@@ -1,0 +1,38 @@
+.category-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.category-selector__button {
+  padding: 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.category-selector__list {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  list-style: none;
+  padding: 5px 0;
+  margin: 0;
+  min-width: 120px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+.category-selector__item {
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.category-selector__item:hover {
+  background-color: #f0f0f0;
+}
+
