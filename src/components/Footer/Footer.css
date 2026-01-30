@@ -11,10 +11,6 @@
   gap: 10px;
 }
 
-.footer__author {
-  font-size: 0.95rem;
-}
-
 .footer__author a {
   color: #ff6f61;
   text-decoration: none;
@@ -24,6 +20,41 @@
 .footer__author a:hover {
   color: #ffa07a;
 }
+
+.footer__link {
+  background: none;
+  border: none;
+  color: #ff6f61;
+  cursor: pointer;
+  font: inherit;
+}
+
+.footer__credits {
+  position: relative;
+  display: inline-block;
+}
+
+.popover {
+  position: absolute;
+  bottom: 250%;
+  left: 0;
+  background: #fff;
+  color: #222;
+  padding: 12px 14px;
+  border-radius: 4px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+.popover a {
+  color: #1d3557;
+  text-decoration: none;
+}
+
+.popover a:hover {
+  text-decoration: underline;
+}
+
 
 @media (min-width: 48rem) and (max-width: 64rem) {
   .footer {

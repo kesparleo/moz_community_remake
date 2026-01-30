@@ -35,13 +35,27 @@
   align-items: center;
 }
 
+.navbar__links a {
+  text-decoration: none;
+  transition: color 0.25s ease-in-out;
+}
+
+.navbar__links a:hover {
+  color: #ee7d21;
+}
+
+.navbar__links a.navbar__action:visited {
+  color: #ee7d21;
+}
+
+
 .navbar__hamburger {
   display: none;
 }
 
 @media (min-width: 64rem) and (max-width: 1280px) {
   .navbar {
-    padding: 0 80px;
+    padding: 0 60px;
     height: 80px;
   }
 
@@ -52,7 +66,7 @@
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .navbar {
-    padding: 0 80px;
+    padding: 0 60px;
     height: 80px;
   }
 
@@ -63,7 +77,7 @@
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 0 40px;
+    padding: 0 30px;
     background-color: #fff;
     min-height: 80px;
     overflow: visible;
@@ -91,12 +105,6 @@
     background-color: #fff;
   }
 
-  .navbar__links a {
-    color: #000;
-    display: block;
-    transition: background-color 0.3s;
-  }
-
   .navbar__links.active {
     max-height: 300px;
     opacity: 1;
@@ -107,5 +115,11 @@
     color: #000;
     font-size: 1.5rem;
     cursor: pointer;
+  }
+
+  .navbar__links a {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    width: 100%;
   }
 }
