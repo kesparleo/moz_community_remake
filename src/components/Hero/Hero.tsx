@@ -12,7 +12,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ title, description, buttonText, buttonUrl, githubUrl }) => {
   return (
-    <section id='home' className="hero">
+    <section id='home' className="hero hero__text">
       <div className="hero__content">
         <h1 className="hero__title">{title}</h1>
         <p className="hero__description">{description}</p>

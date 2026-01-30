@@ -1,5 +1,6 @@
 import React, { useState, useEffect, type JSX } from "react";
 import "./List.css";
+import "../../index.css"
 import { listaData, type Category, type ListaItem } from "../../data/community";
 import {
   FaFacebookF,
@@ -77,7 +78,7 @@ const Communities: React.FC = () => {
   });
 
   return (
-    <section id="communities" className="list">
+    <section id="communities" className="list list__background">
       <header className="list__header">
         <h2 className="list__heading">
           <span className="destaque">Veja</span>{" "}
@@ -148,6 +149,16 @@ const Communities: React.FC = () => {
                   </a>
                 ) : null,
               )}
+            </div>
+            <div className="list__contact">
+              {item.mail ? (
+                <a
+                  href={`mailto:${item.mail}`}
+                  className="list__contact-button"
+                >
+                  Contactar
+                </a>
+              ) : null}
             </div>
           </div>
         </div>

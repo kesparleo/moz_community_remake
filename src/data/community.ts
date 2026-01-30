@@ -22,6 +22,7 @@ export interface ListaItem {
   title: string;
   description: string;
   website?: string;
+  mail?: string;
   social: SocialLinks;
   color: String;
   categories: Category[];
@@ -45,6 +46,7 @@ export const listaData: ListaItem[] = [
     title: 'Pyladies Maputo',
     description: 'Comunidade local que apoia e promove a participação de mulheres na programação em Python, oferecendo encontros, formação prática e redes de apoio para fomentar competências técnicas e inclusão no sector tecnológico em Maputo.',
     website: '',
+    mail: 'maputo@pyladies.com',
     social: {
       instagram: 'https://www.instagram.com/pyladiesmaputo',
       twitter: 'https://x.com/pyladiesmaputo',
@@ -87,6 +89,7 @@ export const listaData: ListaItem[] = [
     title: 'MozDevz',
     description: 'Maior comunidade tecnológica de Moçambique, reunindo desenvolvedores, estudantes e profissionais de TI, com foco em programação, cibersegurança, inovação e projectos colaborativos, promovendo capacitação, eventos e networking no ecossistema digital nacional.',
     website: 'https://www.mozdevz.org',
+    mail: 'contacto@mozdevz.org',
     social: {
       facebook: 'https://www.facebook.com/mozdevz',
       linkedin: 'https://www.linkedin.com/company/mozdevz',
@@ -116,6 +119,7 @@ export const listaData: ListaItem[] = [
     title: 'Maputo Frontenders',
     description: 'Grupo de entusiastas e profissionais de front-end em Maputo que promovem a troca de experiências sobre tecnologias web (HTML, CSS, JavaScript, frameworks modernos), formação contínua e networking na comunidade local.',
     website: 'https://www.maputofrontenders.dev',
+    mail: 'contacto@maputofrontenders.com',
     social: {
       instagram: 'https://www.instagram.com/mptfrontenders',
       linkedin: 'https://linkedin.com/company/maputo-frontenders',
@@ -131,6 +135,7 @@ export const listaData: ListaItem[] = [
     title: 'Flutter Moçambique',
     description: 'Comunidade técnica dedicada ao desenvolvimento com Flutter em Moçambique, focada na partilha de conhecimento, boas práticas, eventos e colaboração entre programadores, estudantes e profissionais da área.',
     website: '',
+    mail: 'mozflutter.contact@gmail.com',
     social: {
       whatsapp: 'https://chat.whatsapp.com/LDCa69V6G6m2EPvHlLEjiz',
       twitter: 'https://x.com/mozflutter',
@@ -158,6 +163,7 @@ export const listaData: ListaItem[] = [
     title: 'JS Maputo Commnunity',
     description: 'Comunidade que reúne programadores e entusiastas para partilhar conhecimento sobre linguagens, frameworks e ferramentas do ecossistema JavaScript, promover encontros técnicos, discutir boas práticas e estimular a colaboração local em desenvolvimento web e aplicações modernas.',
     website: 'https://jsmaputo.web.app/',
+    mail: 'info@jsmaputocommunity.org',
     social: {
       instagram: 'https://instagram.com/jsmaputocommunity',
       twitter: 'hhttps://twitter.com/jsmaputocomm',
@@ -172,6 +178,7 @@ export const listaData: ListaItem[] = [
     title: 'MozCyber',
     description: 'Comunidade técnica independente e auto-organizada dedicada à cibersegurança em Moçambique, centrada na partilha de conhecimento, estudo colectivo de ameaças, práticas defensivas e formação técnica, operando de forma autónoma face a instituições formais.',
     website: 'https://www.mozcyber.org/',
+    mail: 'mozcyber.community@gmail.com',
     social: {
       linkedin: 'https://www.linkedin.com/company/mozcyber',
       instagram: 'https://www.instagram.com/mozcyberr'
