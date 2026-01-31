@@ -5,7 +5,6 @@ import Hero from "./components/Hero/Hero";
 import Communities from "./components/List/List";
 import Navbar from "./components/Navbar/Navbar";
 import ScrollTopButton from "./components/ScrollTopButton/ScrollTopButton";
-import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const communityName = "MozCommunities";
 const githubUrl = "https://github.com/kesparleo/moz_community_remake";
@@ -17,14 +16,7 @@ function App() {
     document.body.setAttribute("data-theme", theme);
   }, [theme]);
   return (
-    <HelmetProvider>
-      <Helmet>
-        <title>{communityName} | Comunidades de Tecnologia em Moçambique</title>
-        <meta
-          name="description"
-          content="Lista de comunidades de tecnologia e programação em Moçambique. Submeta a sua comunidade para ser publicada."
-        />
-      </Helmet>
+    <>
       <Navbar
         title={communityName}
         theme={theme}
@@ -48,7 +40,7 @@ function App() {
       <CollaborationInbox />
       <Footer />
       <ScrollTopButton />
-    </HelmetProvider>
+    </>
   );
 }
 
