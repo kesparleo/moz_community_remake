@@ -6,7 +6,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--white);
+  background-color: var(--gray-025);
+  border-bottom: 1px solid var(--gray-200);
+  padding-bottom: 20px;
   transition: background-color 0.3s ease-in-out, height 0.3s color 0.3s ease-in-out;
 }
 
@@ -111,7 +113,7 @@
     padding-left: 30px;
     width: 100%;
     transition: max-height 0.4s ease, opacity 0.3s ease;
-    background-color: var(--white);
+    background-color: var(--gray-025);
   }
 
   .navbar__links a {
