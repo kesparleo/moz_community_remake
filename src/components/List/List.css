@@ -10,6 +10,8 @@
 .list__item {
   display: flex;
   gap: 20px;
+  border-bottom: 1px solid var(--gray-200);
+  padding-bottom: 20px;
 }
 
 .list__logo {
@@ -128,11 +130,6 @@ span {
   transform: scale(1.01);
 }
 
-.list__item {
-  border-bottom: 1px solid var(--gray-200);
-  padding-bottom: 20px;
-}
-
 .list__actions {
   display: flex;
   gap: 10px;
@@ -219,6 +216,10 @@ span {
   .list {
     padding: 3.75rem clamp(1.5rem, 8vw, 25rem);
     text-align: center;
+  }
+
+  .list__content {
+    padding-left: 0;
   }
 
   .list__item {

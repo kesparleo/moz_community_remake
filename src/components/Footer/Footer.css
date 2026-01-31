@@ -2,6 +2,7 @@
   background-color: var(--dark-bg);
   color: var(--white);
   padding: 80px 0;
+  
 }
 
 .footer__content {
@@ -22,15 +23,12 @@
   text-decoration: none;
 }
 
-@media (min-width: 48rem) and (max-width: 64rem) {
-  .footer {
-    padding: 4rem clamp(2rem, 6vw, 6rem);
-  }
-}
-
 @media (max-width: 48rem) {
   .footer {
-    padding: 3.5rem 3rem;
     text-align: center;
+  }
+
+  .footer__bottom {
+    max-width: 350px;
   }
 }
