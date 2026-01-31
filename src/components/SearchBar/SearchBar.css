@@ -6,9 +6,9 @@
   height: 50px;
   transition: width 0.3s ease;
   overflow: hidden;
-  border: 1px solid #ccc;
+  border: 1px solid var(--gray-300);
   border-radius: 25px;
-  background-color: #fff;
+  background-color: white;
 }
 
 .search-bar.expanded {

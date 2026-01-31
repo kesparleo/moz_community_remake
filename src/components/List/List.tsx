@@ -1,6 +1,5 @@
 import React, { useState, useEffect, type JSX } from "react";
 import "./List.css";
-import "../../index.css"
 import { listaData, type Category, type ListaItem } from "../../data/community";
 import {
   FaFacebookF,
