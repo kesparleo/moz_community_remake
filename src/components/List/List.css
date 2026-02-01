@@ -188,6 +188,10 @@ span {
     padding: 3.75rem clamp(1.5rem, 8vw, 25rem);
     text-align: center;
   }
+
+  .list__content {
+    padding-left: 0;
+  }
   
   .list__item {
     flex-direction: column;
@@ -209,6 +213,11 @@ span {
 
   .list__contact {
     justify-content: center;
+  }
+
+  .events {
+    width: 60%;
+    margin: 1rem auto;
   }
 }
 
@@ -244,5 +253,10 @@ span {
   .list__contact {
     display: flex;
     justify-content: center;
+  }
+
+  .events {
+    width: 60%;
+    margin: 1rem auto;
   }
 }

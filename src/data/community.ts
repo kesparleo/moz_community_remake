@@ -1,32 +1,4 @@
-export type Category =
-  | "Coding"
-  | "Artificial Intelligence"
-  | "Data"
-  | "Networks"
-  | "Cybersecurity";
-
-export interface SocialLinks {
-  facebook?: string;
-  twitter?: string;
-  instagram?: string;
-  linkedin?: string;
-  whatsapp?: string;
-  telegram?: string;
-  youtube?: string;
-  github?: string;
-  [key: string]: string | undefined;
-}
-
-export interface ListaItem {
-  logo: string;
-  title: string;
-  description: string;
-  website?: string;
-  mail?: string;
-  social: SocialLinks;
-  color: String;
-  categories: Category[];
-}
+import type { ListaItem } from "./types";
 
 export const listaData: ListaItem[] = [
   {
@@ -200,15 +172,17 @@ export const listaData: ListaItem[] = [
     categories: ['Networks']
   },
   {
-    logo: 'https://scontent-jnb2-1.cdninstagram.com/v/t51.2885-19/399177534_703850124997058_7851469998021742681_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=scontent-jnb2-1.cdninstagram.com&_nc_cat=102&_nc_oc=Q6cZ2QEEoe7NlupYQaCQIEF8ZfCor43obUUal63P8q13IjyryqI2aKUsXcnSYWeiiRsyAcQ&_nc_ohc=4-8UDFZnJEYQ7kNvwEyTPIZ&_nc_gid=x_jWs7IQ2j-Q-uXKo7Vr5g&edm=APoiHPcBAAAA&ccb=7-5&oh=00_AfvIMYSF8UMlLCx8BQRSi7oFMZbJAJd5oXv4puCqU-cxiw&oe=698404FA&_nc_sid=22de04',
+    logo: 'https://d2oi1rqwb0pj00.cloudfront.net/community/nio_1762857433105_50.webp',
     title: 'Designer Confiado',
-    description: '',
-    website: '',
+    description: 'Um ecossistema vibrante e colaborativo nascido em Moçambique, mas aberto a todos os criativos de língua portuguesa. Somos o ponto de encontro ideal para designers gráficos, editores, ilustradores e outros profissionais que procuram aprendizagem contínua, valorização profissional e apoio mútuo. ',
+    website: 'https://nas.io/designerconfiado',
     social: {
       linkedin: 'https://www.instagram.com/designerconfiado',
-      facebook: 'https://www.facebook.com/DesignerConfiado'
+      facebook: 'https://www.facebook.com/DesignerConfiado',
+      instagram: 'https://www.instagram.com/designerconfiado',
+      whatsapp: 'https://chat.whatsapp.com/EUsyuYOpLtIElEtnpzxdsL'
     },
-    color: '#133b10ff',
-    categories: ['Networks']
+    color: '#6edf11ff',
+    categories: ['Design']
   },
 ];

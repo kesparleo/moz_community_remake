@@ -1,6 +1,7 @@
 import React, { useState, useEffect, type JSX } from "react";
 import "./List.css";
-import { listaData, type Category, type ListaItem } from "../../data/community";
+import { listaData } from "../../data/community";
+import { type Category, type ListaItem } from "../../data/types";
 import {
   FaFacebookF,
   FaTwitter,
@@ -16,9 +17,11 @@ import {
   FaDatabase,
   FaNetworkWired,
   FaShieldAlt,
+  FaPalette
 } from "react-icons/fa";
 import SearchBar from "../SearchBar/SearchBar";
 import CategorySelector from "../CategorySelector/CategorySelector";
+import Events from "../Events/EventCard";
 
 const iconMap: { [key: string]: JSX.Element } = {
   facebook: <FaFacebookF />,
@@ -28,15 +31,16 @@ const iconMap: { [key: string]: JSX.Element } = {
   whatsapp: <FaWhatsapp />,
   github: <FaGithub />,
   telegram: <FaTelegram />,
-  youtube: <FaYoutube />
+  youtube: <FaYoutube />,
 };
 
-export const categoryIconMap: Record<Category, JSX.Element> = {
-  "Coding": <FaCode />,
+const categoryIconMap: Record<Category, JSX.Element> = {
+  Coding: <FaCode />,
   "Artificial Intelligence": <FaBrain />,
-  "Data": <FaDatabase />,
-  "Networks": <FaNetworkWired />,
-  "Cybersecurity": <FaShieldAlt />
+  Data: <FaDatabase />,
+  Networks: <FaNetworkWired />,
+  Cybersecurity: <FaShieldAlt />,
+  Design: <FaPalette />
 };
 
 const socialOrder = [
@@ -45,18 +49,24 @@ const socialOrder = [
   "facebook",
   "twitter",
   "whatsapp",
-  'github',
-  'telegram',
-  'youtube'
+  "github",
+  "telegram",
+  "youtube",
 ];
 
 const Communities: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
-
   const [selectedCategory, setSelectedCategory] = useState<Category | "">("");
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1023);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 1023);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const allCategories = Array.from(
-    new Set(listaData.flatMap(item => item.categories))
+    new Set(listaData.flatMap((item) => item.categories)),
   );
 
   const [shuffledData, setShuffledData] = useState<ListaItem[]>([]);
@@ -70,9 +80,12 @@ const Communities: React.FC = () => {
     setShuffledData(shuffled);
   }, []);
 
-  const filteredData = shuffledData.filter(item => {
-    const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = !selectedCategory || item.categories.includes(selectedCategory);
+  const filteredData = shuffledData.filter((item) => {
+    const matchesSearch = item.title
+      .toLowerCase()
+      .includes(searchTerm.toLowerCase());
+    const matchesCategory =
+      !selectedCategory || item.categories.includes(selectedCategory);
     return matchesSearch && matchesCategory;
   });
 
@@ -95,6 +108,7 @@ const Communities: React.FC = () => {
           />
         </div>
       </header>
+
       {filteredData.map((item: ListaItem, index: number) => (
         <div key={index} className="list__item">
           <img
@@ -105,8 +119,10 @@ const Communities: React.FC = () => {
             alt={item.title}
             className="list__logo"
           />
+
           <div className="list__content">
             <h3 className="list__title">{item.title}</h3>
+
             <div className="list__categories">
               {item.categories.map((cat) => (
                 <span key={cat} className="list__category">
@@ -115,7 +131,15 @@ const Communities: React.FC = () => {
                 </span>
               ))}
             </div>
+
             <p className="list__description">{item.description}</p>
+
+            {isMobile && (
+              <div className="events">
+                <Events communityNames={[item.title]} />
+              </div>
+            )}
+
             <span className="list__link">
               <FaLink />{" "}
               {item.website ? (
@@ -131,6 +155,7 @@ const Communities: React.FC = () => {
                 <span className="list__no-website">sem site</span>
               )}
             </span>
+
             <div className="list__social">
               {socialOrder.map((key) =>
                 item.social[key] && iconMap[key] ? (
@@ -149,19 +174,27 @@ const Communities: React.FC = () => {
                 ) : null,
               )}
             </div>
+
             <div className="list__contact">
-              {item.mail ? (
+              {item.mail && (
                 <a
                   href={`mailto:${item.mail}`}
                   className="list__contact-button"
                 >
                   Contactar
                 </a>
-              ) : null}
+              )}
             </div>
           </div>
+
+          {!isMobile && (
+            <div className="events">
+              <Events communityNames={[item.title]} />
+            </div>
+          )}
         </div>
       ))}
+
       {filteredData.length === 0 && (
         <p className="list__no-results">Nenhuma comunidade encontrada.</p>
       )}

@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import "./SearchBar.css";
-
-interface SearchBarProps {
-  searchTerm: string;
-  setSearchTerm: (term: string) => void;
-}
+import type { SearchBarProps } from "../../data/types";
 
 const SearchBar: React.FC<SearchBarProps> = ({ searchTerm, setSearchTerm }) => {
   const [expanded, setExpanded] = useState(false);
