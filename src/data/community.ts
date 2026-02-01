@@ -1,32 +1,4 @@
-export type Category =
-  | "Coding"
-  | "Artificial Intelligence"
-  | "Data"
-  | "Networks"
-  | "Cybersecurity";
-
-export interface SocialLinks {
-  facebook?: string;
-  twitter?: string;
-  instagram?: string;
-  linkedin?: string;
-  whatsapp?: string;
-  telegram?: string;
-  youtube?: string;
-  github?: string;
-  [key: string]: string | undefined;
-}
-
-export interface ListaItem {
-  logo: string;
-  title: string;
-  description: string;
-  website?: string;
-  mail?: string;
-  social: SocialLinks;
-  color: String;
-  categories: Category[];
-}
+import type { ListaItem } from "./types";
 
 export const listaData: ListaItem[] = [
   {
@@ -64,7 +36,8 @@ export const listaData: ListaItem[] = [
     website: 'https://dsai.co.mz',
     social: {
       whatsapp: 'https://chat.whatsapp.com/IcqlFviLiHIBD3DBNBXfgc',
-      linkedin: 'https://www.linkedin.com/company/dsai-for-moz'
+      linkedin: 'https://www.linkedin.com/company/dsai-for-moz',
+      github: 'https://github.com/DSAI-For-Moz'
     }
     ,
     color: '#3498db',
@@ -87,7 +60,7 @@ export const listaData: ListaItem[] = [
   {
     logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQEJWR8lFdk6yw/company-logo_200_200/company-logo_200_200/0/1698048505986?e=1771459200&v=beta&t=33Eek2w7C_8tMSIxhW0mJKHGAWvhw3mUrdopZrvHhg4',
     title: 'MozDevz',
-    description: 'Maior comunidade tecnológica de Moçambique, reunindo desenvolvedores, estudantes e profissionais de TI, com foco em programação, cibersegurança, inovação e projectos colaborativos, promovendo capacitação, eventos e networking no ecossistema digital nacional.',
+    description: 'Maior comunidade tecnológica de Moçambique, reunindo desenvolvedores, estudantes e profissionais de TI, com foco em programação, inovação e projectos colaborativos, promovendo capacitação, eventos e networking no ecossistema digital nacional.',
     website: 'https://www.mozdevz.org',
     mail: 'contacto@mozdevz.org',
     social: {
@@ -151,7 +124,7 @@ export const listaData: ListaItem[] = [
     logo: 'https://mozcomunidades.web.app/images/comunities/laravelmaputocommunity.png',
     title: 'Laravel Maputo Commnunity',
     description: 'Grupo dedicado ao intercâmbio de diversos interessados do mundo Laravel, canal onde diversas mentes podem unir seu potêncial para resolver questões do dia a dia e divertir-se.',
-    website: 'https://www.maputofrontenders.dev',
+    website: '',
     social: {
       whatsapp: 'https://chat.whatsapp.com/BBsDgZGoLZmBEyVXZS8fy2',
     },
@@ -162,11 +135,10 @@ export const listaData: ListaItem[] = [
     logo: 'https://mozcomunidades.web.app/images/comunities/jsmaputocommunity.png',
     title: 'JS Maputo Commnunity',
     description: 'Comunidade que reúne programadores e entusiastas para partilhar conhecimento sobre linguagens, frameworks e ferramentas do ecossistema JavaScript, promover encontros técnicos, discutir boas práticas e estimular a colaboração local em desenvolvimento web e aplicações modernas.',
-    website: 'https://jsmaputo.web.app/',
+    website: 'https://jsmaputo.web.app',
     mail: 'info@jsmaputocommunity.org',
     social: {
       instagram: 'https://instagram.com/jsmaputocommunity',
-      twitter: 'hhttps://twitter.com/jsmaputocomm',
       facebook: 'https://facebook.com/jsmaputocommunity',
       whatsapp: 'https://chat.whatsapp.com/1ZXaVqxGSM99MbMbnqPtur'
     },
@@ -176,8 +148,8 @@ export const listaData: ListaItem[] = [
   {
     logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQHhhbAfhW4cDg/company-logo_200_200/B4DZV80e8OHwAQ-/0/1741555890716?e=1771459200&v=beta&t=sWSsyC-HCzqfeoWruwjFhtU__IKPid45p1vTTU2QOCc',
     title: 'MozCyber',
-    description: 'Comunidade técnica independente e auto-organizada dedicada à cibersegurança em Moçambique, centrada na partilha de conhecimento, estudo colectivo de ameaças, práticas defensivas e formação técnica, operando de forma autónoma face a instituições formais.',
-    website: 'https://www.mozcyber.org/',
+    description: 'Comunidade dedicada à cibersegurança em Moçambique, centrada na partilha de conhecimento, estudo colectivo de ameaças, práticas defensivas e formação técnica, operando de forma autónoma face a instituições formais.',
+    website: 'https://www.mozcyber.org',
     mail: 'mozcyber.community@gmail.com',
     social: {
       linkedin: 'https://www.linkedin.com/company/mozcyber',
@@ -194,9 +166,23 @@ export const listaData: ListaItem[] = [
     social: {
       linkedin: 'https://www.linkedin.com/company/inframz/',
       instagram: 'https://www.instagram.com/infra.mz/',
-      whatsapp: 'https://l.instagram.com/?u=https%3A%2F%2Fchat.whatsapp.com%2FL6ktaUPCW3NJxdRy87bTHH%3Fmode%3Dems_copy_c%26utm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnCeXvdaqobN3uiq7DYxG-Vt57iGulem6mc34LZUmTtdxctjUDYYFJhlPnGmc_aem_6nvBhup7oYOOZNObhcobcg&e=AT07whnG8FgGGfAk1lU52dwys1s1KjXq1_3aiojCSEAO5AEVRbfEXdd31g1bVElKxItc0WeGGAXUcKQ_E26qYXd1i4X1Q-aMyHAYBMWKqA'
+      whatsapp: 'https://chat.whatsapp.com/L6ktaUPCW3NJxdRy87bTHH?mode=ems_copy_t'
     },
     color: '#133b10ff',
     categories: ['Networks']
-  }
+  },
+  {
+    logo: 'https://d2oi1rqwb0pj00.cloudfront.net/community/nio_1762857433105_50.webp',
+    title: 'Designer Confiado',
+    description: 'Um ecossistema vibrante e colaborativo nascido em Moçambique, mas aberto a todos os criativos de língua portuguesa. Somos o ponto de encontro ideal para designers gráficos, editores, ilustradores e outros profissionais que procuram aprendizagem contínua, valorização profissional e apoio mútuo. ',
+    website: 'https://nas.io/designerconfiado',
+    social: {
+      linkedin: 'https://www.instagram.com/designerconfiado',
+      facebook: 'https://www.facebook.com/DesignerConfiado',
+      instagram: 'https://www.instagram.com/designerconfiado',
+      whatsapp: 'https://chat.whatsapp.com/EUsyuYOpLtIElEtnpzxdsL'
+    },
+    color: '#6edf11ff',
+    categories: ['Design']
+  },
 ];

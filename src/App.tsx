@@ -8,6 +8,10 @@ import ScrollTopButton from "./components/ScrollTopButton/ScrollTopButton";
 
 const communityName = "MozCommunities";
 const githubUrl = "https://github.com/kesparleo/moz_community_remake";
+const author = 'Kespar';
+const authorUrl = 'https://linktr.ee/leokespar'
+const inspiration = 'MozComunidades'
+const inspirationUrl = 'https://mozcomunidades.web.app'
 
 function App() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
@@ -38,7 +42,12 @@ function App() {
       />
       <Communities />
       <CollaborationInbox />
-      <Footer />
+      <Footer
+        copyrightHolderName={inspiration}
+        copyrightHolderUrl={inspirationUrl}
+        redesignAuthorName={author}
+        redesignAuthorUrl={authorUrl}
+      />
       <ScrollTopButton />
     </>
   );

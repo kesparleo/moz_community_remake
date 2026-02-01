@@ -7,6 +7,7 @@ html {
 :root {
   --black: #000;
   --white: #fff;
+  --special: #eee;
 
   --special-hero: #ccc;
   --gray-900: #222;
@@ -35,6 +36,7 @@ html {
 [data-theme="dark"] {
   --black: #fff;
   --white: #000;
+  --special: #f1f1f1;
 
   --special-hero: #f1f1f1;
   --gray-900: #f1f1f1;

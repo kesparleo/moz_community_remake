@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 import './CategorySelector.css';
-import type { Category } from "../../data/community";
-
-interface CategorySelectorProps {
-  categories: Category[];
-  selectedCategory: Category | "";
-  setSelectedCategory: (category: Category | "") => void;
-}
+import type { CategorySelectorProps } from "../../data/types";
 
 const CategorySelector: React.FC<CategorySelectorProps> = ({
   categories,

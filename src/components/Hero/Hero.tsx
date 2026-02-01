@@ -1,14 +1,7 @@
 import React from 'react';
 import './Hero.css';
 import {FaGithub} from 'react-icons/fa';
-
-interface HeroProps {
-  title: string;
-  description: string;
-  buttonText: string;
-  buttonUrl: string;
-  githubUrl: string;
-}
+import type { HeroProps } from '../../data/types';
 
 const Hero: React.FC<HeroProps> = ({ title, description, buttonText, buttonUrl, githubUrl }) => {
   return (

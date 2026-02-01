@@ -1,18 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import { FaBars, FaSun, FaMoon } from "react-icons/fa";
-
-interface NavItem {
-  id: string;
-  label: string;
-}
-
-interface NavProps {
-  title: string;
-  items: NavItem[];
-  theme: "light" | "dark";
-  setTheme: React.Dispatch<React.SetStateAction<"light" | "dark">>;
-}
+import type { NavProps } from "../../data/types";
 
 const Navbar: React.FC<NavProps> = ({ title, items, theme, setTheme }) => {
   const [menuOpen, setMenuOpen] = useState(false);
