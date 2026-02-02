@@ -5,9 +5,10 @@ export const listaData: ListaItem[] = [
     logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQGbZY6Q5sgsEA/company-logo_200_200/B4DZiPlE7PH8AI-/0/1754755518848/qa_community_moz_logo?e=1771459200&v=beta&t=HDsfj-w9EiFgwLDd2XTFybqbK2Bw9KpIjHeWK_ySr60',
     title: 'QA Community Moz',
     description: 'A primeira comunidade moçambicana dedicada a Quality Assurance (QA) e Testes Automatizados, criada para unir profissionais, partilhar conhecimento e elevar a qualidade do software no país.',
-    website: '',
+    website: 'https://mozqacommunity.conexarmanagement.com',
+    mail: 'https://mozqacommunity.conexarmanagement.com/contato',
     social: {
-      whatsapp: 'https://chat.whatsapp.com/BO6tJjlxMyXB2K4AMPPlVm',
+      whatsapp: 'https://chat.whatsapp.com/K61wQYR8KPPEXpBNgNejla?mode=gi_t',
       linkedin: 'https://www.linkedin.com/company/qa-community-moz/'
     },
     color: '#31378aff',
@@ -84,7 +85,7 @@ export const listaData: ListaItem[] = [
     social: {
       linkedin: 'https://www.linkedin.com/company/data-driven-communitymz',
     },
-    color: '',
+    color: '#030836ff',
     categories: ['Data']
   },
   {
@@ -177,7 +178,7 @@ export const listaData: ListaItem[] = [
     description: 'Um ecossistema vibrante e colaborativo nascido em Moçambique, mas aberto a todos os criativos de língua portuguesa. Somos o ponto de encontro ideal para designers gráficos, editores, ilustradores e outros profissionais que procuram aprendizagem contínua, valorização profissional e apoio mútuo. ',
     website: 'https://nas.io/designerconfiado',
     social: {
-      linkedin: 'https://www.instagram.com/designerconfiado',
+      linkedin: 'https://www.linkedin.com/company/designerconfiado',
       facebook: 'https://www.facebook.com/DesignerConfiado',
       instagram: 'https://www.instagram.com/designerconfiado',
       whatsapp: 'https://chat.whatsapp.com/EUsyuYOpLtIElEtnpzxdsL'
