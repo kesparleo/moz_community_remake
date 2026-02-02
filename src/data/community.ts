@@ -106,7 +106,7 @@ export const listaData: ListaItem[] = [
   },
   {
     logo: 'https://media.licdn.com/dms/image/v2/C4E0BAQE5yJ5cQ9PJcw/company-logo_200_200/company-logo_200_200/0/1680002627533?e=1771459200&v=beta&t=qLsSZp-asWguFQD94rZqUQhu72FPNwxHvZEj6foKI_Y',
-    title: 'Flutter Moçambique',
+    title: 'MozFlutter',
     description: 'Comunidade técnica dedicada ao desenvolvimento com Flutter em Moçambique, focada na partilha de conhecimento, boas práticas, eventos e colaboração entre programadores, estudantes e profissionais da área.',
     website: '',
     mail: 'mozflutter.contact@gmail.com',

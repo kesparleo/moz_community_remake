@@ -17,7 +17,9 @@ import {
   FaDatabase,
   FaNetworkWired,
   FaShieldAlt,
-  FaPalette
+  FaPalette,
+  FaTh,
+  FaList,
 } from "react-icons/fa";
 import SearchBar from "../SearchBar/SearchBar";
 import CategorySelector from "../CategorySelector/CategorySelector";
@@ -40,7 +42,7 @@ const categoryIconMap: Record<Category, JSX.Element> = {
   Data: <FaDatabase />,
   Networks: <FaNetworkWired />,
   Cybersecurity: <FaShieldAlt />,
-  Design: <FaPalette />
+  Design: <FaPalette />,
 };
 
 const socialOrder = [
@@ -55,6 +57,7 @@ const socialOrder = [
 ];
 
 const Communities: React.FC = () => {
+  const [view, setView] = useState("list");
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [selectedCategory, setSelectedCategory] = useState<Category | "">("");
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1023);
@@ -106,94 +109,111 @@ const Communities: React.FC = () => {
             selectedCategory={selectedCategory}
             setSelectedCategory={setSelectedCategory}
           />
+          <button
+            onClick={() => setView(view === "grid" ? "list" : "grid")}
+            className="button__format"
+          >
+            {view === "grid" ? <FaList /> : <FaTh />}
+          </button>
         </div>
       </header>
 
-      {filteredData.map((item: ListaItem, index: number) => (
-        <div key={index} className="list__item">
-          <img
-            src={
-              item.logo ||
-              "https://mozcomunidades.web.app/images/comunities/logo.png"
-            }
-            alt={item.title}
-            className="list__logo"
-          />
+      <div
+        className={`list__items-container ${view === "grid" ? "grid-view" : "list-view"}`}
+      >
+        {filteredData.map((item: ListaItem, index: number) => (
+          <div key={index} className="list__item">
+            <img
+              src={
+                item.logo ||
+                "https://mozcomunidades.web.app/images/comunities/logo.png"
+              }
+              alt={item.title}
+              className="list__logo"
+            />
 
-          <div className="list__content">
-            <h3 className="list__title">{item.title}</h3>
+            {view === "list" ? (
+              <div className="list__content">
+                <h3 className="list__title">{item.title}</h3>
 
-            <div className="list__categories">
-              {item.categories.map((cat) => (
-                <span key={cat} className="list__category">
-                  {categoryIconMap[cat as Category]}
-                  {cat}
+                <div className="list__categories">
+                  {item.categories.map((cat) => (
+                    <span key={cat} className="list__category">
+                      {categoryIconMap[cat as Category]}
+                      {cat}
+                    </span>
+                  ))}
+                </div>
+
+                <p className="list__description">{item.description}</p>
+
+                {isMobile && (
+                  <div className="events">
+                    <Events communityNames={[item.title]} />
+                  </div>
+                )}
+
+                <span className="list__link">
+                  <FaLink />{" "}
+                  {item.website ? (
+                    <a
+                      className="list__website"
+                      href={item.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {item.website.replace(/^(https?:\/\/)?(www\.)?/, "")}
+                    </a>
+                  ) : (
+                    <span className="list__no-website">sem site</span>
+                  )}
                 </span>
-              ))}
-            </div>
 
-            <p className="list__description">{item.description}</p>
+                <div className="list__social">
+                  {socialOrder.map((key) =>
+                    item.social[key] && iconMap[key] ? (
+                      <a
+                        key={key}
+                        href={item.social[key]}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`list__social-icon list__social-${key}`}
+                        style={
+                          { "--hover-color": item.color } as React.CSSProperties
+                        }
+                      >
+                        {iconMap[key]}
+                      </a>
+                    ) : null,
+                  )}
+                </div>
 
-            {isMobile && (
+                <div className="list__contact">
+                  {item.mail && (
+                    <a
+                      href={`mailto:${item.mail}`}
+                      className="list__contact-button"
+                    >
+                      Contactar
+                    </a>
+                  )}
+                </div>
+              </div>
+            ) : (
+              // Grelha: apenas logo + título
+              <div className="list__content" style={{ textAlign: "center" }}>
+                <h3 className="list__title">{item.title}</h3>
+              </div>
+            )}
+
+            {!isMobile && view === "list" && (
               <div className="events">
                 <Events communityNames={[item.title]} />
               </div>
             )}
-
-            <span className="list__link">
-              <FaLink />{" "}
-              {item.website ? (
-                <a
-                  className="list__website"
-                  href={item.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {item.website.replace(/^(https?:\/\/)?(www\.)?/, "")}
-                </a>
-              ) : (
-                <span className="list__no-website">sem site</span>
-              )}
-            </span>
-
-            <div className="list__social">
-              {socialOrder.map((key) =>
-                item.social[key] && iconMap[key] ? (
-                  <a
-                    key={key}
-                    href={item.social[key]}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`list__social-icon list__social-${key}`}
-                    style={
-                      { "--hover-color": item.color } as React.CSSProperties
-                    }
-                  >
-                    {iconMap[key]}
-                  </a>
-                ) : null,
-              )}
-            </div>
-
-            <div className="list__contact">
-              {item.mail && (
-                <a
-                  href={`mailto:${item.mail}`}
-                  className="list__contact-button"
-                >
-                  Contactar
-                </a>
-              )}
-            </div>
           </div>
-
-          {!isMobile && (
-            <div className="events">
-              <Events communityNames={[item.title]} />
-            </div>
-          )}
-        </div>
-      ))}
+        ))}
+      </div>
 
       {filteredData.length === 0 && (
         <p className="list__no-results">Nenhuma comunidade encontrada.</p>

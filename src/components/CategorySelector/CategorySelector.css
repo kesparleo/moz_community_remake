@@ -3,15 +3,6 @@
   display: inline-block;
 }
 
-.category-selector__button {
-  padding: 15px;
-  font-size: 1rem;
-  border: 1px solid var(--gray-300);
-  border-radius: 25px;
-  background-color: white;
-  cursor: pointer;
-}
-
 .category-selector__list {
   position: absolute;
   top: 110%;
