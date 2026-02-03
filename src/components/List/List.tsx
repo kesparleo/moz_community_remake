@@ -20,6 +20,9 @@ import {
   FaPalette,
   FaTh,
   FaList,
+  FaUserSecret,
+  FaCloud,
+  FaCogs,
 } from "react-icons/fa";
 import SearchBar from "../SearchBar/SearchBar";
 import CategorySelector from "../CategorySelector/CategorySelector";
@@ -44,6 +47,9 @@ const categoryIconMap: Record<Category, JSX.Element> = {
   Networks: <FaNetworkWired />,
   Cybersecurity: <FaShieldAlt />,
   Design: <FaPalette />,
+  Hacking: <FaUserSecret />,
+  Cloud: <FaCloud />,
+  Infrastructure: <FaCogs />,
 };
 
 const socialOrder = [

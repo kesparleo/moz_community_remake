@@ -8,10 +8,11 @@ import Navbar from "./components/Navbar/Navbar";
 import ScrollTopButton from "./components/ScrollTopButton/ScrollTopButton";
 import CommunityProfile from "./components/CommunityProfile/CommunityProfile";
 import ScrollToTop from "./components/ScrollToTop";
+import logo from './assets/images/mz-logo.png';
 
-const communityName = "MozCommunities";
 const githubUrl = "https://github.com/kesparleo/moz_community_remake";
 const author = "Kespar";
+const mail = 'kespar299@gmail.com';
 const authorUrl = "https://linktr.ee/leokespar";
 const inspiration = "MozComunidades";
 const inspirationUrl = "https://mozcomunidades.web.app";
@@ -41,7 +42,7 @@ function App() {
           element={
             <>
               <Navbar
-                title={communityName}
+                logo={logo}
                 theme={theme}
                 setTheme={setTheme}
                 items={[
@@ -51,13 +52,13 @@ function App() {
                 ]}
               />
               <Hero
-                title={communityName}
+                logo={logo}
                 description="Está pagina foi criada exclusivamente para listar as comunidades de técnologia e programação existentes em Moçambique. É provável que não estejam todas na lista, para isso criamos um meio de submissão abaixo de comunidades para posterior publicação na página."
                 buttonText="Apreciar"
                 buttonUrl="#communities"
               />
               <Communities />
-              <CollaborationInbox githubUrl={githubUrl} />
+              <CollaborationInbox githubUrl={githubUrl} mail={mail} />
             </>
           }
         />

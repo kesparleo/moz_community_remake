@@ -6,16 +6,12 @@
 .category-selector__list {
   position: absolute;
   top: 110%;
-  left: 0;
   background: var(--white);
   border: 1px solid var(--gray-300);
   border-radius: 8px;
   list-style: none;
   padding: 5px 0;
-  margin: 0;
-  min-width: 120px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  z-index: 10;
 }
 
 .category-selector__item {
@@ -27,4 +23,3 @@
 .category-selector__item:hover {
   background-color: var(--gray-100);
 }
-

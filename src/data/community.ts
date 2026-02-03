@@ -149,7 +149,7 @@ export const listaData: ListaItem[] = [
   {
     logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQHhhbAfhW4cDg/company-logo_200_200/B4DZV80e8OHwAQ-/0/1741555890716?e=1771459200&v=beta&t=sWSsyC-HCzqfeoWruwjFhtU__IKPid45p1vTTU2QOCc',
     title: 'MozCyber',
-    description: 'Comunidade dedicada à cibersegurança em Moçambique, centrada na partilha de conhecimento, estudo colectivo de ameaças, práticas defensivas e formação técnica, operando de forma autónoma face a instituições formais.',
+    description: 'Comunidade dedicada em capacitar jovens moçambicanos em habilidades essenciais em cibersegurança, incluindo Hacking para deteção de vulnerabilidades e as principais técnicas de defesa usadas nos sistemas digitais.',
     website: 'https://www.mozcyber.org',
     mail: 'mozcyber.community@gmail.com',
     social: {
@@ -157,12 +157,12 @@ export const listaData: ListaItem[] = [
       instagram: 'https://www.instagram.com/mozcyberr'
     },
     color: '#141414ff',
-    categories: ['Networks', 'Cybersecurity']
+    categories: ['Networks', 'Cybersecurity', 'Hacking']
   },
   {
     logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQFdIuuYirXEnw/company-logo_200_200/B4EZkY7TnrHoAI-/0/1757059825212?e=1771459200&v=beta&t=2xZTMVo9ultY3eItWs-bdVNwqY1_2o80opX4ScZog8A',
     title: 'InfraMZ',
-    description: 'Grupo focado em infra-estruturas de redes e sistemas em Moçambique, orientado para a partilha de conhecimento prático, boas práticas operacionais, estudo de arquitecturas e discussão de desafios técnicos na área de infra-estrutura tecnológica.',
+    description: 'Comunidade focada em capacitar talentos nas áreas de Infraestrutura de TI: Redes, Windows, Linux, Cloud e Virtualização. Local para aprender de forma prática e explorar as tecnologias actuais a serem usadas pelas empresas moçambicanas.',
     website: '',
     social: {
       linkedin: 'https://www.linkedin.com/company/inframz/',
@@ -170,7 +170,7 @@ export const listaData: ListaItem[] = [
       whatsapp: 'https://chat.whatsapp.com/L6ktaUPCW3NJxdRy87bTHH?mode=ems_copy_t'
     },
     color: '#133b10ff',
-    categories: ['Networks']
+    categories: ['Networks', 'Cloud', 'Infrastructure']
   },
   {
     logo: 'https://d2oi1rqwb0pj00.cloudfront.net/community/nio_1762857433105_50.webp',
