@@ -31,9 +31,10 @@
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
+  align-items: center;
 }
 
-.hero__button, .hero__github {
+.hero__button {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -46,27 +47,13 @@
 .hero__button {
   background-color: var(--orange-600);
   color: var(--special-hero);
+  animation: bounce 2s infinite;
+  cursor: pointer;
 }
 
 .hero__button:hover {
   background-color: var(--orange-500);
   transform: translateY(-2px);
-}
-
-.hero__github {
-  background-color: transparent;
-  border: 1px solid var(--special-hero);
-  color: var(--special-hero);
-}
-
-.hero__github:hover {
-  background-color: #222;
-  color: var(--special-hero);
-  transform: translateY(-2px);
-}
-
-.hero__github-icon {
-  font-size: 1.1rem;
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {

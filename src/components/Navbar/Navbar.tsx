@@ -11,13 +11,6 @@ const Navbar: React.FC<NavProps> = ({ title, items, theme, setTheme }) => {
   const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
 
   useEffect(() => {
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)",
-    ).matches;
-    setTheme(prefersDark ? "dark" : "light");
-  }, []);
-
-  useEffect(() => {
     const sections = document.querySelectorAll<HTMLElement>("section[id]");
 
     const onScroll = () => {
@@ -41,6 +34,25 @@ const Navbar: React.FC<NavProps> = ({ title, items, theme, setTheme }) => {
   }, []);
 
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const renderLinks = () =>
+  items.map((item) => (
+    <a
+      key={item.id}
+      href={`#${item.id}`}
+      onClick={(e) => {
+        e.preventDefault();
+        const section = document.getElementById(item.id);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+        setMenuOpen(false);
+      }}
+      className={activeSection === item.id ? "navbar__action" : ""}
+    >
+      {item.label}
+    </a>
+  ));
+
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
@@ -63,17 +75,7 @@ const Navbar: React.FC<NavProps> = ({ title, items, theme, setTheme }) => {
               )}
             </div>
           </div>
-
-          {items.map((item) => (
-            <a
-              key={item.id}
-              href={`#${item.id}`}
-              onClick={() => setMenuOpen(false)}
-              className={activeSection === item.id ? "navbar__action" : ""}
-            >
-              {item.label}
-            </a>
-          ))}
+          {renderLinks()}
         </div>
       )}
 
@@ -97,16 +99,7 @@ const Navbar: React.FC<NavProps> = ({ title, items, theme, setTheme }) => {
 
       {isMobile && menuOpen && (
         <div className="navbar__links active">
-          {items.map((item) => (
-            <a
-              key={item.id}
-              href={`#${item.id}`}
-              onClick={() => setMenuOpen(false)}
-              className={activeSection === item.id ? "navbar__action" : ""}
-            >
-              {item.label}
-            </a>
-          ))}
+          {renderLinks()}
         </div>
       )}
     </nav>

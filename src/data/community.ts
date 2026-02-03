@@ -186,4 +186,20 @@ export const listaData: ListaItem[] = [
     color: '#6edf11ff',
     categories: ['Design']
   },
+  {
+    logo: 'https://mail.google.com/mail/u/0?ui=2&ik=ac97f84219&attid=0.1&permmsgid=msg-f:1856121387423949837&th=19c244915568e40d&view=att&disp=safe&realattid=f_ml5keyuk0&zw',
+    title: 'Python Mozambique Community',
+    description: 'Comunidade nacional dedicada à promoção e desenvolvimento da linguagem Python em Moçambique. Atuamos como um ecossistema de inovação que conecta profissionais e estudantes, oferecendo partilha de conhecimento técnico, mentoria e colaboração em projetos de código aberto para impulsionar a excelência tecnológica e o crescimento da indústria de software no país.',
+    website: '',
+    mail: 'python.community.moz@gmail.com',
+    social: {
+      linkedin: 'https://www.linkedin.com/company/pythonmozambique',
+      instagram: 'https://www.instagram.com/pythonmozambique',
+      whatsapp: 'https://chat.whatsapp.com/Lqlzo70Im7B8DzXLWWFKsX',
+      github: 'https://github.com/pythonmozambique',
+      facebook: 'https://www.facebook.com/pymoz'
+    },
+    color: '#0e33d8ff',
+    categories: ['Coding']
+  }
 ];

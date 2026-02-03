@@ -17,7 +17,16 @@ const inspiration = "MozComunidades";
 const inspirationUrl = "https://mozcomunidades.web.app";
 
 function App() {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [theme, setTheme] = useState<"light" | "dark">(() => {
+    const saved = localStorage.getItem("theme");
+    if (saved === "light" || saved === "dark") return saved;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  });
+
+  useEffect(() => {
+    document.body.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   useEffect(() => {
     document.body.setAttribute("data-theme", theme);
@@ -46,22 +55,16 @@ function App() {
                 description="Está pagina foi criada exclusivamente para listar as comunidades de técnologia e programação existentes em Moçambique. É provável que não estejam todas na lista, para isso criamos um meio de submissão abaixo de comunidades para posterior publicação na página."
                 buttonText="Apreciar"
                 buttonUrl="#communities"
-                githubUrl={githubUrl}
               />
               <Communities />
-              <CollaborationInbox />
+              <CollaborationInbox githubUrl={githubUrl} />
             </>
           }
         />
 
         <Route
           path="/community/:id"
-          element={
-            <CommunityProfile
-              theme={theme}
-              setTheme={setTheme}
-            />
-          }
+          element={<CommunityProfile theme={theme} setTheme={setTheme} />}
         />
       </Routes>
 

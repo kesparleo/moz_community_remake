@@ -24,6 +24,7 @@ import {
 import SearchBar from "../SearchBar/SearchBar";
 import CategorySelector from "../CategorySelector/CategorySelector";
 import Events from "../Events/EventCard";
+import Tooltip from "../Tooltip/Tooltip";
 
 const iconMap: { [key: string]: JSX.Element } = {
   facebook: <FaFacebookF />,
@@ -103,18 +104,24 @@ const Communities: React.FC = () => {
           Lista de Comunidades de Tecnologia e Programação em Moçambique
         </p>
         <div className="list__actions">
-          <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-          <CategorySelector
-            categories={allCategories}
-            selectedCategory={selectedCategory}
-            setSelectedCategory={setSelectedCategory}
-          />
-          <button
-            onClick={() => setView(view === "grid" ? "list" : "grid")}
-            className="button__format"
-          >
-            {view === "grid" ? <FaList /> : <FaTh />}
-          </button>
+          <Tooltip text="Pesquise por nome" position="left" duration={4000}>
+            <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+          </Tooltip>
+          <Tooltip text="Busque por categoria" duration={6000} delay={5000}>
+            <CategorySelector
+              categories={allCategories}
+              selectedCategory={selectedCategory}
+              setSelectedCategory={setSelectedCategory}
+            />
+          </Tooltip>
+          <Tooltip text="Lista / Grelha, apenas clique" position="down" delay={7000} duration={4000}>
+            <button
+              onClick={() => setView(view === "grid" ? "list" : "grid")}
+              className="button__format"
+            >
+              {view === "grid" ? <FaList /> : <FaTh />}
+            </button>
+          </Tooltip>
         </div>
       </header>
 

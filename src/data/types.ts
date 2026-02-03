@@ -73,7 +73,6 @@ export interface HeroProps {
   description: string;
   buttonText: string;
   buttonUrl: string;
-  githubUrl: string;
 }
 
 export interface SearchBarProps {
@@ -84,4 +83,8 @@ export interface SearchBarProps {
 export interface CommunityProfileProps {
   theme: "light" | "dark";
   setTheme: (theme: "light" | "dark") => void;
+}
+
+export interface CollaborateButtonProps {
+  githubUrl: string;
 }
