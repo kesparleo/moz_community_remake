@@ -25,6 +25,9 @@ import {
   FaMoon,
   FaSun,
   FaArrowLeft,
+  FaCloud,
+  FaCogs,
+  FaUserSecret,
 } from "react-icons/fa";
 import Events from "../Events/EventCard";
 import type { JSX } from "react";
@@ -47,6 +50,9 @@ const categoryIconMap: Record<Category, JSX.Element> = {
   Networks: <FaNetworkWired />,
   Cybersecurity: <FaShieldAlt />,
   Design: <FaPalette />,
+  Hacking: <FaUserSecret />,
+  Cloud: <FaCloud />,
+  Infrastructure: <FaCogs />,
 };
 
 const socialOrder = [

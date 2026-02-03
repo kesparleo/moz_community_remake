@@ -1,8 +1,11 @@
 export type Category =
   | "Coding"
   | "Artificial Intelligence"
+  | "Cloud"
   | "Data"
   | "Design"
+  | "Infrastructure"
+  | "Hacking"
   | "Networks"
   | "Cybersecurity";
 
@@ -51,7 +54,7 @@ export interface CategorySelectorProps {
 }
 
 export interface NavProps {
-  title: string;
+  logo: string;
   items: NavItem[];
   theme: "light" | "dark";
   setTheme: React.Dispatch<React.SetStateAction<"light" | "dark">>;
@@ -69,7 +72,7 @@ export interface FooterProps {
 }
 
 export interface HeroProps {
-  title: string;
+  logo: string;
   description: string;
   buttonText: string;
   buttonUrl: string;
@@ -86,5 +89,6 @@ export interface CommunityProfileProps {
 }
 
 export interface CollaborateButtonProps {
+  mail: string;
   githubUrl: string;
 }

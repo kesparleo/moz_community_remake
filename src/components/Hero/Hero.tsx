@@ -1,18 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Hero.css";
 import type { HeroProps } from "../../data/types";
 import Tooltip from "../Tooltip/Tooltip";
 
 const Hero: React.FC<HeroProps> = ({
-  title,
+  logo,
   description,
   buttonText,
   buttonUrl,
 }) => {
+  const [isTop, setIsTop] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsTop(window.scrollY < 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <section id="home" className="hero hero__text">
-      <div className="hero__content">
-        <h1 className="hero__title">{title}</h1>
+      <div className={`hero__content ${isTop ? "visible" : "hidden"}`}>
+        <h1>
+          <img
+            src={logo}
+            alt=""
+            className={`--hero-logo`}
+          />
+        </h1>
         <p className="hero__description">{description}</p>
         <div className="hero__buttons">
           <Tooltip text={"Clique e encontre a sua comunidade"} position="down" duration={12000}>

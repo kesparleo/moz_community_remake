@@ -8,7 +8,6 @@
   align-items: center;
   background-color: var(--gray-025);
   border-bottom: 1px solid var(--gray-200);
-  padding-bottom: 20px;
   transition: background-color 0.3s ease-in-out, height 0.3s color 0.3s ease-in-out;
 }
 
@@ -28,6 +27,10 @@
 .navbar__links {
   display: flex;
   gap: 30px;
+}
+
+.--logo {
+  width: 150px;
 }
 
 .navbar__links a {

@@ -29,7 +29,7 @@ const CategorySelector: React.FC<CategorySelectorProps> = ({
           >
             Todas
           </li>
-          {categories.map((cat) => (
+          {categories.slice().sort().map((cat) => (
             <li
               key={cat}
               className="category-selector__item"
