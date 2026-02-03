@@ -1,4 +1,5 @@
 import React, { useState, useEffect, type JSX } from "react";
+import { Link } from "react-router-dom";
 import "./List.css";
 import { listaData } from "../../data/community";
 import { type Category, type ListaItem } from "../../data/types";
@@ -8,7 +9,6 @@ import {
   FaInstagram,
   FaLinkedinIn,
   FaWhatsapp,
-  FaLink,
   FaGithub,
   FaTelegram,
   FaYoutube,
@@ -134,7 +134,9 @@ const Communities: React.FC = () => {
 
             {view === "list" ? (
               <div className="list__content">
-                <h3 className="list__title">{item.title}</h3>
+                <div className="list__title">
+                  {item.title}
+                </div>
 
                 <div className="list__categories">
                   {item.categories.map((cat) => (
@@ -145,29 +147,21 @@ const Communities: React.FC = () => {
                   ))}
                 </div>
 
-                <p className="list__description">{item.description}</p>
+                <div className="list__row">
+                  <p className="list__description">{item.description}</p>
+                  <Link
+                    className="list__more"
+                    to={`/community/${item.title.toLowerCase().replace(/\s+/g, "-")}`}
+                  >
+                    Saber mais
+                  </Link>
+                </div>
 
                 {isMobile && (
                   <div className="events">
                     <Events communityNames={[item.title]} />
                   </div>
                 )}
-
-                <span className="list__link">
-                  <FaLink />{" "}
-                  {item.website ? (
-                    <a
-                      className="list__website"
-                      href={item.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {item.website.replace(/^(https?:\/\/)?(www\.)?/, "")}
-                    </a>
-                  ) : (
-                    <span className="list__no-website">sem site</span>
-                  )}
-                </span>
 
                 <div className="list__social">
                   {socialOrder.map((key) =>
@@ -200,10 +194,12 @@ const Communities: React.FC = () => {
                 </div>
               </div>
             ) : (
-              // Grelha: apenas logo + título
-              <div className="list__content" style={{ textAlign: "center" }}>
-                <h3 className="list__title">{item.title}</h3>
-              </div>
+              <Link
+                className="list__title"
+                to={`/community/${item.title.toLowerCase().replace(/\s+/g, "-")}`}
+              >
+                {item.title}
+              </Link>
             )}
 
             {!isMobile && view === "list" && (

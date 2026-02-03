@@ -109,7 +109,7 @@ export const listaData: ListaItem[] = [
     title: 'MozFlutter',
     description: 'Comunidade técnica dedicada ao desenvolvimento com Flutter em Moçambique, focada na partilha de conhecimento, boas práticas, eventos e colaboração entre programadores, estudantes e profissionais da área.',
     website: '',
-    mail: 'mozflutter.contact@gmail.com',
+    mail: 'mozflutter.contacto@gmail.com',
     social: {
       whatsapp: 'https://chat.whatsapp.com/LDCa69V6G6m2EPvHlLEjiz',
       twitter: 'https://x.com/mozflutter',

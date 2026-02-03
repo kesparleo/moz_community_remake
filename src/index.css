@@ -72,6 +72,7 @@ body {
   font-family: 'Bellota', sans-serif;
   line-height: 1.6;
   color: #333;
+  overflow-x: hidden;
 }
 
 .navbar, .hero, .footer{
@@ -89,4 +90,15 @@ a {
   border-radius: 25px;
   background-color: white;
   cursor: pointer;
+}
+
+.theme-toggle .icon {
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+  color: var(--black);
+}
+
+.theme-toggle .icon:hover {
+  color: var(--orange-600);
 }
