@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
   padding: 40px 0;
   background-color: var(--gray-025);
 }
@@ -11,19 +12,43 @@
   align-items: center;
   gap: 10px;
   padding: 12px 26px;
-  background-color: var(--gray-900);
-  color: var(--white);
+  color: var(--black);
   text-decoration: none;
   border-radius: 30px;
+  border: 1px solid var(--black);
   font-weight: 500;
   transition: background-color 0.3s, transform 0.2s;
 }
 
 .collaborate:hover {
-  background-color: var(--gray-900);
+  background-color: var(--gray-100);
   transform: translateY(-2px);
 }
 
 .collaborate span {
   color: var(--white);
+}
+
+.hero__github {
+  border: 1px solid var(--black);
+  color: var(--black);
+}
+
+.hero__github:hover {
+  background-color: var(--gray-100);
+  transform: translateY(-2px);
+}
+
+.hero__github-icon {
+  font-size: 1.1rem;
+}
+
+.hero__github {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 30px;
+  font-weight: bold;
+  border-radius: 40px;
+  transition: background-color 0.3s, transform 0.2s;
 }

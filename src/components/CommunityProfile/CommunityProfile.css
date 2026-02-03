@@ -1,0 +1,201 @@
+.community-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--gray-025);
+  text-align: center;
+  padding: 20px 500px;
+}
+
+.community-profile__card {
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--community-color, #ee7d21) 80%, #fff 20%) 0%,
+    color-mix(in srgb, var(--community-color, #ee7d21) 40%, #fff 40%) 100%
+  );
+  padding: 28px 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.1),
+    0 16px 32px color-mix(in srgb, var(--community-color, #ee7d21) 35%, rgba(0, 0, 0, 0.2)),
+    0 32px 64px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.community-profile__card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.1),
+    0 20px 36px color-mix(in srgb, var(--community-color, #ee7d21) 40%, rgba(0, 0, 0, 0.18)),
+    0 36px 72px rgba(0, 0, 0, 0.14);
+}
+
+.community-profile__logo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-radius 0.3s ease;
+}
+
+.community-profile__logo:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  border-radius: 0%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.community-profile__title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--black);
+}
+
+.community-profile__categories {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.community-profile__category {
+  background-color: var(--gray-100);
+  color: var(--black);
+  padding: 8px 14px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.community-profile__description {
+  color: var(--gray-900);
+  margin-bottom: 20px;
+}
+
+.community-profile__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 20px;
+  color: var(--gray-800);
+}
+
+.community-profile__website,
+.community-profile__website:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.community-profile__website:hover {
+  text-decoration: underline;
+}
+
+.community-profile__social {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.community-profile__social-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--gray-900);
+  border-radius: 50%;
+  color: var(--gray-900);
+  font-weight: bold;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.community-profile__social-icon:hover {
+  background-color: var(--hover-color, #ee7d21);
+  color: var(--special);
+  transform: scale(1.05);
+}
+
+.community-profile__contact {
+  margin-top: 20px;
+}
+
+.community-profile__contact-button {
+  padding: 10px 24px;
+  color: var(--gray-900);
+  border: 1px solid var(--gray-900);
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.community-profile__contact-button:hover {
+  background-color: var(--white);
+  transform: translateY(-1px);
+}
+
+.--actions {
+    display: flex;;
+    justify-content: space-between;
+    padding: 0 30px;
+    width: 100%;
+}
+
+.back-button button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--black);
+}
+
+@media (max-width: 1024px) {
+  .community-profile {
+    padding: 40px 2rem;
+  }
+
+  .community-profile__logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .community-profile__title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .community-profile {
+    padding: 30px 1.5rem;
+  }
+
+  .community-profile__logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .community-profile__title {
+    font-size: 1.5rem;
+  }
+
+  .community-profile__categories {
+    gap: 6px;
+  }
+}

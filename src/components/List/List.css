@@ -43,13 +43,59 @@
   font-size: 1.5rem;
   margin-bottom: 10px;
   color: var(--gray-800);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1.5rem;
+}
+
+.list__title:hover::after {
+  transform: translateX(4px);
+}
+
+.list__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
 }
 
 .list__description {
   font-size: 1rem;
   margin-bottom: 10px;
   color: var(--gray-500);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  min-width: 0;
+  flex: 1 1 auto;
 }
+
+
+.list__more {
+  flex-shrink: 0;
+  padding: 6px 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  border: 1px solid var(--gray-700);
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.list__more:hover {
+  background-color: var(--gray-075);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 
 .list__website {
   color: var(--gray-500);
@@ -128,6 +174,8 @@ span {
   background-color: var(--hover-color, #ee7d21);
   color: var(--white);
   transform: scale(1.01);
+  color: var(--gray-900);
+  border: 1px solid var(--gray-900);
 }
 
 .list__actions {
@@ -176,9 +224,34 @@ span {
   transform: translateY(-1px);
 }
 
+.list__items-container.grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.list__items-container.list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.grid-view .list__item {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
 @media (min-width: 64rem) and (max-width: 1280px) {
   .list {
     padding: 4rem clamp(2rem, 6vw, 8rem);
+  }
+  .list__row {
+    flex-direction: column;
+    align-items: start;
+    gap: 12px;
+    padding: 10px 0;
   }
 }
 
@@ -219,6 +292,13 @@ span {
     width: 60%;
     margin: 1rem auto;
   }
+
+  .list__row {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 0 20px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -258,5 +338,12 @@ span {
   .events {
     width: 60%;
     margin: 1rem auto;
+  }
+
+  .list__row {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 0 20px;
   }
 }

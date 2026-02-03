@@ -5,9 +5,10 @@ export const listaData: ListaItem[] = [
     logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQGbZY6Q5sgsEA/company-logo_200_200/B4DZiPlE7PH8AI-/0/1754755518848/qa_community_moz_logo?e=1771459200&v=beta&t=HDsfj-w9EiFgwLDd2XTFybqbK2Bw9KpIjHeWK_ySr60',
     title: 'QA Community Moz',
     description: 'A primeira comunidade moçambicana dedicada a Quality Assurance (QA) e Testes Automatizados, criada para unir profissionais, partilhar conhecimento e elevar a qualidade do software no país.',
-    website: '',
+    website: 'https://mozqacommunity.conexarmanagement.com',
+    mail: 'https://mozqacommunity.conexarmanagement.com/contato',
     social: {
-      whatsapp: 'https://chat.whatsapp.com/BO6tJjlxMyXB2K4AMPPlVm',
+      whatsapp: 'https://chat.whatsapp.com/K61wQYR8KPPEXpBNgNejla?mode=gi_t',
       linkedin: 'https://www.linkedin.com/company/qa-community-moz/'
     },
     color: '#31378aff',
@@ -84,7 +85,7 @@ export const listaData: ListaItem[] = [
     social: {
       linkedin: 'https://www.linkedin.com/company/data-driven-communitymz',
     },
-    color: '',
+    color: '#030836ff',
     categories: ['Data']
   },
   {
@@ -105,10 +106,10 @@ export const listaData: ListaItem[] = [
   },
   {
     logo: 'https://media.licdn.com/dms/image/v2/C4E0BAQE5yJ5cQ9PJcw/company-logo_200_200/company-logo_200_200/0/1680002627533?e=1771459200&v=beta&t=qLsSZp-asWguFQD94rZqUQhu72FPNwxHvZEj6foKI_Y',
-    title: 'Flutter Moçambique',
+    title: 'MozFlutter',
     description: 'Comunidade técnica dedicada ao desenvolvimento com Flutter em Moçambique, focada na partilha de conhecimento, boas práticas, eventos e colaboração entre programadores, estudantes e profissionais da área.',
     website: '',
-    mail: 'mozflutter.contact@gmail.com',
+    mail: 'mozflutter.contacto@gmail.com',
     social: {
       whatsapp: 'https://chat.whatsapp.com/LDCa69V6G6m2EPvHlLEjiz',
       twitter: 'https://x.com/mozflutter',
@@ -177,7 +178,7 @@ export const listaData: ListaItem[] = [
     description: 'Um ecossistema vibrante e colaborativo nascido em Moçambique, mas aberto a todos os criativos de língua portuguesa. Somos o ponto de encontro ideal para designers gráficos, editores, ilustradores e outros profissionais que procuram aprendizagem contínua, valorização profissional e apoio mútuo. ',
     website: 'https://nas.io/designerconfiado',
     social: {
-      linkedin: 'https://www.instagram.com/designerconfiado',
+      linkedin: 'https://www.linkedin.com/company/designerconfiado',
       facebook: 'https://www.facebook.com/DesignerConfiado',
       instagram: 'https://www.instagram.com/designerconfiado',
       whatsapp: 'https://chat.whatsapp.com/EUsyuYOpLtIElEtnpzxdsL'
@@ -185,4 +186,20 @@ export const listaData: ListaItem[] = [
     color: '#6edf11ff',
     categories: ['Design']
   },
+  {
+    logo: 'https://mail.google.com/mail/u/0?ui=2&ik=ac97f84219&attid=0.1&permmsgid=msg-f:1856121387423949837&th=19c244915568e40d&view=att&disp=safe&realattid=f_ml5keyuk0&zw',
+    title: 'Python Mozambique Community',
+    description: 'Comunidade nacional dedicada à promoção e desenvolvimento da linguagem Python em Moçambique. Atuamos como um ecossistema de inovação que conecta profissionais e estudantes, oferecendo partilha de conhecimento técnico, mentoria e colaboração em projetos de código aberto para impulsionar a excelência tecnológica e o crescimento da indústria de software no país.',
+    website: '',
+    mail: 'python.community.moz@gmail.com',
+    social: {
+      linkedin: 'https://www.linkedin.com/company/pythonmozambique',
+      instagram: 'https://www.instagram.com/pythonmozambique',
+      whatsapp: 'https://chat.whatsapp.com/Lqlzo70Im7B8DzXLWWFKsX',
+      github: 'https://github.com/pythonmozambique',
+      facebook: 'https://www.facebook.com/pymoz'
+    },
+    color: '#0e33d8ff',
+    categories: ['Coding']
+  }
 ];

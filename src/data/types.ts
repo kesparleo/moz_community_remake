@@ -73,10 +73,18 @@ export interface HeroProps {
   description: string;
   buttonText: string;
   buttonUrl: string;
-  githubUrl: string;
 }
 
 export interface SearchBarProps {
   searchTerm: string;
   setSearchTerm: (term: string) => void;
+}
+
+export interface CommunityProfileProps {
+  theme: "light" | "dark";
+  setTheme: (theme: "light" | "dark") => void;
+}
+
+export interface CollaborateButtonProps {
+  githubUrl: string;
 }

@@ -12,7 +12,7 @@ const CategorySelector: React.FC<CategorySelectorProps> = ({
   return (
     <div className="category-selector">
       <button
-        className="category-selector__button"
+        className="button__format"
         onClick={() => setOpen(!open)}
       >
         {selectedCategory || "Categoria"}
