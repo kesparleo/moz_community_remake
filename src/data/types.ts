@@ -9,6 +9,8 @@ export type Category =
   | "Networks"
   | "Cybersecurity";
 
+type TooltipPosition = 'up' | 'down' | 'left' | 'right';
+
 export interface SocialLinks {
   facebook?: string;
   twitter?: string;
@@ -91,4 +93,12 @@ export interface CommunityProfileProps {
 export interface CollaborateButtonProps {
   mail: string;
   githubUrl: string;
+}
+
+export interface TooltipProps {
+  text: string;
+  delay?: number;
+  duration?: number;
+  position?: TooltipPosition;
+  children: React.ReactNode;
 }

@@ -9,13 +9,7 @@ import ScrollTopButton from "./components/ScrollTopButton/ScrollTopButton";
 import CommunityProfile from "./components/CommunityProfile/CommunityProfile";
 import ScrollToTop from "./components/ScrollToTop";
 import logo from './assets/images/mz-logo.png';
-
-const githubUrl = "https://github.com/kesparleo/moz_community_remake";
-const author = "Kespar";
-const mail = 'kespar299@gmail.com';
-const authorUrl = "https://linktr.ee/leokespar";
-const inspiration = "MozComunidades";
-const inspirationUrl = "https://mozcomunidades.web.app";
+import { githubUrl, mail, inspiration, inspirationUrl, author, authorUrl } from "./data/personal";
 
 function App() {
   const [theme, setTheme] = useState<"light" | "dark">(() => {

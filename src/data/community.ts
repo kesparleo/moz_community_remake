@@ -9,7 +9,7 @@ export const listaData: ListaItem[] = [
     mail: 'https://mozqacommunity.conexarmanagement.com/contato',
     social: {
       whatsapp: 'https://chat.whatsapp.com/K61wQYR8KPPEXpBNgNejla?mode=gi_t',
-      linkedin: 'https://www.linkedin.com/company/qa-community-moz/'
+      linkedin: 'https://www.linkedin.com/company/qa-community-moz'
     },
     color: '#31378aff',
     categories: ['Coding']
@@ -42,7 +42,7 @@ export const listaData: ListaItem[] = [
     }
     ,
     color: '#3498db',
-    categories: ['Artificial Intelligence']
+    categories: ['Artificial Intelligence', 'Data']
   },
   {
     logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQFu68cby66G8w/company-logo_100_100/company-logo_100_100/0/1682616794107/djangogirlsmoz_logo?e=1771459200&v=beta&t=qgc_Iy3Q4-MqIj68IX51WvfpghRjyzUXGoPxWtZi1EM',
@@ -82,8 +82,12 @@ export const listaData: ListaItem[] = [
     title: 'Data Driven CommunityMZ',
     description: 'Um espaço dinâmico dedicado a conectar profissionais de dados e tecnologia. Aqui, promovemos a troca de conhecimentos, o aprendizado contínuo e a colaboração entre membros, com foco em discutir tendências, melhores práticas e inovações na área. Junte-se a nós para compartilhar experiências, participar de eventos e transformar dados em soluções impactantes!',
     website: '',
+    mail: 'datacommunitymz@gmail.com',
     social: {
       linkedin: 'https://www.linkedin.com/company/data-driven-communitymz',
+      instagram: 'https://www.instagram.com/datadrivencommunity.mz',
+      whatsapp: 'https://chat.whatsapp.com/JYdKuoGYvEuCLS0jNUTho1',
+      youtube: 'https://www.youtube.com/@datadrivencommunitymz'
     },
     color: '#030836ff',
     categories: ['Data']
@@ -165,8 +169,8 @@ export const listaData: ListaItem[] = [
     description: 'Comunidade focada em capacitar talentos nas áreas de Infraestrutura de TI: Redes, Windows, Linux, Cloud e Virtualização. Local para aprender de forma prática e explorar as tecnologias actuais a serem usadas pelas empresas moçambicanas.',
     website: '',
     social: {
-      linkedin: 'https://www.linkedin.com/company/inframz/',
-      instagram: 'https://www.instagram.com/infra.mz/',
+      linkedin: 'https://www.linkedin.com/company/inframz',
+      instagram: 'https://www.instagram.com/infra.mz',
       whatsapp: 'https://chat.whatsapp.com/L6ktaUPCW3NJxdRy87bTHH?mode=ems_copy_t'
     },
     color: '#133b10ff',
@@ -187,7 +191,7 @@ export const listaData: ListaItem[] = [
     categories: ['Design']
   },
   {
-    logo: 'https://mail.google.com/mail/u/0?ui=2&ik=ac97f84219&attid=0.1&permmsgid=msg-f:1856121387423949837&th=19c244915568e40d&view=att&disp=safe&realattid=f_ml5keyuk0&zw',
+    logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQFzdt-q71CqCg/company-logo_200_200/B4DZwgpxS5I8AQ-/0/1770074347613/pythonmozambique_logo?e=1772064000&v=beta&t=ndfC9sSv-aexakhubF9urujTKsnjr9m4_7fA-yHg8Gc',
     title: 'Python Mozambique Community',
     description: 'Comunidade nacional dedicada à promoção e desenvolvimento da linguagem Python em Moçambique. Atuamos como um ecossistema de inovação que conecta profissionais e estudantes, oferecendo partilha de conhecimento técnico, mentoria e colaboração em projetos de código aberto para impulsionar a excelência tecnológica e o crescimento da indústria de software no país.',
     website: '',
@@ -200,6 +204,21 @@ export const listaData: ListaItem[] = [
       facebook: 'https://www.facebook.com/pymoz'
     },
     color: '#0e33d8ff',
+    categories: ['Coding']
+  },
+  {
+    logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQH_y0CI5iWiFQ/company-logo_200_200/B4DZmXHMtwHsAI-/0/1759176871987?e=1772064000&v=beta&t=bvB-g2kOOf6vbVWBX2UkQctpJN2A0_GKooIjNdBtGeg',
+    title: 'PyLadies Beira',
+    description: 'O PyLadies é uma comunidade internacional de mentoria que tem como missão promover, educar e fortalecer a comunidade Python, apoiando mulheres a tornarem-se participantes ativas e líderes na área de tecnologia e na comunidade Python.',
+    website: '',
+    mail: 'beira@pyladies.com',
+    social: {
+      linkedin: 'https://www.linkedin.com/company/pyladiesbeira',
+      instagram: 'https://www.instagram.com/pyladiesbeira',
+      twitter: 'https://x.com/pyladiesbeira',
+      whatsapp: 'https://chat.whatsapp.com/D5Wa1Vbt3oP4Ne4Cj1HSSJ'
+    },
+    color: 'rgb(22, 10, 126)',
     categories: ['Coding']
   }
 ];

@@ -1,15 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Tooltip.css';
-
-type TooltipPosition = 'up' | 'down' | 'left' | 'right';
-
-interface TooltipProps {
-  text: string;
-  delay?: number;
-  duration?: number;
-  position?: TooltipPosition;
-  children: React.ReactNode;
-}
+import type { TooltipProps } from '../../data/types';
 
 const Tooltip: React.FC<TooltipProps> = ({
   text,
@@ -22,7 +13,6 @@ const Tooltip: React.FC<TooltipProps> = ({
   const [visible, setVisible] = useState(false);
   const [triggered, setTriggered] = useState(false);
 
-  /* 1. Detecta entrada no viewport */
   useEffect(() => {
     if (!wrapperRef.current || triggered) return;
 
@@ -41,7 +31,6 @@ const Tooltip: React.FC<TooltipProps> = ({
     return () => observer.disconnect();
   }, [triggered]);
 
-  /* 2. Aplica delay de aparecimento */
   useEffect(() => {
     if (!triggered) return;
 
@@ -53,7 +42,6 @@ const Tooltip: React.FC<TooltipProps> = ({
     return () => clearTimeout(showTimer);
   }, [triggered, delay]);
 
-  /* 3. Controla duração visível */
   useEffect(() => {
     if (!visible || !duration) return;
 
