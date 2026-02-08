@@ -185,5 +185,28 @@ const CommunityProfile: React.FC<CommunityProfileProps> = ({
 };
 
 export default CommunityProfile;
-
 */
+
+import React from "react";
+
+const CommunityProfile: React.FC = () => {
+  return (
+    <div
+      style={{
+        backgroundColor: "#000",
+        color: "#fff",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+        width: "100%",
+        textAlign: "center",
+        fontSize: "1.5rem",
+      }}
+    >
+      Ainda estamos em desenolvimento
+    </div>
+  );
+};
+
+export default CommunityProfile;
