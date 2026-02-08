@@ -24,6 +24,7 @@ export interface SocialLinks {
 }
 
 export interface ListaItem {
+  id: number;
   logo: string;
   title: string;
   description: string;

@@ -1,6 +1,9 @@
+/*
 import type { ListaItem } from "./types";
 
 export const listaData: ListaItem[] = [
+  
+  
   {
     logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQGbZY6Q5sgsEA/company-logo_200_200/B4DZiPlE7PH8AI-/0/1754755518848/qa_community_moz_logo?e=1771459200&v=beta&t=HDsfj-w9EiFgwLDd2XTFybqbK2Bw9KpIjHeWK_ySr60',
     title: 'QA Community Moz',
@@ -234,3 +237,4 @@ export const listaData: ListaItem[] = [
     categories: ['Networks', 'Cybersecurity']
   }
 ];
+*/

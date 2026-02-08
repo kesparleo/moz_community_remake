@@ -3,6 +3,6 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/api/seedCommunities": "pages/api/seedCommunities.js",
+  "/api/communities": "pages/api/communities.js",
   "/community/[id]": "pages/community/[id].js"
 }

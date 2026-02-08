@@ -480,21 +480,6 @@ const listaData = [
         categories: [
             'Coding'
         ]
-    },
-    {
-        logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQGRoHLSnuTM6A/company-logo_200_200/B4DZqsExxrIgAI-/0/1763823525994?e=1772064000&v=beta&t=prswaWiGQhoMp21a982Fdl9vZ5BW2OhiAq-An4c-Zek',
-        title: 'Network Communiity',
-        description: 'A Network Community é uma iniciativa dedicada a formar e capacitar estudantes, entusiastas e profissionais em Redes e Tecnologias da Informação, oferecendo cursos práticos, acessíveis e alinhados ao mercado de trabalho, promovendo a partilha de conhecimento, a inclusão digital, a inovação tecnológica e o desenvolvimento profissional em Moçambique e além-fronteiras.',
-        website: '',
-        mail: 'networkcommunitymz@gmail.com',
-        social: {
-            linkedin: 'https://www.linkedin.com/company/network-communiity'
-        },
-        color: 'rgb(22, 10, 126)',
-        categories: [
-            'Networks',
-            'Cybersecurity'
-        ]
     }
 ];
 }),
@@ -921,7 +906,7 @@ const Communities = ()=>{
     const [isMobile, setIsMobile] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(false);
     (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useEffect"])(()=>{
         const updateIsMobile = ()=>setIsMobile(window.innerWidth <= 1023);
-        updateIsMobile(); // define valor inicial no client
+        updateIsMobile();
         window.addEventListener("resize", updateIsMobile);
         return ()=>window.removeEventListener("resize", updateIsMobile);
     }, []);

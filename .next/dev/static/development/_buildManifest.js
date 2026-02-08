@@ -17,6 +17,7 @@ self.__BUILD_MANIFEST = {
     "/",
     "/_app",
     "/_error",
+    "/api/communities",
     "/community/[id]"
   ]
 };self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
