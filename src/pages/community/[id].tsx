@@ -1,3 +1,4 @@
+/*
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { listaData } from "../../data/community";
@@ -184,3 +185,5 @@ const CommunityProfile: React.FC<CommunityProfileProps> = ({
 };
 
 export default CommunityProfile;
+
+*/
