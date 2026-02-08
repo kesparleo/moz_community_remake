@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/Collaborate/CollaborateButton.css"],"sourcesContent":[".collaborate-wrapper {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  gap: 10px;\n  padding: 40px 0;\n  background-color: var(--gray-025);\n}\n\n.collaborate {\n  display: inline-flex;\n  align-items: center;\n  gap: 10px;\n  padding: 12px 26px;\n  color: var(--black);\n  text-decoration: none;\n  border-radius: 30px;\n  border: 1px solid var(--black);\n  font-weight: 500;\n  transition: background-color 0.3s, transform 0.2s;\n}\n\n.collaborate:hover {\n  background-color: var(--gray-100);\n  transform: translateY(-2px);\n}\n\n.collaborate span {\n  color: var(--white);\n}\n\n.hero__github {\n  border: 1px solid var(--black);\n  color: var(--black);\n}\n\n.hero__github:hover {\n  background-color: var(--gray-100);\n  transform: translateY(-2px);\n}\n\n.hero__github-icon {\n  font-size: 1.1rem;\n}\n\n.hero__github {\n  display: inline-flex;\n  align-items: center;\n  gap: 8px;\n  padding: 12px 30px;\n  font-weight: bold;\n  border-radius: 40px;\n  transition: background-color 0.3s, transform 0.2s;\n}"],"names":[],"mappings":"AAAA;;;;;;;;;AASA;;;;;;;;;;;;;AAaA;;;;;AAKA;;;;AAIA;;;;;AAKA;;;;;AAKA;;;;AAIA"}}]
+}

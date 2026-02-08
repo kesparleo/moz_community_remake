@@ -1,0 +1,45 @@
+/* [project]/src/components/ScrollTopButton/ScrollTopButton.module.css [client] (css) */
+.ScrollTopButton-module__bZl0Ra__scroll-top {
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 100;
+  background-color: #ee7d21;
+  border: none;
+  padding: 12px 15px;
+  font-size: 1.5rem;
+  transition: opacity .3s, transform .3s, background-color .3s;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  transform: translateY(20px);
+}
+
+.ScrollTopButton-module__bZl0Ra__scroll-top.ScrollTopButton-module__bZl0Ra__show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ScrollTopButton-module__bZl0Ra__scroll-top:hover {
+  background-color: #ca6d20;
+}
+
+@media (max-width: 768px) {
+  .ScrollTopButton-module__bZl0Ra__scroll-top {
+    padding: 10px 12px;
+    font-size: 1.3rem;
+    bottom: 25px;
+    right: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ScrollTopButton-module__bZl0Ra__scroll-top {
+    padding: 8px 10px;
+    font-size: 1.2rem;
+    bottom: 30px;
+    right: 30px;
+  }
+}
+
+/*# sourceMappingURL=src_components_ScrollTopButton_ScrollTopButton_module_css_65f1660e._.single.css.map*/

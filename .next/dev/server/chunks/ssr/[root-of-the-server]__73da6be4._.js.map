@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 40, "column": 0}, "map": {"version":3,"sources":["file:///home/kespar/Projects/open/moz_community/src/pages/_document.tsx"],"sourcesContent":["import { Html, Head, Main, NextScript } from 'next/document';\n\nexport default function Document() {\n  return (\n    <Html>\n      <Head>\n        <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" />\n        <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossOrigin=\"\" />\n        <link\n          href=\"https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap\"\n          rel=\"stylesheet\"\n        />\n      </Head>\n      <body>\n        <Main />\n        <NextScript />\n      </body>\n    </Html>\n  );\n}\n"],"names":[],"mappings":";;;;;AAAA;;;AAEe,SAAS;IACtB,qBACE,qKAAC,iIAAI;;0BACH,qKAAC,iIAAI;;kCACH,qKAAC;wBAAK,KAAI;wBAAa,MAAK;;;;;;kCAC5B,qKAAC;wBAAK,KAAI;wBAAa,MAAK;wBAA4B,aAAY;;;;;;kCACpE,qKAAC;wBACC,MAAK;wBACL,KAAI;;;;;;;;;;;;0BAGR,qKAAC;;kCACC,qKAAC,iIAAI;;;;;kCACL,qKAAC,uIAAU;;;;;;;;;;;;;;;;;AAInB"}}]
+}

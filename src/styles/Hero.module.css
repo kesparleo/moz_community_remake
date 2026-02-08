@@ -1,0 +1,105 @@
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://mozcomunidades.web.app/images/background/4.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 0 200px;
+}
+
+.hero__text {
+  color: var(--special-hero);
+}
+
+[data-theme="dark"] .hero {
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://mozcomunidades.web.app/images/background/4.jpg') center/cover no-repeat;
+}
+
+.hero__content {
+  max-width: 700px;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hero__logo {
+  width: 300px;
+}
+
+.hero__content.hidden {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.hero__content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero__description {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero__buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.hero__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 30px;
+  font-weight: bold;
+  border-radius: 40px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.hero__button {
+  background-color: var(--orange-600);
+  color: var(--special-hero);
+  animation: bounce 2s infinite;
+  cursor: pointer;
+}
+
+.hero__button:hover {
+  background-color: var(--orange-500);
+  transform: translateY(-2px);
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .--hero-logo {
+    width: 300px;
+  }
+
+  .hero__description {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .--hero-logo {
+    width: 300px;
+  }
+
+  .hero__description {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-left: 50px;
+  }
+  .--hero-logo {
+    width: 250px;
+  }
+
+  .hero__description {
+    font-size: 1rem;
+  }
+
+  .hero__button {
+    padding: 10px 25px;
+  }
+}

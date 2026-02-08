@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/styles/CategorySelector.module.css"],"sourcesContent":[".category__selector {\n  position: relative;\n  display: inline-block;\n}\n\n.category__selector__list {\n  position: absolute;\n  top: 110%;\n  background: var(--white);\n  border: 1px solid var(--gray-300);\n  border-radius: 8px;\n  list-style: none;\n  padding: 5px 0;\n  z-index: 10;\n  box-shadow: 0 2px 5px rgba(0,0,0,0.2);\n}\n\n.category__selector__item {\n  padding: 8px 15px;\n  cursor: pointer;\n  color: var(--gray-900);\n}\n\n.category__selector__item:hover {\n  background-color: var(--gray-100);\n}\n\n.button__format {\n  padding: 15px;\n  font-size: 1rem;\n  border: 1px solid var(--gray-300);\n  border-radius: 25px;\n  background-color: white;\n  cursor: pointer;\n}"],"names":[],"mappings":"AAAA;;;;;AAKA;;;;;;;;;;;;AAYA;;;;;;AAMA;;;;AAIA"}}]
+}

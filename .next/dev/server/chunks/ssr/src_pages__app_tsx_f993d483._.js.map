@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///home/kespar/Projects/open/moz_community/src/pages/_app.tsx"],"sourcesContent":["import { useEffect, useState } from 'react';\nimport type { AppProps } from 'next/app';\nimport '../styles/globals.css';\n\nexport default function MyApp({ Component, pageProps }: AppProps) {\n  const [theme, setTheme] = useState<'light' | 'dark'>(() => {\n    if (typeof window === 'undefined') return 'light';\n    const saved = localStorage.getItem('theme');\n    if (saved === 'light' || saved === 'dark') return saved;\n    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';\n  });\n\n  useEffect(() => {\n    document.body.setAttribute('data-theme', theme);\n    localStorage.setItem('theme', theme);\n  }, [theme]);\n\n  return <Component {...pageProps} theme={theme} setTheme={setTheme} />;\n}\n"],"names":[],"mappings":";;;;;AAAA;;;;AAIe,SAAS,MAAM,EAAE,SAAS,EAAE,SAAS,EAAY;IAC9D,MAAM,CAAC,OAAO,SAAS,GAAG,IAAA,+GAAQ,EAAmB;QACnD,wCAAmC,OAAO;;;QAC1C,MAAM;IAGR;IAEA,IAAA,gHAAS,EAAC;QACR,SAAS,IAAI,CAAC,YAAY,CAAC,cAAc;QACzC,aAAa,OAAO,CAAC,SAAS;IAChC,GAAG;QAAC;KAAM;IAEV,qBAAO,qKAAC;QAAW,GAAG,SAAS;QAAE,OAAO;QAAO,UAAU;;;;;;AAC3D"}}]
+}
