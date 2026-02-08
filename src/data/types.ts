@@ -56,7 +56,6 @@ export interface CategorySelectorProps {
 }
 
 export interface NavProps {
-  logo: string;
   items: NavItem[];
   theme: "light" | "dark";
   setTheme: React.Dispatch<React.SetStateAction<"light" | "dark">>;
@@ -74,7 +73,6 @@ export interface FooterProps {
 }
 
 export interface HeroProps {
-  logo: string;
   description: string;
   buttonText: string;
   buttonUrl: string;

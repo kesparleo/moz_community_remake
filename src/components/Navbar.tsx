@@ -3,7 +3,7 @@ import styles from "../styles/Navbar.module.css";
 import { FaBars, FaSun, FaMoon } from "react-icons/fa";
 import type { NavProps } from "../data/types";
 
-const Navbar: React.FC<NavProps> = ({ logo, items, theme, setTheme }) => {
+const Navbar: React.FC<NavProps> = ({ items, theme, setTheme }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isTop, setIsTop] = useState(true);
   const [activeSection, setActiveSection] = useState<string>("");
@@ -67,7 +67,7 @@ const Navbar: React.FC<NavProps> = ({ logo, items, theme, setTheme }) => {
   return (
     <nav className={`${styles.navbar} ${isTop ? styles["navbar--top"] : styles["navbar--scrolled"]}`}>
       <div className={styles.navbar__logo}>
-        <img src={logo} alt="Logo Moz Communities" className={styles.logo} />
+        <img src='/mz_logo.png' alt="Logo Moz Communities" className={styles.logo} />
       </div>
 
       {!isMobile && (

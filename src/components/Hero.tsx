@@ -4,7 +4,6 @@ import type { HeroProps } from "../data/types";
 import Tooltip from "./Tooltip";
 
 const Hero: React.FC<HeroProps> = ({
-  logo,
   description,
   buttonText,
   buttonUrl,
@@ -27,7 +26,7 @@ const Hero: React.FC<HeroProps> = ({
         }`}
       >
         <h1>
-          <img src={logo} alt="" className={styles.hero__logo} />
+          <img src='/mz_logo.png' alt="Logo" className={styles.hero__logo} />
         </h1>
         <p className={styles.hero__description}>{description}</p>
         <div className={styles.hero__buttons}>

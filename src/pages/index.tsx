@@ -5,7 +5,6 @@ import CollaborationInbox from '../components/CollaborateButton';
 import Footer from '../components/Footer';
 import ScrollTopButton from '../components/ScrollTopButton';
 import ScrollToTop from '../components/ScrollToTop';
-import logo from '../assets/images/mz_logo.png';
 import { githubUrl, mail, inspiration, inspirationUrl, author, authorUrl } from '../data/personal';
 
 interface Props {
@@ -19,7 +18,6 @@ export default function Home({ theme, setTheme }: Props) {
       <ScrollTopButton />
       <ScrollToTop />
       <Navbar
-        logo={logo}
         theme={theme}
         setTheme={setTheme}
         items={[
@@ -29,8 +27,7 @@ export default function Home({ theme, setTheme }: Props) {
         ]}
       />
       <Hero
-        logo={logo}
-        description="Esta página foi criada exclusivamente para listar as comunidades de tecnologia e programação existentes em Moçambique..."
+        description="Está pagina foi criada exclusivamente para listar as comunidades de técnologia e programação existentes em Moçambique. É provável que não estejam todas na lista, para isso criamos um meio de submissão abaixo de comunidades para posterior publicação na página."
         buttonText="Apreciar"
         buttonUrl="#communities"
       />
