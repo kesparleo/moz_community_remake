@@ -22,6 +22,7 @@ import {
   FaCloud,
   FaCogs,
 } from "react-icons/fa";
+import { socialOrder } from "../data/data";
 
 interface Props {
   item: ListaItem;
@@ -51,17 +52,6 @@ const categoryIconMap: Record<Category, JSX.Element> = {
   Cloud: <FaCloud />,
   Infrastructure: <FaCogs />,
 };
-
-const socialOrder = [
-  "instagram",
-  "linkedin",
-  "facebook",
-  "twitter",
-  "whatsapp",
-  "github",
-  "telegram",
-  "youtube",
-];
 
 const CommunityCard: React.FC<Props> = ({ item, view, isMobile }) => {
   return (

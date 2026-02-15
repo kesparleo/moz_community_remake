@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "../styles/Footer.module.css";
 import type { FooterProps } from "../data/types";
 

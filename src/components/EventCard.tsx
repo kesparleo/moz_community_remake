@@ -1,27 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { eventsData } from "../data/events";
-import { type EventItem, type EventsProps } from "../data/types";
+import { type EventsProps } from "../data/types";
 import styles from "../styles/Events.module.css";
+import { useUpcomingEvents } from "../hooks/useUpcomingEvent";
 
 const Events: React.FC<EventsProps> = ({ communityNames }) => {
-  const [upcomingEvents, setUpcomingEvents] = useState<EventItem[]>([]);
-
-  useEffect(() => {
-    const now = new Date();
-    const filtered = eventsData.filter(event => {
-      const eventDate = new Date(event.date);
-      return (
-        eventDate >= now &&
-        (!communityNames || event.communities.some(c => communityNames.includes(c)))
-      );
-    });
-
-    setUpcomingEvents(filtered);
-  }, [communityNames]);
-
-  if (upcomingEvents.length === 0) {
-    return null;
-  }
+  const upcomingEvents = useUpcomingEvents(communityNames);
 
   return (
     <div className={styles.events__container}>

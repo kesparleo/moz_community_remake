@@ -1,40 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "../styles/Navbar.module.css";
 import { FaBars, FaSun, FaMoon } from "react-icons/fa";
 import type { NavProps } from "../data/types";
+import { useMediaQuery } from "../hooks/useMediaQuery";
+import { useScrollSpy } from "../hooks/useScrollSpy";
 
 const Navbar: React.FC<NavProps> = ({ items, theme, setTheme }) => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isTop, setIsTop] = useState(true);
-  const [activeSection, setActiveSection] = useState<string>("");
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  const { isTop, activeSection } = useScrollSpy(120);
 
   const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
-
-  useEffect(() => {
-  const sections = document.querySelectorAll<HTMLElement>("section[id]");
-
-  const onScroll = () => {
-    const scrollY = window.scrollY;
-    setIsTop(scrollY < 10);
-
-    const scrollPos = scrollY + 120;
-
-    sections.forEach((sec) => {
-      if (
-        scrollPos >= sec.offsetTop &&
-        scrollPos < sec.offsetTop + sec.offsetHeight
-      ) {
-        setActiveSection(sec.id);
-      }
-    });
-  };
-
-  window.addEventListener("scroll", onScroll);
-  return () => window.removeEventListener("scroll", onScroll);
-}, []);
-
-
-  const [isMobile, setIsMobile] = useState(false);
+  
   const renderLinks = () =>
   items.map((item) => (
     <a
@@ -53,15 +30,6 @@ const Navbar: React.FC<NavProps> = ({ items, theme, setTheme }) => {
       {item.label}
     </a>
   ));
-
-
-  useEffect(() => {
-  setIsMobile(window.innerWidth <= 768);
-
-  const handleResize = () => setIsMobile(window.innerWidth <= 768);
-  window.addEventListener("resize", handleResize);
-  return () => window.removeEventListener("resize", handleResize);
-}, []);
 
 
   return (

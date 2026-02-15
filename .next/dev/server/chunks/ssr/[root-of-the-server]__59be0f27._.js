@@ -688,16 +688,6 @@ const categoryIconMap = {
         columnNumber: 19
     }, ("TURBOPACK compile-time value", void 0))
 };
-const socialOrder = [
-    "instagram",
-    "linkedin",
-    "facebook",
-    "twitter",
-    "whatsapp",
-    "github",
-    "telegram",
-    "youtube"
-];
 const CommunityCard = ({ item, view, isMobile })=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
         className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$List$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].list__item,
@@ -708,7 +698,7 @@ const CommunityCard = ({ item, view, isMobile })=>{
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$List$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].list__logo
             }, void 0, false, {
                 fileName: "[project]/src/components/communityCard.tsx",
-                lineNumber: 69,
+                lineNumber: 58,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             view === "list" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -719,7 +709,7 @@ const CommunityCard = ({ item, view, isMobile })=>{
                         children: item.title
                     }, void 0, false, {
                         fileName: "[project]/src/components/communityCard.tsx",
-                        lineNumber: 77,
+                        lineNumber: 66,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -733,12 +723,12 @@ const CommunityCard = ({ item, view, isMobile })=>{
                                 ]
                             }, cat, true, {
                                 fileName: "[project]/src/components/communityCard.tsx",
-                                lineNumber: 81,
+                                lineNumber: 70,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0)))
                     }, void 0, false, {
                         fileName: "[project]/src/components/communityCard.tsx",
-                        lineNumber: 79,
+                        lineNumber: 68,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -749,7 +739,7 @@ const CommunityCard = ({ item, view, isMobile })=>{
                                 children: item.description
                             }, void 0, false, {
                                 fileName: "[project]/src/components/communityCard.tsx",
-                                lineNumber: 88,
+                                lineNumber: 77,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -758,13 +748,13 @@ const CommunityCard = ({ item, view, isMobile })=>{
                                 children: "Saber mais"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/communityCard.tsx",
-                                lineNumber: 89,
+                                lineNumber: 78,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/communityCard.tsx",
-                        lineNumber: 87,
+                        lineNumber: 76,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     isMobile && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -775,12 +765,12 @@ const CommunityCard = ({ item, view, isMobile })=>{
                             ]
                         }, void 0, false, {
                             fileName: "[project]/src/components/communityCard.tsx",
-                            lineNumber: 99,
+                            lineNumber: 88,
                             columnNumber: 15
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/src/components/communityCard.tsx",
-                        lineNumber: 98,
+                        lineNumber: 87,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -796,12 +786,12 @@ const CommunityCard = ({ item, view, isMobile })=>{
                                 children: iconMap[key]
                             }, key, false, {
                                 fileName: "[project]/src/components/communityCard.tsx",
-                                lineNumber: 106,
+                                lineNumber: 95,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0)) : null)
                     }, void 0, false, {
                         fileName: "[project]/src/components/communityCard.tsx",
-                        lineNumber: 103,
+                        lineNumber: 92,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -812,18 +802,18 @@ const CommunityCard = ({ item, view, isMobile })=>{
                             children: "Contactar"
                         }, void 0, false, {
                             fileName: "[project]/src/components/communityCard.tsx",
-                            lineNumber: 122,
+                            lineNumber: 111,
                             columnNumber: 15
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/src/components/communityCard.tsx",
-                        lineNumber: 120,
+                        lineNumber: 109,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/communityCard.tsx",
-                lineNumber: 76,
+                lineNumber: 65,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$List$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].list__title,
@@ -831,7 +821,7 @@ const CommunityCard = ({ item, view, isMobile })=>{
                 children: item.title
             }, void 0, false, {
                 fileName: "[project]/src/components/communityCard.tsx",
-                lineNumber: 132,
+                lineNumber: 121,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0)),
             !isMobile && view === "list" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -842,18 +832,18 @@ const CommunityCard = ({ item, view, isMobile })=>{
                     ]
                 }, void 0, false, {
                     fileName: "[project]/src/components/communityCard.tsx",
-                    lineNumber: 142,
+                    lineNumber: 131,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/components/communityCard.tsx",
-                lineNumber: 141,
+                lineNumber: 130,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/communityCard.tsx",
-        lineNumber: 68,
+        lineNumber: 57,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
