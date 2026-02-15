@@ -101,3 +101,9 @@ export interface TooltipProps {
   position?: TooltipPosition;
   children: React.ReactNode;
 }
+
+export interface Props {
+  item: ListaItem;
+  view: "list" | "grid";
+  isMobile: boolean;
+}

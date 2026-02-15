@@ -150,14 +150,11 @@
   border: 1px solid var(--gray-700);
   border-radius: 25px;
   flex-shrink: 0;
-  align-items: center;
-  gap: 6px;
   padding: 6px 14px;
   font-size: .95rem;
   font-weight: 600;
   text-decoration: none;
   transition: all .3s;
-  display: inline-flex;
 }
 
 .List-module__33HuFG__list__more:hover {

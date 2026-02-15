@@ -1,7 +1,7 @@
 import React, { type JSX } from "react";
 import Link from "next/link";
 import styles from "../styles/List.module.css";
-import { type ListaItem, type Category } from "../data/types";
+import { type Category, type Props } from "../data/types";
 import Events from "./EventCard";
 import {
   FaFacebookF,
@@ -23,12 +23,6 @@ import {
   FaCogs,
 } from "react-icons/fa";
 import { socialOrder } from "../data/data";
-
-interface Props {
-  item: ListaItem;
-  view: "list" | "grid";
-  isMobile: boolean;
-}
 
 const iconMap: { [key: string]: JSX.Element } = {
   facebook: <FaFacebookF />,

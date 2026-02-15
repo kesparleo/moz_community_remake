@@ -1,7 +1,6 @@
-/*
+
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { listaData } from "../../data/community";
 import {
   type ListaItem,
   type Category,
@@ -33,6 +32,7 @@ import {
 } from "react-icons/fa";
 import Events from "../../components/EventCard";
 import type { JSX } from "react";
+import { useCommunities } from "../../hooks/useCommunities";
 
 const iconMap: { [key: string]: JSX.Element } = {
   facebook: <FaFacebookF />,
@@ -72,11 +72,12 @@ const CommunityProfile: React.FC<CommunityProfileProps> = ({
   theme,
   setTheme,
 }) => {
+  const {filteredData} = useCommunities();
   const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
   const router = useRouter();
   const id = Array.isArray(router.query.id) ? router.query.id[0] : router.query.id;
 
-  const community: ListaItem | undefined = listaData.find(
+  const community: ListaItem | undefined = filteredData.find(
     (item) => item.title.toLowerCase().replace(/\s+/g, "-") === id,
   );
 
@@ -180,31 +181,6 @@ const CommunityProfile: React.FC<CommunityProfileProps> = ({
           </div>
         </section>
       </div>
-    </div>
-  );
-};
-
-export default CommunityProfile;
-*/
-
-import React from "react";
-
-const CommunityProfile: React.FC = () => {
-  return (
-    <div
-      style={{
-        backgroundColor: "#000",
-        color: "#fff",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-        width: "100%",
-        textAlign: "center",
-        fontSize: "1.5rem",
-      }}
-    >
-      Ainda estamos em desenolvimento
     </div>
   );
 };
