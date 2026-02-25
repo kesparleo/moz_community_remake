@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles/Hero.module.css";
 import type { HeroProps } from "../data/types";
 import Tooltip from "./Tooltip";
 import { useIsTop } from "../hooks/useIsTop";
+import CommunityModal from "./newCommunity";
 
 const Hero: React.FC<HeroProps> = ({
   description,
@@ -10,6 +11,7 @@ const Hero: React.FC<HeroProps> = ({
   buttonUrl,
 }) => {
   const isTop = useIsTop(10);
+  const [isModalOpen, setModalOpen] = useState(false);
 
   return (
     <section id="home" className={`${styles.hero} ${styles.hero__text}`}>
@@ -32,8 +34,12 @@ const Hero: React.FC<HeroProps> = ({
               {buttonText}
             </a>
           </Tooltip>
+          <button onClick={() => setModalOpen(true)}>Nova Comunidade</button>
         </div>
       </div>
+      {isModalOpen && (
+        <CommunityModal onClose={() => setModalOpen(false)} />
+      )}
     </section>
   );
 };

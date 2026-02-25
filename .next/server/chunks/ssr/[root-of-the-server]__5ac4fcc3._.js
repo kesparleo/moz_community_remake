@@ -1,3 +1,0 @@
-module.exports=[8171,(a,b,c)=>{b.exports=a.x("react/jsx-runtime",()=>require("react/jsx-runtime"))},7669,(a,b,c)=>{b.exports=a.x("react",()=>require("react"))},8695,a=>{"use strict";var b=a.i(8171),c=a.i(7669);function d({Component:a,pageProps:d}){let[e,f]=(0,c.useState)(()=>"light");return(0,c.useEffect)(()=>{document.body.setAttribute("data-theme",e),localStorage.setItem("theme",e)},[e]),(0,b.jsx)(a,{...d,theme:e,setTheme:f})}a.s(["default",()=>d])}];
-
-//# sourceMappingURL=%5Broot-of-the-server%5D__5ac4fcc3._.js.map

@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/SearchBar/SearchBar.css"],"sourcesContent":[".search-bar {\n  display: flex;\n  align-items: center;\n  position: relative;\n  width: 40px;\n  height: 50px;\n  transition: width 0.3s ease;\n  overflow: hidden;\n  border: 1px solid var(--gray-300);\n  border-radius: 25px;\n  background-color: white;\n}\n\n.search-bar.expanded {\n  width: 250px;\n}\n\n.search-bar__icon {\n  background: none;\n  border: none;\n  cursor: pointer;\n  padding: 10px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 1.2rem;\n}\n\n.search-bar__input {\n  flex: 1;\n  border: none;\n  outline: none;\n  padding: 10px 10px 10px 0;\n  font-size: 1rem;\n  opacity: 0;\n  transition: opacity 0.3s ease;\n}\n\n.search-bar.expanded .search-bar__input {\n  opacity: 1;\n}\n"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;AAaA;;;;AAIA;;;;;;;;;;;AAWA;;;;;;;;;;AAUA"}}]
-}

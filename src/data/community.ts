@@ -1,11 +1,9 @@
-/*
 import type { ListaItem } from "./types";
 
 export const listaData: ListaItem[] = [
-  
-  
   {
-    logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQGbZY6Q5sgsEA/company-logo_200_200/B4DZiPlE7PH8AI-/0/1754755518848/qa_community_moz_logo?e=1771459200&v=beta&t=HDsfj-w9EiFgwLDd2XTFybqbK2Bw9KpIjHeWK_ySr60',
+    id: 1,
+    logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQGbZY6Q5sgsEA/company-logo_100_100/B4DZiPlE7PH8AQ-/0/1754755518848/qa_community_moz_logo?e=1773878400&v=beta&t=ZNlBkiBL3PKspKIQYsRKshJedeYIK391I4xSba-wFdw',
     title: 'QA Community Moz',
     description: 'A primeira comunidade moçambicana dedicada a Quality Assurance (QA) e Testes Automatizados, criada para unir profissionais, partilhar conhecimento e elevar a qualidade do software no país.',
     website: 'https://mozqacommunity.conexarmanagement.com',
@@ -18,7 +16,8 @@ export const listaData: ListaItem[] = [
     categories: ['Coding']
   },
   {
-    logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQFtj0fOo53rkQ/company-logo_200_200/company-logo_200_200/0/1695041071092?e=1771459200&v=beta&t=FK0UsiTT_DFA43z-7SqaME2-Jaq2SreuuDYaE8OjdxE',
+    id: 2,
+    logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQFtj0fOo53rkQ/company-logo_100_100/company-logo_100_100/0/1695041071092?e=1773878400&v=beta&t=haItq8dlBE4Bzm8S4XSHK1KLIQRuOp4aS97lGW45Qn0',
     title: 'Pyladies Maputo',
     description: 'Comunidade local que apoia e promove a participação de mulheres na programação em Python, oferecendo encontros, formação prática e redes de apoio para fomentar competências técnicas e inclusão no sector tecnológico em Maputo.',
     website: '',
@@ -34,7 +33,8 @@ export const listaData: ListaItem[] = [
     categories: ['Coding']
   },
   {
-    logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQEq9FQO8CF3cg/company-logo_200_200/company-logo_200_200/0/1729162204438/dsai_for_moz_logo?e=1771459200&v=beta&t=nQUQeTZmjqYh1fzvri1vONGMd3GjeGGpj8pA5t-ksoo',
+    id: 3,
+    logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQEq9FQO8CF3cg/company-logo_200_200/company-logo_200_200/0/1729162204438/dsai_for_moz_logo?e=1773878400&v=beta&t=zzJOn86qllaAw-ubJ0yloKihOhp8vgM_9dEHJcnN1Ds',
     title: 'DSAI For Moz',
     description: 'Comunidade orientada para Dados, Ciência de Dados e Inteligência Artificial, focada na construção de capacidade técnica, partilha de conhecimento e promoção de aplicações de data science e IA para resolver desafios locais e ampliar competências no ecossistema tecnológico.',
     website: 'https://dsai.co.mz',
@@ -42,13 +42,13 @@ export const listaData: ListaItem[] = [
       whatsapp: 'https://chat.whatsapp.com/IcqlFviLiHIBD3DBNBXfgc',
       linkedin: 'https://www.linkedin.com/company/dsai-for-moz',
       github: 'https://github.com/DSAI-For-Moz'
-    }
-    ,
+    },
     color: '#3498db',
     categories: ['Artificial Intelligence', 'Data']
   },
   {
-    logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQFu68cby66G8w/company-logo_100_100/company-logo_100_100/0/1682616794107/djangogirlsmoz_logo?e=1771459200&v=beta&t=qgc_Iy3Q4-MqIj68IX51WvfpghRjyzUXGoPxWtZi1EM',
+    id: 4,
+    logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQFu68cby66G8w/company-logo_100_100/company-logo_100_100/0/1682616794107/djangogirlsmoz_logo?e=1773878400&v=beta&t=tXnK4h6I_-Yhm-8Z1E71w6c6YhEYoT0NEfS50V-zxek',
     title: 'Django Girls Moz',
     description: 'Workshop de um dia dedicado a Python e Django, direcionado especialmente a mulheres, que visa introduzir programação, desenvolvimento web e boas práticas, oferecendo um ambiente de aprendizagem prático, inclusivo e de empoderamento tecnológico',
     website: '',
@@ -62,7 +62,8 @@ export const listaData: ListaItem[] = [
     categories: ['Coding']
   },
   {
-    logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQEJWR8lFdk6yw/company-logo_200_200/company-logo_200_200/0/1698048505986?e=1771459200&v=beta&t=33Eek2w7C_8tMSIxhW0mJKHGAWvhw3mUrdopZrvHhg4',
+    id: 5,
+    logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQEJWR8lFdk6yw/company-logo_100_100/company-logo_100_100/0/1698048505986?e=1773878400&v=beta&t=ZRhnJrbQkMWePJyWBVJ0Nb8QPIuelaA7vt0Pz2YFozk',
     title: 'MozDevz',
     description: 'Maior comunidade tecnológica de Moçambique, reunindo desenvolvedores, estudantes e profissionais de TI, com foco em programação, inovação e projectos colaborativos, promovendo capacitação, eventos e networking no ecossistema digital nacional.',
     website: 'https://www.mozdevz.org',
@@ -81,7 +82,8 @@ export const listaData: ListaItem[] = [
     categories: ['Coding']
   },
   {
-    logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQFYkGScKvniSA/company-logo_200_200/company-logo_200_200/0/1728759049864/data_driven_communitymz_logo?e=1771459200&v=beta&t=_WLPuqdHsPl6QpGaDzq6HCgZVGX5PJXpz1ti_pfiCLk',
+    id: 6,
+    logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQFYkGScKvniSA/company-logo_100_100/company-logo_100_100/0/1728759049864/data_driven_communitymz_logo?e=1773878400&v=beta&t=D3CvIFet75Tu3jtObt9roran2UbBScpiZ8z9h4EpU20',
     title: 'Data Driven CommunityMZ',
     description: 'Um espaço dinâmico dedicado a conectar profissionais de dados e tecnologia. Aqui, promovemos a troca de conhecimentos, o aprendizado contínuo e a colaboração entre membros, com foco em discutir tendências, melhores práticas e inovações na área. Junte-se a nós para compartilhar experiências, participar de eventos e transformar dados em soluções impactantes!',
     website: '',
@@ -96,7 +98,8 @@ export const listaData: ListaItem[] = [
     categories: ['Data']
   },
   {
-    logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQE1eJmFJGGJfg/company-logo_200_200/company-logo_200_200/0/1724060766992/maputo_frontenders_logo?e=1771459200&v=beta&t=WnKLhla8YenTe_QCE-3GpCGiwh4ETuGZknVUQFul7kY',
+    id: 7,
+    logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQE1eJmFJGGJfg/company-logo_100_100/company-logo_100_100/0/1724060766992/maputo_frontenders_logo?e=1773878400&v=beta&t=FNJnvckbrYxzZqQsUnIFEqMVxGOV1Fgkb1VbXTtDw1s',
     title: 'Maputo Frontenders',
     description: 'Grupo de entusiastas e profissionais de front-end em Maputo que promovem a troca de experiências sobre tecnologias web (HTML, CSS, JavaScript, frameworks modernos), formação contínua e networking na comunidade local.',
     website: 'https://www.maputofrontenders.dev',
@@ -112,7 +115,8 @@ export const listaData: ListaItem[] = [
     categories: ['Coding']
   },
   {
-    logo: 'https://media.licdn.com/dms/image/v2/C4E0BAQE5yJ5cQ9PJcw/company-logo_200_200/company-logo_200_200/0/1680002627533?e=1771459200&v=beta&t=qLsSZp-asWguFQD94rZqUQhu72FPNwxHvZEj6foKI_Y',
+    id: 8,
+    logo: 'https://media.licdn.com/dms/image/v2/C4E0BAQE5yJ5cQ9PJcw/company-logo_100_100/company-logo_100_100/0/1680002627533?e=1773878400&v=beta&t=QNeTQH3ZCT9OsP15RmKl2A9avbCuUrTBOO7QS26X9LA',
     title: 'MozFlutter',
     description: 'Comunidade técnica dedicada ao desenvolvimento com Flutter em Moçambique, focada na partilha de conhecimento, boas práticas, eventos e colaboração entre programadores, estudantes e profissionais da área.',
     website: '',
@@ -129,6 +133,7 @@ export const listaData: ListaItem[] = [
     categories: ['Coding']
   },
   {
+    id: 9,
     logo: 'https://mozcomunidades.web.app/images/comunities/laravelmaputocommunity.png',
     title: 'Laravel Maputo Commnunity',
     description: 'Grupo dedicado ao intercâmbio de diversos interessados do mundo Laravel, canal onde diversas mentes podem unir seu potêncial para resolver questões do dia a dia e divertir-se.',
@@ -140,6 +145,7 @@ export const listaData: ListaItem[] = [
     categories: ['Coding']
   },
   {
+    id: 10,
     logo: 'https://mozcomunidades.web.app/images/comunities/jsmaputocommunity.png',
     title: 'JS Maputo Commnunity',
     description: 'Comunidade que reúne programadores e entusiastas para partilhar conhecimento sobre linguagens, frameworks e ferramentas do ecossistema JavaScript, promover encontros técnicos, discutir boas práticas e estimular a colaboração local em desenvolvimento web e aplicações modernas.',
@@ -154,7 +160,8 @@ export const listaData: ListaItem[] = [
     categories: ['Coding']
   },
   {
-    logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQHhhbAfhW4cDg/company-logo_200_200/B4DZV80e8OHwAQ-/0/1741555890716?e=1771459200&v=beta&t=sWSsyC-HCzqfeoWruwjFhtU__IKPid45p1vTTU2QOCc',
+    id: 11,
+    logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQHhhbAfhW4cDg/company-logo_100_100/B4DZV80e8OHwAY-/0/1741555890716?e=1773878400&v=beta&t=0jhzllGZ29jM5KgDggOKeY3PqDQjCe7DeE_o4x0k47g',
     title: 'MozCyber',
     description: 'Comunidade dedicada em capacitar jovens moçambicanos em habilidades essenciais em cibersegurança, incluindo Hacking para deteção de vulnerabilidades e as principais técnicas de defesa usadas nos sistemas digitais.',
     website: 'https://www.mozcyber.org',
@@ -167,7 +174,8 @@ export const listaData: ListaItem[] = [
     categories: ['Networks', 'Cybersecurity', 'Hacking']
   },
   {
-    logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQFdIuuYirXEnw/company-logo_200_200/B4EZkY7TnrHoAI-/0/1757059825212?e=1771459200&v=beta&t=2xZTMVo9ultY3eItWs-bdVNwqY1_2o80opX4ScZog8A',
+    id: 12,
+    logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQFdIuuYirXEnw/company-logo_100_100/B4EZkY7TnrHoAQ-/0/1757059825212?e=1773878400&v=beta&t=QpM0X8kg9vx_AV9FTUMvzrwk_fLGfJG2AykIdR6rSSU',
     title: 'InfraMZ',
     description: 'Comunidade focada em capacitar talentos nas áreas de Infraestrutura de TI: Redes, Windows, Linux, Cloud e Virtualização. Local para aprender de forma prática e explorar as tecnologias actuais a serem usadas pelas empresas moçambicanas.',
     website: '',
@@ -180,6 +188,7 @@ export const listaData: ListaItem[] = [
     categories: ['Networks', 'Cloud', 'Infrastructure']
   },
   {
+    id: 13,
     logo: 'https://d2oi1rqwb0pj00.cloudfront.net/community/nio_1762857433105_50.webp',
     title: 'Designer Confiado',
     description: 'Um ecossistema vibrante e colaborativo nascido em Moçambique, mas aberto a todos os criativos de língua portuguesa. Somos o ponto de encontro ideal para designers gráficos, editores, ilustradores e outros profissionais que procuram aprendizagem contínua, valorização profissional e apoio mútuo. ',
@@ -194,6 +203,7 @@ export const listaData: ListaItem[] = [
     categories: ['Design']
   },
   {
+    id: 14,
     logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQFzdt-q71CqCg/company-logo_200_200/B4DZwgpxS5I8AQ-/0/1770074347613/pythonmozambique_logo?e=1772064000&v=beta&t=ndfC9sSv-aexakhubF9urujTKsnjr9m4_7fA-yHg8Gc',
     title: 'Python Mozambique Community',
     description: 'Comunidade nacional dedicada à promoção e desenvolvimento da linguagem Python em Moçambique. Atuamos como um ecossistema de inovação que conecta profissionais e estudantes, oferecendo partilha de conhecimento técnico, mentoria e colaboração em projetos de código aberto para impulsionar a excelência tecnológica e o crescimento da indústria de software no país.',
@@ -210,6 +220,7 @@ export const listaData: ListaItem[] = [
     categories: ['Coding']
   },
   {
+    id: 15,
     logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQH_y0CI5iWiFQ/company-logo_200_200/B4DZmXHMtwHsAI-/0/1759176871987?e=1772064000&v=beta&t=bvB-g2kOOf6vbVWBX2UkQctpJN2A0_GKooIjNdBtGeg',
     title: 'PyLadies Beira',
     description: 'O PyLadies é uma comunidade internacional de mentoria que tem como missão promover, educar e fortalecer a comunidade Python, apoiando mulheres a tornarem-se participantes ativas e líderes na área de tecnologia e na comunidade Python.',
@@ -225,6 +236,7 @@ export const listaData: ListaItem[] = [
     categories: ['Coding']
   },
   {
+    id: 16,
     logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQGRoHLSnuTM6A/company-logo_200_200/B4DZqsExxrIgAI-/0/1763823525994?e=1772064000&v=beta&t=prswaWiGQhoMp21a982Fdl9vZ5BW2OhiAq-An4c-Zek',
     title: 'Network Communiity',
     description: 'A Network Community é uma iniciativa dedicada a formar e capacitar estudantes, entusiastas e profissionais em Redes e Tecnologias da Informação, oferecendo cursos práticos, acessíveis e alinhados ao mercado de trabalho, promovendo a partilha de conhecimento, a inclusão digital, a inovação tecnológica e o desenvolvimento profissional em Moçambique e além-fronteiras.',
@@ -237,4 +249,3 @@ export const listaData: ListaItem[] = [
     categories: ['Networks', 'Cybersecurity']
   }
 ];
-*/

@@ -386,6 +386,11 @@
     gap: 12px;
     padding: 10px 0;
   }
+
+  .List-module__33HuFG__list__social-icon {
+    border: 1px solid var(--gray-500);
+    color: var(--gray-500);
+  }
 }
 
 @media (min-width: 48rem) and (max-width: 64rem) {
@@ -422,6 +427,11 @@
     align-items: center;
     gap: 12px;
     padding: 0 20px;
+  }
+
+  .List-module__33HuFG__list__social-icon {
+    border: 1px solid var(--gray-500);
+    color: var(--gray-500);
   }
 }
 
@@ -469,6 +479,11 @@
     align-items: center;
     gap: 12px;
     padding: 0 20px;
+  }
+
+  .List-module__33HuFG__list__social-icon {
+    border: 1px solid var(--gray-500);
+    color: var(--gray-500);
   }
 }
 

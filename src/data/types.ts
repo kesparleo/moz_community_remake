@@ -104,6 +104,4 @@ export interface TooltipProps {
 
 export interface Props {
   item: ListaItem;
-  view: "list" | "grid";
-  isMobile: boolean;
 }

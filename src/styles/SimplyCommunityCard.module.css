@@ -1,0 +1,81 @@
+.container_principal {
+  padding: 20px 2%;
+}
+
+.category_section {
+  margin-bottom: 30px;
+}
+
+.section_title {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 15px;
+  border-left: 3px solid #ee7d21;
+  padding-left: 10px;
+  font-weight: 700;
+}
+
+/* Grelha mais densa: 1 coluna mobile, 3 ou 4 no desktop */
+.grid_view {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 768px) {
+  .grid_view {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid_view {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* O Card em formato de "Pílula" Ondulada */
+.card__format {
+  background: white;
+  border-radius: 50px; /* Formato pílula */
+  padding: 8px 15px;    /* Bem fino verticalmente */
+  display: flex;
+  flex-direction: row;  /* Alinha imagem e texto na mesma linha */
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #f0f0f0;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Efeito de Ondular sutil */
+.card__format:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+  border-color: #ee7d21;
+}
+
+.image_wrapper {
+  width: 40px;  /* Imagem bem pequena */
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.card_logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; /* Imagem circular */
+  border: 1px solid #eee;
+}
+
+.card_name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  white-space: nowrap;    /* Mantém tudo em uma linha */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Corta com ... se for muito longo */
+}

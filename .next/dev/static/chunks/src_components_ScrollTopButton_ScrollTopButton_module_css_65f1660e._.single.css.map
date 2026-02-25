@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/ScrollTopButton/ScrollTopButton.module.css"],"sourcesContent":[".scroll-top {\n  position: fixed;\n  bottom: 40px;\n  right: 40px;\n  background-color: #ee7d21;\n  color: #fff;\n  border: none;\n  padding: 12px 15px;\n  font-size: 1.5rem;\n  cursor: pointer;\n  opacity: 0;\n  transform: translateY(20px);\n  transition: opacity 0.3s, transform 0.3s, background-color 0.3s;\n  z-index: 100;\n}\n\n.scroll-top.show {\n  opacity: 1;\n  transform: translateY(0);\n}\n\n.scroll-top:hover {\n  background-color: #ca6d20;\n}\n\n@media (max-width: 768px) {\n  .scroll-top {\n    bottom: 25px;\n    right: 25px;\n    padding: 10px 12px;\n    font-size: 1.3rem;\n  }\n}\n\n@media (max-width: 480px) {\n  .scroll-top {\n    bottom: 30px;\n    right: 30px;\n    padding: 8px 10px;\n    font-size: 1.2rem;\n  }\n}\n"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;;;AAgBA;;;;;AAKA;;;;AAIA;EACE;;;;;;;;AAQF;EACE"}}]
-}

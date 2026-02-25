@@ -147,6 +147,7 @@ __turbopack_context__.s([
     ()=>__TURBOPACK__default__export__
 ]);
 var __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/react/jsx-dev-runtime [external] (react/jsx-dev-runtime, cjs)");
+var __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/react [external] (react, cjs)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$Hero$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__ = __turbopack_context__.i("[project]/src/styles/Hero.module.css [ssr] (css module)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Tooltip$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/Tooltip.tsx [ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useIsTop$2e$ts__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/hooks/useIsTop.ts [ssr] (ecmascript)");
@@ -154,71 +155,92 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useIsTop$2e$
 ;
 ;
 ;
+;
 const Hero = ({ description, buttonText, buttonUrl })=>{
     const isTop = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useIsTop$2e$ts__$5b$ssr$5d$__$28$ecmascript$29$__["useIsTop"])(10);
+    const [, setModalOpen] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])(false);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("section", {
         id: "home",
         className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$Hero$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].hero} ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$Hero$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].hero__text}`,
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-            className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$Hero$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].hero__content} ${isTop ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$Hero$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].visible : __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$Hero$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].hidden}`,
-            children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h1", {
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
-                        src: "/mz_logo.png",
-                        alt: "Logo",
-                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$Hero$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].hero__logo
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/Hero.tsx",
-                        lineNumber: 22,
-                        columnNumber: 11
-                    }, ("TURBOPACK compile-time value", void 0))
-                }, void 0, false, {
-                    fileName: "[project]/src/components/Hero.tsx",
-                    lineNumber: 21,
-                    columnNumber: 9
-                }, ("TURBOPACK compile-time value", void 0)),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                    className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$Hero$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].hero__description,
-                    children: description
-                }, void 0, false, {
-                    fileName: "[project]/src/components/Hero.tsx",
-                    lineNumber: 24,
-                    columnNumber: 9
-                }, ("TURBOPACK compile-time value", void 0)),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                    className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$Hero$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].hero__buttons,
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Tooltip$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                        text: "Clique e encontre a sua comunidade",
-                        position: "down",
-                        duration: 12000,
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
-                            href: buttonUrl,
-                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$Hero$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].hero__button,
-                            children: buttonText
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$Hero$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].hero__content} ${isTop ? __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$Hero$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].visible : __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$Hero$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].hidden}`,
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h1", {
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("img", {
+                            src: "/mz_logo.png",
+                            alt: "Logo",
+                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$Hero$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].hero__logo
                         }, void 0, false, {
                             fileName: "[project]/src/components/Hero.tsx",
-                            lineNumber: 31,
-                            columnNumber: 13
+                            lineNumber: 23,
+                            columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/src/components/Hero.tsx",
+                        lineNumber: 22,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$Hero$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].hero__description,
+                        children: description
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/Hero.tsx",
+                        lineNumber: 25,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$Hero$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].hero__buttons,
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Tooltip$2e$tsx__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                text: "Clique e encontre a sua comunidade",
+                                position: "down",
+                                duration: 12000,
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
+                                    href: buttonUrl,
+                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$Hero$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].hero__button,
+                                    children: buttonText
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/Hero.tsx",
+                                    lineNumber: 32,
+                                    columnNumber: 13
+                                }, ("TURBOPACK compile-time value", void 0))
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/Hero.tsx",
+                                lineNumber: 27,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
+                                onClick: ()=>setModalOpen(true),
+                                children: "Nova Comunidade"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/Hero.tsx",
+                                lineNumber: 36,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/Hero.tsx",
                         lineNumber: 26,
-                        columnNumber: 11
+                        columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
-                }, void 0, false, {
-                    fileName: "[project]/src/components/Hero.tsx",
-                    lineNumber: 25,
-                    columnNumber: 9
-                }, ("TURBOPACK compile-time value", void 0))
-            ]
-        }, void 0, true, {
-            fileName: "[project]/src/components/Hero.tsx",
-            lineNumber: 16,
-            columnNumber: 7
-        }, ("TURBOPACK compile-time value", void 0))
-    }, void 0, false, {
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/Hero.tsx",
+                lineNumber: 17,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0)),
+            isModalOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(CommunityModal, {
+                onClose: ()=>setModalOpen(false)
+            }, void 0, false, {
+                fileName: "[project]/src/components/Hero.tsx",
+                lineNumber: 40,
+                columnNumber: 9
+            }, ("TURBOPACK compile-time value", void 0))
+        ]
+    }, void 0, true, {
         fileName: "[project]/src/components/Hero.tsx",
-        lineNumber: 15,
+        lineNumber: 16,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -775,7 +797,7 @@ const CommunityCard = ({ item, view, isMobile })=>{
                         children: item.title
                     }, void 0, false, {
                         fileName: "[project]/src/components/communityCard.tsx",
-                        lineNumber: 61,
+                        lineNumber: 64,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -789,12 +811,12 @@ const CommunityCard = ({ item, view, isMobile })=>{
                                 ]
                             }, cat, true, {
                                 fileName: "[project]/src/components/communityCard.tsx",
-                                lineNumber: 65,
+                                lineNumber: 68,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0)))
                     }, void 0, false, {
                         fileName: "[project]/src/components/communityCard.tsx",
-                        lineNumber: 63,
+                        lineNumber: 66,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -805,7 +827,7 @@ const CommunityCard = ({ item, view, isMobile })=>{
                                 children: item.description
                             }, void 0, false, {
                                 fileName: "[project]/src/components/communityCard.tsx",
-                                lineNumber: 72,
+                                lineNumber: 75,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -814,13 +836,13 @@ const CommunityCard = ({ item, view, isMobile })=>{
                                 children: "Saber mais"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/communityCard.tsx",
-                                lineNumber: 73,
+                                lineNumber: 76,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/communityCard.tsx",
-                        lineNumber: 71,
+                        lineNumber: 74,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     isMobile && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -831,55 +853,79 @@ const CommunityCard = ({ item, view, isMobile })=>{
                             ]
                         }, void 0, false, {
                             fileName: "[project]/src/components/communityCard.tsx",
-                            lineNumber: 83,
+                            lineNumber: 86,
                             columnNumber: 15
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/src/components/communityCard.tsx",
-                        lineNumber: 82,
+                        lineNumber: 85,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                         className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$List$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].list__social,
-                        children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$data$2e$ts__$5b$ssr$5d$__$28$ecmascript$29$__["socialOrder"].map((key)=>item.social[key] && iconMap[key] ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                href: item.social[key],
-                                target: "_blank",
-                                rel: "noopener noreferrer",
-                                className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$List$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"]['list__social-icon']} ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$List$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"][`list__social-${key}`]}`,
-                                style: {
-                                    "--hover-color": item.color
-                                },
-                                children: iconMap[key]
-                            }, key, false, {
-                                fileName: "[project]/src/components/communityCard.tsx",
-                                lineNumber: 90,
-                                columnNumber: 17
-                            }, ("TURBOPACK compile-time value", void 0)) : null)
+                        children: (()=>{
+                            const socialKeys = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$data$2e$ts__$5b$ssr$5d$__$28$ecmascript$29$__["socialOrder"].filter((key)=>item.social[key] && iconMap[key]);
+                            const firstTwo = socialKeys.slice(0, 3);
+                            const remaining = socialKeys.slice(3);
+                            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["Fragment"], {
+                                children: [
+                                    firstTwo.map((key)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                            href: item.social[key],
+                                            target: "_blank",
+                                            rel: "noopener noreferrer",
+                                            className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$List$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"]["list__social-icon"]} ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$List$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"][`list__social-${key}`]}`,
+                                            style: {
+                                                "--hover-color": item.color
+                                            },
+                                            children: iconMap[key]
+                                        }, key, false, {
+                                            fileName: "[project]/src/components/communityCard.tsx",
+                                            lineNumber: 101,
+                                            columnNumber: 21
+                                        }, ("TURBOPACK compile-time value", void 0))),
+                                    remaining.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
+                                        className: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$List$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"]["list__social-icon"]} ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$List$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"]["list__social-more"]}`,
+                                        style: {
+                                            "--hover-color": item.color
+                                        },
+                                        title: remaining.map((k)=>k.charAt(0).toUpperCase() + k.slice(1)).join(", "),
+                                        children: [
+                                            "+",
+                                            remaining.length
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/components/communityCard.tsx",
+                                        lineNumber: 115,
+                                        columnNumber: 21
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                ]
+                            }, void 0, true);
+                        })()
                     }, void 0, false, {
                         fileName: "[project]/src/components/communityCard.tsx",
-                        lineNumber: 87,
+                        lineNumber: 90,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                         className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$List$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].list__contact,
                         children: item.mail && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
                             href: `mailto:${item.mail}`,
-                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$List$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"]['list__contact-button'],
+                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$List$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"]["list__contact-button"],
                             children: "Contactar"
                         }, void 0, false, {
                             fileName: "[project]/src/components/communityCard.tsx",
-                            lineNumber: 106,
+                            lineNumber: 134,
                             columnNumber: 15
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/src/components/communityCard.tsx",
-                        lineNumber: 104,
+                        lineNumber: 132,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/communityCard.tsx",
-                lineNumber: 60,
+                lineNumber: 63,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$List$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].list__title,
@@ -887,7 +933,7 @@ const CommunityCard = ({ item, view, isMobile })=>{
                 children: item.title
             }, void 0, false, {
                 fileName: "[project]/src/components/communityCard.tsx",
-                lineNumber: 116,
+                lineNumber: 144,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0)),
             !isMobile && view === "list" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -898,12 +944,12 @@ const CommunityCard = ({ item, view, isMobile })=>{
                     ]
                 }, void 0, false, {
                     fileName: "[project]/src/components/communityCard.tsx",
-                    lineNumber: 126,
+                    lineNumber: 154,
                     columnNumber: 11
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/components/communityCard.tsx",
-                lineNumber: 125,
+                lineNumber: 153,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         ]

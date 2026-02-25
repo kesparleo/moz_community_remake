@@ -1,60 +1,80 @@
 import React from "react";
 import styles from "../styles/List.module.css";
-import { useCommunities } from "../hooks/useCommunities";
-import SearchBar from "./SearchBar";
-import CategorySelector from "./CategorySelector";
-import Tooltip from "./Tooltip";
-import CommunityCard from '../components/communityCard'
+import SimpleCommunityCard from "./SimplyCommunityCard";
+import type { ListaItem, Category } from "../data/types";
+import { listaData } from "../data/community";
+
+
+const CATEGORY_INFO: Record<Category, { title: string; description: string }> = {
+  Coding: {
+    title: "Desenvolvimento & Programação",
+    description: "Comunidades focadas em escrita de código, frameworks e engenharia de software."
+  },
+  Design: {
+    title: "Design & Experiência do Usuário",
+    description: "Espaços dedicados a UI/UX, Design Gráfico e criatividade visual."
+  },
+  Data: {
+    title: "Dados & Inteligência Artificial",
+    description: "Grupos que exploram Ciência de Dados, IA e análise de informações."
+  },
+  Networks: {
+    title: "Infraestrutura & Cibersegurança",
+    description: "Especialistas em redes, segurança digital e administração de sistemas."
+  },
+  "Artificial Intelligence": {
+    title: "",
+    description: ""
+  },
+  Cloud: {
+    title: "",
+    description: ""
+  },
+  Infrastructure: {
+    title: "",
+    description: ""
+  },
+  Hacking: {
+    title: "",
+    description: ""
+  },
+  Cybersecurity: {
+    title: "",
+    description: ""
+  }
+};
+
+const TARGET_CATEGORIES: Category[] = ["Coding", "Design", "Data", "Networks"];
 
 const Communities: React.FC = () => {
-  const {
-    view,
-    setView,
-    searchTerm,
-    setSearchTerm,
-    selectedCategory,
-    setSelectedCategory,
-    isMobile,
-    filteredData,
-    allCategories,
-  } = useCommunities();
+  const categoriesMap = TARGET_CATEGORIES.reduce((acc, cat) => {
+    acc[cat] = listaData.filter(item => item.categories.includes(cat));
+    return acc;
+  }, {} as Record<Category, ListaItem[]>);
 
   return (
-    <section id="communities" className={`${styles.list} ${styles.list__background}`}>
-      <header className={styles.list__header}>
-        <h2 className={styles.list__heading}>
-          <span className={styles.destaqie}>Veja</span>{" "}
-          <span className={styles.secundario}>Abaixo</span>
-        </h2>
-        <p className={styles.list__intro}>
-          Lista de Comunidades de Tecnologia e Programação em Moçambique
-        </p>
-        <div className={styles.list__actions}>
-          <Tooltip text="Pesquise por nome" position="left" duration={4000}>
-            <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-          </Tooltip>
-          <Tooltip text="Busque por categoria" duration={6000} delay={5000}>
-            <CategorySelector
-              categories={allCategories}
-              selectedCategory={selectedCategory}
-              setSelectedCategory={setSelectedCategory}
-            />
-          </Tooltip>
-          <Tooltip text="Lista / Grelha" position="down" delay={7000} duration={4000}>
-            <button onClick={() => setView(view === "grid" ? "list" : "grid")} className={styles.button__format}>
-              {view === "grid" ? "List" : "Grid"}
-            </button>
-          </Tooltip>
-        </div>
-      </header>
+    <section className={styles.container_principal}>
+      {TARGET_CATEGORIES.map(category => {
+        const items = categoriesMap[category];
+        const info = CATEGORY_INFO[category];
+        
+        if (!items || items.length === 0) return null;
 
-      <div className={`${styles.list__items_container} ${view === "grid" ? styles.grid_view : styles.list_view}`}>
-        {filteredData.map((item, index) => (
-          <CommunityCard key={index} item={item} view={view} isMobile={isMobile} />
-        ))}
-      </div>
-
-      {filteredData.length === 0 && <p className={styles['list__no-results']}>Nenhuma comunidade encontrada.</p>}
+        return (
+          <div key={category} className={styles.category_section}>
+            <div className={styles.header_group}>
+              <h2 className={styles.section_title}>{info?.title || category}</h2>
+              <p className={styles.section_description}>{info?.description}</p>
+            </div>
+            
+            <div className={styles.grid_view}>
+              {items.map(item => (
+                <SimpleCommunityCard key={item.id} item={item} />
+              ))}
+            </div>
+          </div>
+        );
+      })}
     </section>
   );
 };

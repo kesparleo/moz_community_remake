@@ -51,7 +51,10 @@ const CommunityCard: React.FC<Props> = ({ item, view, isMobile }) => {
   return (
     <div className={styles.list__item}>
       <img
-        src={item.logo || "https://mozcomunidades.web.app/images/comunities/logo.png"}
+        src={
+          item.logo ||
+          "https://mozcomunidades.web.app/images/comunities/logo.png"
+        }
         alt={item.title}
         className={styles.list__logo}
       />
@@ -85,27 +88,52 @@ const CommunityCard: React.FC<Props> = ({ item, view, isMobile }) => {
           )}
 
           <div className={styles.list__social}>
-            {socialOrder.map((key) =>
-              item.social[key] && iconMap[key] ? (
-                <Link
-                  key={key}
-                  href={item.social[key]!}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`${styles['list__social-icon']} ${styles[`list__social-${key}`]}`}
-                  style={{ "--hover-color": item.color } as React.CSSProperties}
-                >
-                  {iconMap[key]}
-                </Link>
-              ) : null
-            )}
+            {(() => {
+              const socialKeys = socialOrder.filter(
+                (key) => item.social[key] && iconMap[key],
+              );
+              const firstTwo = socialKeys.slice(0, 3);
+              const remaining = socialKeys.slice(3);
+
+              return (
+                <>
+                  {firstTwo.map((key) => (
+                    <Link
+                      key={key}
+                      href={item.social[key]!}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`${styles["list__social-icon"]} ${styles[`list__social-${key}`]}`}
+                      style={
+                        { "--hover-color": item.color } as React.CSSProperties
+                      }
+                    >
+                      {iconMap[key]}
+                    </Link>
+                  ))}
+                  {remaining.length > 0 && (
+                    <div
+                      className={`${styles["list__social-icon"]} ${styles["list__social-more"]}`}
+                      style={
+                        { "--hover-color": item.color } as React.CSSProperties
+                      }
+                      title={remaining
+                        .map((k) => k.charAt(0).toUpperCase() + k.slice(1))
+                        .join(", ")}
+                    >
+                      +{remaining.length}
+                    </div>
+                  )}
+                </>
+              );
+            })()}
           </div>
 
           <div className={styles.list__contact}>
             {item.mail && (
               <Link
                 href={`mailto:${item.mail}`}
-                className={styles['list__contact-button']}
+                className={styles["list__contact-button"]}
               >
                 Contactar
               </Link>
