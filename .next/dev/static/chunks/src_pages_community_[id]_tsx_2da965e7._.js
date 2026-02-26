@@ -10,7 +10,7 @@
   "static/chunks/node_modules_react-icons_fa_index_mjs_c19690bf._.js",
   "static/chunks/node_modules_react-icons_lib_7cd2a28b._.js",
   "static/chunks/node_modules_f1be3ba2._.js",
-  "static/chunks/[root-of-the-server]__932cc329._.js",
+  "static/chunks/[root-of-the-server]__8f603dbd._.js",
   "static/chunks/src_styles_98e01ef1._.css"
 ],
     source: "entry"

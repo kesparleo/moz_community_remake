@@ -1,55 +1,18 @@
-.container_principal {
-  padding: 20px 2%;
-}
-
-.category_section {
-  margin-bottom: 30px;
-}
-
-.section_title {
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 15px;
-  border-left: 3px solid #ee7d21;
-  padding-left: 10px;
-  font-weight: 700;
-}
-
-/* Grelha mais densa: 1 coluna mobile, 3 ou 4 no desktop */
-.grid_view {
-  display: grid;
-  gap: 12px;
-  grid-template-columns: repeat(1, 1fr);
-}
-
-@media (min-width: 768px) {
-  .grid_view {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 1200px) {
-  .grid_view {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-/* O Card em formato de "Pílula" Ondulada */
 .card__format {
   background: white;
-  border-radius: 50px; /* Formato pílula */
-  padding: 8px 15px;    /* Bem fino verticalmente */
+  border-radius: 50px;
+  padding: 8px 15px;
   display: flex;
-  flex-direction: row;  /* Alinha imagem e texto na mesma linha */
+  flex-direction: row;
   align-items: center;
   gap: 12px;
-  border: 1px solid #f0f0f0;
+  border: 2px solid var(--accent);
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
               box-shadow 0.3s ease;
   cursor: pointer;
+  text-decoration: none;
 }
 
-/* Efeito de Ondular sutil */
 .card__format:hover {
   transform: translateY(-5px) scale(1.02);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
@@ -57,7 +20,7 @@
 }
 
 .image_wrapper {
-  width: 40px;  /* Imagem bem pequena */
+  width: 40px;
   height: 40px;
   flex-shrink: 0;
 }
@@ -66,8 +29,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 50%; /* Imagem circular */
-  border: 1px solid #eee;
+  border-radius: 50%;
+  border: 1px solid var(--accent);
 }
 
 .card_name {
@@ -75,7 +38,31 @@
   font-weight: 600;
   color: #333;
   margin: 0;
-  white-space: nowrap;    /* Mantém tudo em uma linha */
+  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; /* Corta com ... se for muito longo */
+  text-overflow: ellipsis;
+}
+
+
+@media (max-width: 480px) {
+  .card__format {
+  background: var(--accent);
+  padding: 1px;
+  border: 1px;
+}
+  .card__format {
+    width: 70px;
+    height: 70px;
+    padding: 4px;
+    border-radius: 50%;
+  }
+
+  .card_name {
+    display: none;
+  }
+
+  .image_wrapper {
+    width: 100%;
+    height: 100%;
+  }
 }

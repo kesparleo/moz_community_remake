@@ -1,81 +1,123 @@
-import React from "react";
+import { useEffect, useRef } from "react";
 import styles from "../styles/List.module.css";
 import SimpleCommunityCard from "./SimplyCommunityCard";
-import type { ListaItem, Category } from "../data/types";
+import type { Category } from "../data/types";
 import { listaData } from "../data/community";
 
+const CATEGORY_INFO: Record<Category, { title: string; description: string }> =
+  {
+    Coding: {
+      title: "Desenvolvimento",
+      description:
+        "Programação, arquitecturas, frameworks e boas práticas de engenharia....",
+    },
 
-const CATEGORY_INFO: Record<Category, { title: string; description: string }> = {
-  Coding: {
-    title: "Desenvolvimento & Programação",
-    description: "Comunidades focadas em escrita de código, frameworks e engenharia de software."
-  },
-  Design: {
-    title: "Design & Experiência do Usuário",
-    description: "Espaços dedicados a UI/UX, Design Gráfico e criatividade visual."
-  },
-  Data: {
-    title: "Dados & Inteligência Artificial",
-    description: "Grupos que exploram Ciência de Dados, IA e análise de informações."
-  },
-  Networks: {
-    title: "Infraestrutura & Cibersegurança",
-    description: "Especialistas em redes, segurança digital e administração de sistemas."
-  },
-  "Artificial Intelligence": {
-    title: "",
-    description: ""
-  },
-  Cloud: {
-    title: "",
-    description: ""
-  },
-  Infrastructure: {
-    title: "",
-    description: ""
-  },
-  Hacking: {
-    title: "",
-    description: ""
-  },
-  Cybersecurity: {
-    title: "",
-    description: ""
-  }
-};
+    Design: {
+      title: "Design Digital e UX/UI",
+      description:
+        "Concepção de interfaces, experiência do utilizador, design visual e sistemas de design.",
+    },
+
+    Data: {
+      title: "Ciência e Engenharia de Dados",
+      description:
+        "Análise, processamento e modelação de dados para suporte à decisão e sistemas inteligentes.",
+    },
+
+    Networks: {
+      title: "Redes e Administração de Sistemas",
+      description:
+        "Configuração, gestão e optimização de infraestruturas de rede e sistemas operativos.",
+    },
+
+    "Artificial Intelligence": {
+      title: "Inteligência Artificial e Machine Learning",
+      description:
+        "Modelos preditivos, aprendizagem automática, redes neuronais e sistemas autónomos.",
+    },
+
+    Cloud: {
+      title: "Computação em Nuvem",
+      description:
+        "Serviços cloud, contentorização, orquestração e arquitecturas distribuídas escaláveis.",
+    },
+
+    Infrastructure: {
+      title: "Arquitectura e Infraestrutura de TI",
+      description:
+        "Planeamento e manutenção de servidores, data centers e ambientes empresariais complexos.",
+    },
+
+    Hacking: {
+      title: "Segurança Ofensiva e Pentesting",
+      description:
+        "Testes de penetração, análise de vulnerabilidades e avaliação ética de segurança.",
+    },
+
+    Cybersecurity: {
+      title: "Segurança Informática e Protecção de Dados",
+      description:
+        "Defesa contra ameaças digitais, gestão de risco e conformidade normativa.",
+    },
+  };
 
 const TARGET_CATEGORIES: Category[] = ["Coding", "Design", "Data", "Networks"];
 
 const Communities: React.FC = () => {
-  const categoriesMap = TARGET_CATEGORIES.reduce((acc, cat) => {
-    acc[cat] = listaData.filter(item => item.categories.includes(cat));
-    return acc;
-  }, {} as Record<Category, ListaItem[]>);
+  const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.isFocused);
+          } else {
+            entry.target.classList.remove(styles.isFocused);
+          }
+        });
+      },
+      { threshold: 0.3 },
+    );
+
+    sectionRefs.current.forEach((ref) => ref && observer.observe(ref));
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <section className={styles.container_principal}>
-      {TARGET_CATEGORIES.map(category => {
-        const items = categoriesMap[category];
+    <div className={styles.pageWrapper}>
+      {TARGET_CATEGORIES.map((category, index) => {
+        const items = listaData.filter((item) =>
+          item.categories.includes(category),
+        );
         const info = CATEGORY_INFO[category];
-        
-        if (!items || items.length === 0) return null;
+
+        if (items.length === 0) return null;
 
         return (
-          <div key={category} className={styles.category_section}>
-            <div className={styles.header_group}>
-              <h2 className={styles.section_title}>{info?.title || category}</h2>
-              <p className={styles.section_description}>{info?.description}</p>
+          <section
+            key={category}
+            ref={(el: HTMLDivElement | null) => {
+              sectionRefs.current[index] = el;
+            }}
+            className={styles.focusSection}
+          >
+            <div className={styles.innerContent}>
+              <header className={styles.header}>
+                <h2 className={styles.title}>{info?.title}</h2>
+                <p className={styles.description}>{info?.description}</p>
+              </header>
+
+              <div className={styles.grid}>
+                {items.map((item) => (
+                  <SimpleCommunityCard key={item.id} item={item} />
+                ))}
+              </div>
             </div>
-            
-            <div className={styles.grid_view}>
-              {items.map(item => (
-                <SimpleCommunityCard key={item.id} item={item} />
-              ))}
-            </div>
-          </div>
+          </section>
         );
       })}
-    </section>
+    </div>
   );
 };
 

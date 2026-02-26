@@ -204,7 +204,7 @@ export const listaData: ListaItem[] = [
   },
   {
     id: 14,
-    logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQFzdt-q71CqCg/company-logo_200_200/B4DZwgpxS5I8AQ-/0/1770074347613/pythonmozambique_logo?e=1772064000&v=beta&t=ndfC9sSv-aexakhubF9urujTKsnjr9m4_7fA-yHg8Gc',
+    logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQFzdt-q71CqCg/company-logo_200_200/B4DZwgpxS5I8AQ-/0/1770074347613/pythonmozambique_logo?e=1773878400&v=beta&t=TRYpZcUIZCB_UxdpcTDd_RCGlCyBCBk8jArRSMvyiJo',
     title: 'Python Mozambique Community',
     description: 'Comunidade nacional dedicada à promoção e desenvolvimento da linguagem Python em Moçambique. Atuamos como um ecossistema de inovação que conecta profissionais e estudantes, oferecendo partilha de conhecimento técnico, mentoria e colaboração em projetos de código aberto para impulsionar a excelência tecnológica e o crescimento da indústria de software no país.',
     website: '',
@@ -221,7 +221,7 @@ export const listaData: ListaItem[] = [
   },
   {
     id: 15,
-    logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQH_y0CI5iWiFQ/company-logo_200_200/B4DZmXHMtwHsAI-/0/1759176871987?e=1772064000&v=beta&t=bvB-g2kOOf6vbVWBX2UkQctpJN2A0_GKooIjNdBtGeg',
+    logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQH_y0CI5iWiFQ/company-logo_200_200/B4DZmXHMtwHsAI-/0/1759176871987?e=1773878400&v=beta&t=DHBOQNFN_JWKOoryByT8Ehd9xcgQU2eOJj6k9F49pXw',
     title: 'PyLadies Beira',
     description: 'O PyLadies é uma comunidade internacional de mentoria que tem como missão promover, educar e fortalecer a comunidade Python, apoiando mulheres a tornarem-se participantes ativas e líderes na área de tecnologia e na comunidade Python.',
     website: '',
@@ -247,5 +247,21 @@ export const listaData: ListaItem[] = [
     },
     color: 'rgb(22, 10, 126)',
     categories: ['Networks', 'Cybersecurity']
+  },
+  {
+    id: 17,
+    logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQHGlRcg0Oq2_g/company-logo_200_200/B4EZnCXmZ6HIAI-/0/1759902591770/mozdesigncommunity_logo?e=1773878400&v=beta&t=kCUr_ffc9kRc1b9i7qXVZZHnK1UzMYtOfL4uzdTsypk',
+    title: 'Moz Design Community',
+    description: '.Moz Design Gráfico é a maior comunidade de designers moçambicanos dedicados a promover as criações gráficas e a construir uma rede expansiva para profissionais da área em busca de novas oportunidades, com um papel importante no desenvolvimento e no fortalecimento da comunidade de design gráfico em Moçambique..',
+    website: 'https://mozdesigncommunity.org.mz/',
+    social: {
+      linkedin: 'https://www.linkedin.com/company/mozdesigncommunity',
+      facebook: 'http://web.facebook.com/groups/mozdesigncommunity',
+      whatsapp: 'https://chat.whatsapp.com/HbZpsOIClqiAzpEwNFgAjk',
+      instagram: 'https://www.instagram.com/mozdesign_community',
+      telegram: 'https://t.me/mozdesigncommunity'
+    },
+    color: 'rgb(223, 17, 17)',
+    categories: ['Design']
   }
 ];
