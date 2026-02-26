@@ -225,13 +225,17 @@ export const listaData: ListaItem[] = [
     categories: ['Coding']
   },
   {
+    
     logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQGRoHLSnuTM6A/company-logo_200_200/B4DZqsExxrIgAI-/0/1763823525994?e=1772064000&v=beta&t=prswaWiGQhoMp21a982Fdl9vZ5BW2OhiAq-An4c-Zek',
-    title: 'Network Communiity',
-    description: 'A Network Community é uma iniciativa dedicada a formar e capacitar estudantes, entusiastas e profissionais em Redes e Tecnologias da Informação, oferecendo cursos práticos, acessíveis e alinhados ao mercado de trabalho, promovendo a partilha de conhecimento, a inclusão digital, a inovação tecnológica e o desenvolvimento profissional em Moçambique e além-fronteiras.',
+    title: 'Network Community',
+    description: 'A Network Community é uma iniciativa dedicada a capacitar estudantes, entusiastas e futuros profissionais da área de Redes de Computadores, através de formação prática, acessível e orientada para o mercado de trabalho.\n\nMISSÃO:\nFormar e capacitar a próxima geração de especialistas em Redes e Tecnologias da Informação, através de cursos acessíveis, práticos e de qualidade, promovendo a partilha de conhecimento, a inclusão digital e o desenvolvimento profissional em Moçambique e além-fronteiras.\n\nVISÃO:\nSer uma comunidade de referência em educação tecnológica, reconhecida pela excelência na formação em redes e segurança informática, pela inovação pedagógica e pelo impacto social, contribuindo para um ecossistema digital mais seguro, inclusivo e sustentável até 2030.\n\nVALORES:\n- Acessibilidade: democratizar o acesso ao conhecimento técnico\n- Colaboração: fomentar espírito de comunidade e aprendizagem colectiva\n- Excelência: garantir qualidade pedagógica e rigor técnico\n- Inovação: integrar práticas modernas (cloud, automação, DevOps, segurança)\n- Impacto Social: formar profissionais que transformem positivamente o mercado\n- Transparência: assegurar clareza nos processos e certificações\n- Responsabilidade: promover ética, compromisso e profissionalismo\n\nFundada por Marven Buque, a comunidade nasceu com o objectivo de tornar o conhecimento técnico mais próximo de todos, promovendo aprendizagem colaborativa e desenvolvimento contínuo.',
     website: '',
     mail: 'networkcommunitymz@gmail.com',
     social: {
       linkedin: 'https://www.linkedin.com/company/network-communiity',
+      instagram: 'https://www.instagram.com/netw_orkcommunity',
+      facebook: 'https://www.facebook.com/profile.php?id=61586913074550',
+      whatsapp: 'https://chat.whatsapp.com/HPUU1Ow735qGuShPvCVudM'
     },
     color: 'rgb(22, 10, 126)',
     categories: ['Networks', 'Cybersecurity']
