@@ -27,9 +27,7 @@ export default function Home({ theme, setTheme }: Props) {
         ]}
       />
       <Hero
-        description="Está pagina foi criada exclusivamente para listar as comunidades de técnologia e programação existentes em Moçambique. É provável que não estejam todas na lista, para isso criamos um meio de submissão abaixo de comunidades para posterior publicação na página."
-        buttonText="Apreciar"
-        buttonUrl="#communities"
+        description="Está pagina foi criada para servir de guia entre as comunidades de técnologia existentes em Moçambique. É provável que não estejam todas na lista, para isso criamos um meio de submissão abaixo de comunidades para posterior publicação na página."
       />
       <Communities />
       <CollaborationInbox githubUrl={githubUrl} mail={mail} />

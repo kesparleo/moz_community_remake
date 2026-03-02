@@ -1,192 +1,218 @@
 .modalBackdrop {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
-  padding: 1rem;
-  box-sizing: border-box;
+  z-index: 2000;
+  padding: 20px;
 }
 
 .modalContent {
-  background: var(--gray-200);
-  padding: 2rem;
-  border-radius: 12px;
+  background: var(--white);
+  padding: 40px;
+  border: 1px solid var(--black);
+  border-radius: 24px;
   width: 100%;
-  max-width: 500px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  max-width: 550px;
   position: relative;
-  overflow-y: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
   max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Scrollbar personalizada */
+.modalContent::-webkit-scrollbar {
+  width: 6px;
+}
+.modalContent::-webkit-scrollbar-thumb {
+  background: var(--gray-300);
+  border-radius: 10px;
 }
 
 .closeButton {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: transparent;
+  top: 20px;
+  right: 20px;
+  background: var(--gray-100);
   border: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  cursor: pointer;
-  color: #333;
-  transition: color 0.2s;
-}
-
-.closeButton:hover {
-  color: #ff0000;
-}
-
-.communityForm {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.title {
-  color: var(--black);
-  text-align: center;
-}
-
-.communityForm label {
-  display: flex;
-  flex-direction: column;
-  font-weight: 500;
-  font-size: 0.95rem;
-  color: var(--black);
-}
-
-.communityForm span {
-  color: var(--gray-800);
-  display: flex;
-}
-
-.communityForm input[type="text"],
-.communityForm input[type="email"],
-.communityForm input[type="url"],
-.communityForm input[type="file"],
-.communityForm textarea {
-  margin-top: 0.3rem;
-  padding: 0.5rem 0.7rem;
-  font-size: 0.95rem;
-  border: 1px solid var(--black);
-  border-radius: 6px;
-  outline: none;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.communityForm input:focus,
-.communityForm textarea:focus {
-  border-color: #0070f3;
-  box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.2);
-}
-
-/* Textarea ajustável */
-.communityForm textarea {
-  resize: vertical;
-  min-height: 80px;
-}
-
-/* Botão de submissão */
-.communityForm button[type="submit"] {
-  margin-top: 0.5rem;
-  padding: 0.7rem 1.2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--black);
-  background-color: #0070f3;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.communityForm button[type="submit"]:hover {
-  background-color: #005bb5;
-}
-
-.imageUpload {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
-  position: relative;
-}
-
-/* Caixa do ícone ou preview */
-.uploadIconContainer {
-  width: 120px;
-  height: 120px;
-  border: 2px dashed #ccc;
-  border-radius: 12px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.uploadIconContainer:hover {
-  border-color: #0070f3;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-}
-
-/* Ícone da câmera */
-.cameraIcon {
-  font-size: 2.5rem;
-  color: #666;
-}
-
-/* Texto abaixo do ícone */
-.uploadText {
-  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
   color: var(--black);
-  text-align: center;
 }
 
-/* Pré-visualização da imagem */
+.closeButton:hover {
+  background: #ffeded;
+  color: #ff4444;
+  transform: rotate(90deg);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: var(--gray-600);
+  font-size: 0.95rem;
+}
+
+/* Upload Section */
+.imageUploadSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.uploadCircle {
+  width: 100px;
+  height: 100px;
+  border-radius: 30px;
+  border: 2px dashed var(--gray-300);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  overflow: hidden;
+  background: var(--gray-025);
+}
+
+.uploadCircle:hover {
+  border-color: var(--orange-600);
+  background: #fff9f5;
+}
+
+.uploadPlaceholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--gray-500);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.cameraIcon {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
 .previewImage {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
-/* Botão remover imagem */
-.removeButton {
-  position: absolute;
-  top: 4px;
-  right: 4px;
-  background: rgba(255,0,0,0.8);
+.hiddenInput {
+  display: none;
+}
+
+.changePhotoButton {
+  background: none;
   border: none;
-  color: #fff;
-  font-size: 0.75rem;
-  padding: 2px 5px;
-  border-radius: 4px;
+  color: var(--orange-600);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 8px;
   cursor: pointer;
 }
 
-.removeButton:hover {
-  background: rgba(255,0,0,1);
+/* Form Styles */
+.communityForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formGroup label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.communityForm input, 
+.communityForm textarea {
+  padding: 12px 16px;
+  border: 1.5px solid var(--gray-200);
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.2s;
+  background: var(--gray-025);
+}
+
+.communityForm input:focus, 
+.communityForm textarea:focus {
+  border-color: var(--orange-600);
+  background: #fff;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(238, 125, 33, 0.1);
+}
+
+.socialIconsPreview {
+  display: flex;
+  gap: 12px;
+  color: var(--gray-400);
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.submitButton {
+  background: var(--black);
+  color: white;
+  padding: 16px;
+  border-radius: 14px;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+
+.submitButton:hover {
+  background: var(--orange-600);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(238, 125, 33, 0.3);
+}
 
 /* Responsividade */
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .modalContent {
-    padding: 1.5rem;
+    padding: 30px 20px;
+    border-radius: 0; /* Fullscreen feel on mobile */
+    height: 100%;
+    max-height: 100vh;
   }
-
-  .communityForm input,
-  .communityForm textarea,
-  .communityForm button {
-    font-size: 0.9rem;
+  .row {
+    grid-template-columns: 1fr;
   }
 }

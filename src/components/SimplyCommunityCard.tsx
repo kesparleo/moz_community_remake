@@ -7,7 +7,7 @@ const SimpleCommunityCard: React.FC<Props> = ({ item }) => {
   const id = item.title.toLowerCase().replace(/\s+/g, "-");
 
   return (
-    <Link href={`/community/${id}`} className={styles.card__format} style={{ "--accent": item.color } as React.CSSProperties}>
+    <Link href={`/${id}`} className={styles.card__format} style={{ "--accent": item.color } as React.CSSProperties}>
       <div className={styles.image_wrapper}>
         <img
           src={item.logo || "https://mozcomunidades.web.app/images/comunities/logo.png"}

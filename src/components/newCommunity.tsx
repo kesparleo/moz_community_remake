@@ -1,12 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styles from "../styles/Modal.module.css";
-import { FaFacebookF,
-  FaTwitter,
-  FaLinkedinIn,
-  FaWhatsapp,
-  FaGithub,
-  FaTelegram,
-  FaYoutube,FaCamera, FaInstagram } from "react-icons/fa";
+import { 
+  FaFacebookF, FaTwitter, FaLinkedinIn, FaWhatsapp, 
+  FaGithub, FaTelegram, FaYoutube, FaCamera, FaInstagram, FaTimes 
+} from "react-icons/fa";
 
 interface Props {
   onClose: () => void;
@@ -31,9 +28,9 @@ const CommunityModal: React.FC<Props> = ({ onClose }) => {
     image: null,
   });
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
   };
@@ -46,117 +43,129 @@ const CommunityModal: React.FC<Props> = ({ onClose }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Aqui podes enviar os dados para uma API ou guardar no estado global
-    console.log(form);
-    onClose(); // fecha o modal após submissão
+    console.log("Formulário enviado:", form);
+    onClose();
   };
 
   return (
-    <div className={styles.modalBackdrop}>
-      <div className={styles.modalContent}>
-        <button className={styles.closeButton} onClick={onClose}>
-          X
+    <div className={styles.modalBackdrop} onClick={onClose}>
+      <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+        <button className={styles.closeButton} onClick={onClose} aria-label="Fechar">
+          <FaTimes />
         </button>
-        <h2 className={styles.title}>Nova Comunidade</h2>
+        
+        <header className={styles.header}>
+          <h2 className={styles.title}>Nova Comunidade</h2>
+          <p className={styles.subtitle}>Preencha os dados para listar sua comunidade.</p>
+        </header>
 
         <form className={styles.communityForm} onSubmit={handleSubmit}>
-          <label>
-            Nome:
+          {/* Seção de Upload */}
+          <div className={styles.imageUploadSection}>
+            <div 
+              className={styles.uploadCircle} 
+              onClick={() => fileInputRef.current?.click()}
+            >
+              {form.image ? (
+                <img
+                  src={URL.createObjectURL(form.image)}
+                  alt="Preview"
+                  className={styles.previewImage}
+                />
+              ) : (
+                <div className={styles.uploadPlaceholder}>
+                  <FaCamera className={styles.cameraIcon} />
+                  <span>Logo</span>
+                </div>
+              )}
+            </div>
             <input
+              type="file"
+              ref={fileInputRef}
+              accept="image/*"
+              onChange={handleFileChange}
+              className={styles.hiddenInput}
+            />
+            {form.image && (
+              <button 
+                type="button" 
+                className={styles.changePhotoButton}
+                onClick={() => fileInputRef.current?.click()}
+              >
+                Alterar Foto
+              </button>
+            )}
+          </div>
+
+          <div className={styles.formGroup}>
+            <label htmlFor="name">Nome da Comunidade</label>
+            <input
+              id="name"
               type="text"
               name="name"
               value={form.name}
               onChange={handleChange}
               required
-              placeholder="Moz..."
+              placeholder="Ex: MozDevs"
             />
-          </label>
+          </div>
 
-          <label>Descrição:</label>
-          <textarea
-            name="description"
-            value={form.description}
-            onChange={handleChange}
-            required
-            placeholder="Comunidade dedicada a ..."
-          />
-
-          <label>
-            Links de Redes Sociais
-            <div>
-              <FaInstagram/>
-              <FaTelegram/>
-              <FaLinkedinIn/>
-              <FaYoutube/>
-              <FaGithub/>
-              <FaWhatsapp/>
-              <FaTwitter/>
-              <FaLinkedinIn/>
-              <FaFacebookF/>
-            </div>
-          </label>
-
-          <label>
-            Email de contacto:
-            <input
-              type="email"
-              name="email"
-              value={form.email}
+          <div className={styles.formGroup}>
+            <label htmlFor="description">Descrição Curta</label>
+            <textarea
+              id="description"
+              name="description"
+              value={form.description}
               onChange={handleChange}
-              placeholder="moz...@..."
-            />
-          </label>
-
-          <label>
-            Website:
-            <input
-              type="url"
-              name="website"
-              value={form.website}
-              onChange={handleChange}
-              placeholder="moz..."
-            />
-          </label>
-
-          <label className={styles.imageUpload}>
-            <input
-              type="file"
-              accept="image/*"
-              onChange={handleFileChange}
-              style={{ display: "none" }}
-              id="logoUpload"
               required
+              placeholder="Fale um pouco sobre o propósito..."
             />
+          </div>
 
-            <div
-              className={styles.uploadIconContainer}
-              onClick={() => document.getElementById("logoUpload")?.click()}
-            >
-              {form.image ? (
-                <img
-                  src={URL.createObjectURL(form.image)}
-                  alt="Pré-visualização"
-                  className={styles.previewImage}
-                />
-              ) : (
-                <FaCamera className={styles.cameraIcon} />
-              )}
+          <div className={styles.formGroup}>
+            <label>Redes Sociais Disponíveis</label>
+            <div className={styles.socialIconsPreview}>
+              <FaInstagram /> <FaTelegram /> <FaLinkedinIn /> 
+              <FaYoutube /> <FaGithub /> <FaWhatsapp /> 
+              <FaTwitter /> <FaFacebookF />
             </div>
+            <input
+              type="text"
+              name="socialLinks"
+              value={form.socialLinks}
+              onChange={handleChange}
+              placeholder="Links separados por vírgula"
+            />
+          </div>
 
-            <span className={styles.uploadText}>Inserir Logotipo</span>
+          <div className={styles.row}>
+            <div className={styles.formGroup}>
+              <label htmlFor="email">Email</label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                placeholder="contato@exemplo.com"
+              />
+            </div>
+            <div className={styles.formGroup}>
+              <label htmlFor="website">Website</label>
+              <input
+                id="website"
+                type="url"
+                name="website"
+                value={form.website}
+                onChange={handleChange}
+                placeholder="https://..."
+              />
+            </div>
+          </div>
 
-            {form.image && (
-              <button
-                type="button"
-                className={styles.removeButton}
-                onClick={() => setForm((prev) => ({ ...prev, image: null }))}
-              >
-                Remover
-              </button>
-            )}
-          </label>
-
-          <button type="submit">Criar Comunidade</button>
+          <button type="submit" className={styles.submitButton}>
+            Criar Comunidade
+          </button>
         </form>
       </div>
     </div>

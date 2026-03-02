@@ -4,8 +4,8 @@ import {
   type ListaItem,
   type Category,
   type CommunityProfileProps,
-} from "../../data/types";
-import styles from "../../styles/CommunityProfile.module.css";
+} from "../data/types";
+import styles from "../styles/CommunityProfile.module.css";
 import {
   FaFacebookF,
   FaTwitter,
@@ -29,9 +29,9 @@ import {
   FaCogs,
   FaUserSecret,
 } from "react-icons/fa";
-import Events from "../../components/EventCard";
+import Events from "../components/EventCard";
 import type { JSX } from "react";
-import { listaData } from "../../data/community";
+import { listaData } from "../data/community";
 
 const iconMap: { [key: string]: JSX.Element } = {
   facebook: <FaFacebookF />,
@@ -74,12 +74,10 @@ const CommunityProfile: React.FC<CommunityProfileProps> = ({
   const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
   const router = useRouter();
   
-  // Captura o ID da URL
   const id = Array.isArray(router.query.id)
     ? router.query.id[0]
     : router.query.id;
 
-  // Busca a comunidade diretamente nos dados estáticos importados
   const community: ListaItem | undefined = listaData.find(
     (item) => item.title.toLowerCase().replace(/\s+/g, "-") === id,
   );

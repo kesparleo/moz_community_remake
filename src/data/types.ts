@@ -75,8 +75,6 @@ export interface FooterProps {
 
 export interface HeroProps {
   description: string;
-  buttonText: string;
-  buttonUrl: string;
 }
 
 export interface SearchBarProps {

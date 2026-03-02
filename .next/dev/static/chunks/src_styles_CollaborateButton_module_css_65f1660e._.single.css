@@ -1,39 +1,83 @@
 /* [project]/src/styles/CollaborateButton.module.css [client] (css) */
-.CollaborateButton-module__F-Q4GG__collaborate-wrapper {
+.CollaborateButton-module__F-Q4GG__wrapper {
   background-color: var(--gray-025);
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  padding: 40px 0;
+  padding: 80px 20px;
   display: flex;
 }
 
-.CollaborateButton-module__F-Q4GG__collaborate {
-  color: var(--black);
-  border: 1px solid var(--black);
-  border-radius: 20px;
-  padding: 12px 26px;
-  transition: background-color .3s, transform .2s;
+.CollaborateButton-module__F-Q4GG__container {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  display: flex;
+}
+
+.CollaborateButton-module__F-Q4GG__collaborate, .CollaborateButton-module__F-Q4GG__github {
+  cursor: pointer;
+  background: none;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: all .3s cubic-bezier(.4, 0, .2, 1);
   display: inline-flex;
+}
+
+.CollaborateButton-module__F-Q4GG__collaborate {
+  border: 2px solid var(--black);
+  color: var(--black);
+  border-radius: 50px;
+  gap: 10px;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.CollaborateButton-module__F-Q4GG__collaborate .CollaborateButton-module__F-Q4GG__icon {
+  font-size: .8rem;
 }
 
 .CollaborateButton-module__F-Q4GG__collaborate:hover {
-  background-color: var(--gray-100);
-  transform: translateY(-2px);
+  background-color: var(--black);
+  color: var(--white);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px #00000026;
 }
 
-.CollaborateButton-module__F-Q4GG__hero__github {
-  border: 1px solid var(--black);
+.CollaborateButton-module__F-Q4GG__github {
+  border: 2px solid var(--gray-300);
+  width: 54px;
+  height: 54px;
+  color: var(--gray-700);
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+
+.CollaborateButton-module__F-Q4GG__github:hover {
+  border-color: var(--black);
   color: var(--black);
-  border-radius: 20px;
-  padding: 12px 30px;
-  transition: background-color .3s, transform .2s;
-  display: inline-flex;
+  background-color: var(--white);
+  transform: translateY(-4px)rotate(8deg);
+  box-shadow: 0 10px 20px #00000014;
 }
 
-.CollaborateButton-module__F-Q4GG__hero__github:hover {
-  background-color: var(--gray-100);
-  transform: translateY(-2px);
+@media (max-width: 480px) {
+  .CollaborateButton-module__F-Q4GG__container {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .CollaborateButton-module__F-Q4GG__collaborate {
+    order: 1;
+    width: 100%;
+  }
+
+  .CollaborateButton-module__F-Q4GG__github {
+    order: 2;
+  }
 }
 
 /*# sourceMappingURL=src_styles_CollaborateButton_module_css_65f1660e._.single.css.map*/

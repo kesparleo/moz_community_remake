@@ -1,9 +1,14 @@
 .hero {
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://mozcomunidades.web.app/images/background/4.jpg') center/cover no-repeat;
+  background: linear-gradient(
+      to bottom, 
+      rgba(0, 0, 0, 0.4) 0%, 
+      rgba(0, 0, 0, 0.7) 100%
+    ), 
+    url('https://mozcomunidades.web.app/images/background/4.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
-  padding: 0 200px;
+  padding: 0 10%;
 }
 
 .hero__text {
@@ -15,92 +20,135 @@
 }
 
 .hero__content {
-  max-width: 700px;
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  max-width: 800px;
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s ease;
 }
 
 .hero__logo {
-  width: 300px;
-}
-
-.hero__content.hidden {
-  opacity: 0;
-  transform: translateY(-20px);
-}
-
-.hero__content.visible {
-  opacity: 1;
-  transform: translateY(0);
+  width: 100%;
+  max-width: 450px;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
 }
 
 .hero__description {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
+  font-size: 1.35rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  max-width: 600px;
 }
 
 .hero__buttons {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   flex-wrap: wrap;
   align-items: center;
 }
 
-.hero__button {
+.hero__button, 
+.hero__secondary_button {
+  padding: 14px 32px;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 30px;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 40px;
-  transition: background-color 0.3s, transform 0.2s;
+  justify-content: center;
 }
 
 .hero__button {
   background-color: var(--orange-600);
-  color: var(--special-hero);
-  animation: bounce 2s infinite;
-  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(238, 125, 33, 0.4);
 }
 
 .hero__button:hover {
   background-color: var(--orange-500);
-  transform: translateY(-2px);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(238, 125, 33, 0.5);
 }
 
-@media (min-width: 1025px) and (max-width: 1280px) {
-  .--hero-logo {
-    width: 300px;
-  }
+.hero__secondary_button {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+}
 
-  .hero__description {
-    font-size: 1.1rem;
-  }
+.hero__secondary_button:hover {
+  background-color: #fff;
+  color: #000;
+  transform: translateY(-3px);
 }
 
 @media (max-width: 1024px) {
-  .--hero-logo {
-    width: 300px;
-  }
-
-  .hero__description {
-    font-size: 1.1rem;
-  }
+  .hero { padding: 0 5%; justify-content: center; text-align: center; }
+  .hero__content { display: flex; flex-direction: column; align-items: center; }
+  .hero__buttons { justify-content: center; }
+  .hero__logo { max-width: 350px; }
 }
 
-@media (max-width: 768px) {
-  .hero {
-    padding-left: 50px;
-  }
-  .--hero-logo {
-    width: 250px;
-  }
+@media (max-width: 480px) {
+  .hero__buttons { flex-direction: column; width: 100%; }
+  .hero__button, .hero__secondary_button { width: 100%; }
+}
 
-  .hero__description {
-    font-size: 1rem;
-  }
+.scroll__indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
 
-  .hero__button {
-    padding: 10px 25px;
+.scroll__indicator:hover {
+  transform: translateY(5px);
+}
+
+.scroll__text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--special-hero);
+  opacity: 0.8;
+}
+
+.mouse {
+  width: 22px;
+  height: 36px;
+  border: 2px solid var(--special-hero);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+}
+
+.wheel {
+  width: 3px;
+  height: 6px;
+  background-color: var(--orange-600);
+  border-radius: 2px;
+  animation: scrollAnim 1.6s infinite cubic-bezier(0.15, 0.41, 0.69, 0.94);
+}
+
+@keyframes scrollAnim {
+  0% { opacity: 0; transform: translateY(-3px); }
+  30% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(10px); }
+}
+
+@media (max-width: 1024px) {
+  .scroll__indicator {
+    justify-content: center;
+    width: 100%;
   }
 }

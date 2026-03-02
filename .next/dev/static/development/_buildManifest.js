@@ -2,8 +2,11 @@ self.__BUILD_MANIFEST = {
   "/": [
     "static/chunks/pages/index.js"
   ],
-  "/community/[id]": [
-    "static/chunks/pages/community/[id].js"
+  "/[id]": [
+    "static/chunks/pages/[id].js"
+  ],
+  "/_error": [
+    "static/chunks/pages/_error.js"
   ],
   "__rewrites": {
     "afterFiles": [],
@@ -15,6 +18,6 @@ self.__BUILD_MANIFEST = {
     "/_app",
     "/_error",
     "/api/communities",
-    "/community/[id]"
+    "/[id]"
   ]
 };self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
