@@ -1,7 +1,5 @@
 /* [project]/src/styles/globals.css [client] (css) */
 :root {
-  --black: #000;
-  --white: #fff;
   --special: #eee;
   --sp-b: #333;
   --special-hero: #ccc;
@@ -26,8 +24,6 @@
 }
 
 [data-theme="dark"] {
-  --black: #fff;
-  --white: #000;
   --special: #f1f1f1;
   --sp-b: #111;
   --special-hero: #f1f1f1;

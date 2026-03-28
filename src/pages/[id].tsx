@@ -22,8 +22,6 @@ import {
   FaNetworkWired,
   FaShieldAlt,
   FaPalette,
-  FaMoon,
-  FaSun,
   FaArrowLeft,
   FaCloud,
   FaCogs,
@@ -67,13 +65,9 @@ const socialOrder = [
   "youtube",
 ];
 
-const CommunityProfile: React.FC<CommunityProfileProps> = ({
-  theme,
-  setTheme,
-}) => {
-  const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
+const CommunityProfile: React.FC<CommunityProfileProps> = () => {
   const router = useRouter();
-  
+
   const id = Array.isArray(router.query.id)
     ? router.query.id[0]
     : router.query.id;
@@ -98,13 +92,6 @@ const CommunityProfile: React.FC<CommunityProfileProps> = ({
               <button onClick={() => window.history.back()}>
                 <FaArrowLeft />
               </button>
-            </div>
-            <div className={styles.theme__toggle} onClick={toggleTheme}>
-              {theme === "light" ? (
-                <FaSun className="icon" />
-              ) : (
-                <FaMoon className="icon" />
-              )}
             </div>
           </div>
           <img
@@ -148,10 +135,13 @@ const CommunityProfile: React.FC<CommunityProfileProps> = ({
 
             <div className={styles.community__profile__social}>
               {socialOrder.map((key) =>
-                community.social[key as keyof typeof community.social] && iconMap[key] ? (
+                community.social[key as keyof typeof community.social] &&
+                iconMap[key] ? (
                   <Link
                     key={key}
-                    href={community.social[key as keyof typeof community.social]!}
+                    href={
+                      community.social[key as keyof typeof community.social]!
+                    }
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.community__profile__social__icon}
@@ -170,7 +160,11 @@ const CommunityProfile: React.FC<CommunityProfileProps> = ({
             <div className={styles.community__profile__contact}>
               {community.mail && (
                 <Link
-                  href={community.mail.startsWith('http') ? community.mail : `mailto:${community.mail}`}
+                  href={
+                    community.mail.startsWith("http")
+                      ? community.mail
+                      : `mailto:${community.mail}`
+                  }
                   className={styles.community__profile__contact__button}
                 >
                   Contactar

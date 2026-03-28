@@ -3,7 +3,7 @@ import type { ListaItem } from "./types";
 export const listaData: ListaItem[] = [
   {
     id: 1,
-    logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQGbZY6Q5sgsEA/company-logo_100_100/B4DZiPlE7PH8AQ-/0/1754755518848/qa_community_moz_logo?e=1773878400&v=beta&t=ZNlBkiBL3PKspKIQYsRKshJedeYIK391I4xSba-wFdw',
+    logo: 'qac.jpeg',
     title: 'QA Community Moz',
     description: 'A primeira comunidade moçambicana dedicada a Quality Assurance (QA) e Testes Automatizados, criada para unir profissionais, partilhar conhecimento e elevar a qualidade do software no país.',
     website: 'https://mozqacommunity.conexarmanagement.com',
@@ -17,7 +17,7 @@ export const listaData: ListaItem[] = [
   },
   {
     id: 2,
-    logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQFtj0fOo53rkQ/company-logo_100_100/company-logo_100_100/0/1695041071092?e=1773878400&v=beta&t=haItq8dlBE4Bzm8S4XSHK1KLIQRuOp4aS97lGW45Qn0',
+    logo: 'plm.jpeg',
     title: 'Pyladies Maputo',
     description: 'Comunidade local que apoia e promove a participação de mulheres na programação em Python, oferecendo encontros, formação prática e redes de apoio para fomentar competências técnicas e inclusão no sector tecnológico em Maputo.',
     website: '',
@@ -34,7 +34,7 @@ export const listaData: ListaItem[] = [
   },
   {
     id: 3,
-    logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQEq9FQO8CF3cg/company-logo_200_200/company-logo_200_200/0/1729162204438/dsai_for_moz_logo?e=1773878400&v=beta&t=zzJOn86qllaAw-ubJ0yloKihOhp8vgM_9dEHJcnN1Ds',
+    logo: 'dsai.jpeg',
     title: 'DSAI For Moz',
     description: 'Comunidade orientada para Dados, Ciência de Dados e Inteligência Artificial, focada na construção de capacidade técnica, partilha de conhecimento e promoção de aplicações de data science e IA para resolver desafios locais e ampliar competências no ecossistema tecnológico.',
     website: 'https://dsai.co.mz',
@@ -48,7 +48,7 @@ export const listaData: ListaItem[] = [
   },
   {
     id: 4,
-    logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQFu68cby66G8w/company-logo_100_100/company-logo_100_100/0/1682616794107/djangogirlsmoz_logo?e=1773878400&v=beta&t=tXnK4h6I_-Yhm-8Z1E71w6c6YhEYoT0NEfS50V-zxek',
+    logo: 'dg.jpeg',
     title: 'Django Girls Moz',
     description: 'Workshop de um dia dedicado a Python e Django, direcionado especialmente a mulheres, que visa introduzir programação, desenvolvimento web e boas práticas, oferecendo um ambiente de aprendizagem prático, inclusivo e de empoderamento tecnológico',
     website: '',
@@ -63,7 +63,7 @@ export const listaData: ListaItem[] = [
   },
   {
     id: 5,
-    logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQEJWR8lFdk6yw/company-logo_100_100/company-logo_100_100/0/1698048505986?e=1773878400&v=beta&t=ZRhnJrbQkMWePJyWBVJ0Nb8QPIuelaA7vt0Pz2YFozk',
+    logo: 'md.jpeg',
     title: 'MozDevz',
     description: 'Maior comunidade tecnológica de Moçambique, reunindo desenvolvedores, estudantes e profissionais de TI, com foco em programação, inovação e projectos colaborativos, promovendo capacitação, eventos e networking no ecossistema digital nacional.',
     website: 'https://www.mozdevz.org',
@@ -83,7 +83,7 @@ export const listaData: ListaItem[] = [
   },
   {
     id: 6,
-    logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQFYkGScKvniSA/company-logo_100_100/company-logo_100_100/0/1728759049864/data_driven_communitymz_logo?e=1773878400&v=beta&t=D3CvIFet75Tu3jtObt9roran2UbBScpiZ8z9h4EpU20',
+    logo: 'ddc.jpeg',
     title: 'Data Driven CommunityMZ',
     description: 'Um espaço dinâmico dedicado a conectar profissionais de dados e tecnologia. Aqui, promovemos a troca de conhecimentos, o aprendizado contínuo e a colaboração entre membros, com foco em discutir tendências, melhores práticas e inovações na área. Junte-se a nós para compartilhar experiências, participar de eventos e transformar dados em soluções impactantes!',
     website: '',
@@ -99,7 +99,7 @@ export const listaData: ListaItem[] = [
   },
   {
     id: 7,
-    logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQE1eJmFJGGJfg/company-logo_100_100/company-logo_100_100/0/1724060766992/maputo_frontenders_logo?e=1773878400&v=beta&t=FNJnvckbrYxzZqQsUnIFEqMVxGOV1Fgkb1VbXTtDw1s',
+    logo: 'mf.jpeg',
     title: 'Maputo Frontenders',
     description: 'Grupo de entusiastas e profissionais de front-end em Maputo que promovem a troca de experiências sobre tecnologias web (HTML, CSS, JavaScript, frameworks modernos), formação contínua e networking na comunidade local.',
     website: 'https://www.maputofrontenders.dev',
@@ -116,7 +116,7 @@ export const listaData: ListaItem[] = [
   },
   {
     id: 8,
-    logo: 'https://media.licdn.com/dms/image/v2/C4E0BAQE5yJ5cQ9PJcw/company-logo_100_100/company-logo_100_100/0/1680002627533?e=1773878400&v=beta&t=QNeTQH3ZCT9OsP15RmKl2A9avbCuUrTBOO7QS26X9LA',
+    logo: 'mf.png',
     title: 'MozFlutter',
     description: 'Comunidade técnica dedicada ao desenvolvimento com Flutter em Moçambique, focada na partilha de conhecimento, boas práticas, eventos e colaboração entre programadores, estudantes e profissionais da área.',
     website: '',
@@ -161,7 +161,7 @@ export const listaData: ListaItem[] = [
   },
   {
     id: 11,
-    logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQHhhbAfhW4cDg/company-logo_100_100/B4DZV80e8OHwAY-/0/1741555890716?e=1773878400&v=beta&t=0jhzllGZ29jM5KgDggOKeY3PqDQjCe7DeE_o4x0k47g',
+    logo: 'mc.jpeg',
     title: 'MozCyber',
     description: 'Comunidade dedicada em capacitar jovens moçambicanos em habilidades essenciais em cibersegurança, incluindo Hacking para deteção de vulnerabilidades e as principais técnicas de defesa usadas nos sistemas digitais.',
     website: 'https://www.mozcyber.org',
@@ -175,7 +175,7 @@ export const listaData: ListaItem[] = [
   },
   {
     id: 12,
-    logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQFdIuuYirXEnw/company-logo_100_100/B4EZkY7TnrHoAQ-/0/1757059825212?e=1773878400&v=beta&t=QpM0X8kg9vx_AV9FTUMvzrwk_fLGfJG2AykIdR6rSSU',
+    logo: 'imz.jpeg',
     title: 'InfraMZ',
     description: 'Comunidade focada em capacitar talentos nas áreas de Infraestrutura de TI: Redes, Windows, Linux, Cloud e Virtualização. Local para aprender de forma prática e explorar as tecnologias actuais a serem usadas pelas empresas moçambicanas.',
     website: '',
@@ -189,7 +189,7 @@ export const listaData: ListaItem[] = [
   },
   {
     id: 13,
-    logo: 'https://d2oi1rqwb0pj00.cloudfront.net/community/nio_1762857433105_50.webp',
+    logo: 'dc.jpeg',
     title: 'Designer Confiado',
     description: 'Um ecossistema vibrante e colaborativo nascido em Moçambique, mas aberto a todos os criativos de língua portuguesa. Somos o ponto de encontro ideal para designers gráficos, editores, ilustradores e outros profissionais que procuram aprendizagem contínua, valorização profissional e apoio mútuo. ',
     website: 'https://nas.io/designerconfiado',
@@ -204,7 +204,7 @@ export const listaData: ListaItem[] = [
   },
   {
     id: 14,
-    logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQFzdt-q71CqCg/company-logo_200_200/B4DZwgpxS5I8AQ-/0/1770074347613/pythonmozambique_logo?e=1773878400&v=beta&t=TRYpZcUIZCB_UxdpcTDd_RCGlCyBCBk8jArRSMvyiJo',
+    logo: 'pc.jpeg',
     title: 'Python Mozambique Community',
     description: 'Comunidade nacional dedicada à promoção e desenvolvimento da linguagem Python em Moçambique. Atuamos como um ecossistema de inovação que conecta profissionais e estudantes, oferecendo partilha de conhecimento técnico, mentoria e colaboração em projetos de código aberto para impulsionar a excelência tecnológica e o crescimento da indústria de software no país.',
     website: '',
@@ -221,7 +221,7 @@ export const listaData: ListaItem[] = [
   },
   {
     id: 15,
-    logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQH_y0CI5iWiFQ/company-logo_200_200/B4DZmXHMtwHsAI-/0/1759176871987?e=1773878400&v=beta&t=DHBOQNFN_JWKOoryByT8Ehd9xcgQU2eOJj6k9F49pXw',
+    logo: 'plb.jpeg',
     title: 'PyLadies Beira',
     description: 'O PyLadies é uma comunidade internacional de mentoria que tem como missão promover, educar e fortalecer a comunidade Python, apoiando mulheres a tornarem-se participantes ativas e líderes na área de tecnologia e na comunidade Python.',
     website: '',
@@ -237,7 +237,7 @@ export const listaData: ListaItem[] = [
   },
   {
     id: 16,
-    logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQGRoHLSnuTM6A/company-logo_200_200/B4DZqsExxrIgAI-/0/1763823525994?e=1773878400&v=beta&t=-I65rfIm4SdMKrvwhFzS4I9LU8IsZuDCyfuWBRBwiOU',
+    logo: 'nc.jpeg',
     title: 'Network Communiity',
     description: 'A Network Community é uma iniciativa dedicada a formar e capacitar estudantes, entusiastas e profissionais em Redes e Tecnologias da Informação, oferecendo cursos práticos, acessíveis e alinhados ao mercado de trabalho, promovendo a partilha de conhecimento, a inclusão digital, a inovação tecnológica e o desenvolvimento profissional em Moçambique e além-fronteiras.',
     website: '',
@@ -250,7 +250,7 @@ export const listaData: ListaItem[] = [
   },
   {
     id: 17,
-    logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQHGlRcg0Oq2_g/company-logo_200_200/B4EZnCXmZ6HIAI-/0/1759902591770/mozdesigncommunity_logo?e=1773878400&v=beta&t=kCUr_ffc9kRc1b9i7qXVZZHnK1UzMYtOfL4uzdTsypk',
+    logo: 'mdc.jpeg',
     title: 'Moz Design Community',
     description: '.Moz Design Gráfico é a maior comunidade de designers moçambicanos dedicados a promover as criações gráficas e a construir uma rede expansiva para profissionais da área em busca de novas oportunidades, com um papel importante no desenvolvimento e no fortalecimento da comunidade de design gráfico em Moçambique..',
     website: 'https://mozdesigncommunity.org.mz/',

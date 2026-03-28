@@ -1,6 +1,5 @@
 /* [project]/src/styles/CommunityProfile.module.css [client] (css) */
 .CommunityProfile-module__WZRIBa__community__profile {
-  background-color: var(--gray-025);
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -36,7 +35,7 @@
 
 .CommunityProfile-module__WZRIBa__back__button button {
   cursor: pointer;
-  color: var(--black);
+  color: #fff;
   background: none;
   border: none;
   font-size: 1.5rem;
@@ -44,13 +43,8 @@
 
 .CommunityProfile-module__WZRIBa__theme__toggle .CommunityProfile-module__WZRIBa__icon {
   cursor: pointer;
-  color: var(--black);
   font-size: 1.3rem;
   transition: color .3s;
-}
-
-.CommunityProfile-module__WZRIBa__theme__toggle .CommunityProfile-module__WZRIBa__icon:hover {
-  color: var(--orange-600);
 }
 
 .CommunityProfile-module__WZRIBa__community__profile__logo {
@@ -68,7 +62,7 @@
 }
 
 .CommunityProfile-module__WZRIBa__community__profile__title {
-  color: var(--black);
+  color: #fff;
   margin-bottom: 20px;
   font-size: 2rem;
 }
@@ -82,8 +76,8 @@
 }
 
 .CommunityProfile-module__WZRIBa__community__profile__category {
-  background-color: var(--gray-100);
-  color: var(--black);
+  color: #fff;
+  border: 1px solid #fff;
   border-radius: 20px;
   align-items: center;
   gap: 6px;
@@ -94,7 +88,7 @@
 }
 
 .CommunityProfile-module__WZRIBa__community__profile__description {
-  color: var(--gray-900);
+  color: #fff;
   margin-bottom: 20px;
 }
 

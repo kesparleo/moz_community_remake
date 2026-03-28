@@ -1,6 +1,5 @@
 /* [project]/src/styles/CollaborateButton.module.css [client] (css) */
 .CollaborateButton-module__F-Q4GG__wrapper {
-  background-color: var(--gray-025);
   justify-content: center;
   align-items: center;
   padding: 80px 20px;
@@ -26,8 +25,6 @@
 }
 
 .CollaborateButton-module__F-Q4GG__collaborate {
-  border: 2px solid var(--black);
-  color: var(--black);
   border-radius: 50px;
   gap: 10px;
   padding: 14px 32px;
@@ -40,25 +37,20 @@
 }
 
 .CollaborateButton-module__F-Q4GG__collaborate:hover {
-  background-color: var(--black);
-  color: var(--white);
   transform: translateY(-4px);
   box-shadow: 0 10px 20px #00000026;
 }
 
 .CollaborateButton-module__F-Q4GG__github {
-  border: 2px solid var(--gray-300);
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 50%;
   width: 54px;
   height: 54px;
-  color: var(--gray-700);
-  border-radius: 50%;
   font-size: 1.5rem;
 }
 
 .CollaborateButton-module__F-Q4GG__github:hover {
-  border-color: var(--black);
-  color: var(--black);
-  background-color: var(--white);
   transform: translateY(-4px)rotate(8deg);
   box-shadow: 0 10px 20px #00000014;
 }

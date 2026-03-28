@@ -2,8 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 80px 20px; /* Um pouco mais de respiro */
-  background-color: var(--gray-025);
+  padding: 80px 20px;
 }
 
 .container {
@@ -14,7 +13,6 @@
   align-items: center;
 }
 
-/* Base Comum */
 .collaborate,
 .github {
   display: inline-flex;
@@ -26,15 +24,12 @@
   background: transparent;
 }
 
-/* Botão "Nova Comunidade" */
 .collaborate {
   padding: 14px 32px;
   font-size: 1rem;
   font-weight: 700;
   border-radius: 50px;
-  border: 2px solid var(--black);
-  color: var(--black);
-  gap: 10px; /* Espaço entre o ícone + e o texto */
+  gap: 10px;
 }
 
 .collaborate .icon {
@@ -42,31 +37,24 @@
 }
 
 .collaborate:hover {
-  background-color: var(--black);
-  color: var(--white);
   transform: translateY(-4px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Botão do GitHub (Circular) */
 .github {
-  width: 54px; /* Altura equivalente ao botão de texto */
+  width: 54px;
   height: 54px;
   border-radius: 50%;
-  border: 2px solid var(--gray-300);
-  color: var(--gray-700);
+  border: 2px solid black;
+  color: black;
   font-size: 1.5rem;
 }
 
 .github:hover {
-  border-color: var(--black);
-  color: var(--black);
-  background-color: var(--white);
-  transform: translateY(-4px) rotate(8deg); /* Leve rotação para charme extra */
+  transform: translateY(-4px) rotate(8deg);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* Responsividade */
 @media (max-width: 480px) {
   .container {
     flex-direction: column;
@@ -76,10 +64,10 @@
   
   .collaborate {
     width: 100%;
-    order: 1; /* Texto em cima */
+    order: 1;
   }
 
   .github {
-    order: 2; /* GitHub embaixo */
+    order: 2;
   }
 }
