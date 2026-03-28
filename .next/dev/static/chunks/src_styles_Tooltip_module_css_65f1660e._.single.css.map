@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/styles/Tooltip.module.css"],"sourcesContent":[".tooltip__wrapper {\n  position: relative;\n  display: inline-block;\n}\n\n.tooltip__content {\n  position: absolute;\n  background-color: var(--sp-b);\n  color: var(--special);\n  padding: 6px 10px;\n  border: 1px solid var(--black);\n  border-radius: 50px;\n  font-size: 0.75rem;\n  white-space: nowrap;\n  opacity: 0;\n  animation: tooltipFadeIn 350ms ease-out forwards;\n}\n\n.tooltip__up {\n  bottom: 125%;\n  left: 50%;\n  transform: translateX(-50%) translateY(6px);\n}\n\n.tooltip__down {\n  top: 125%;\n  left: -50%;\n  transform: translateX(-50%) translateY(-6px);\n}\n\n.tooltip__left {\n  right: 15%;\n  top: 100%;\n  transform: translateY(-50%) translateX(6px);\n}\n\n.tooltip__right {\n  left: 125%;\n  top: 50%;\n  transform: translateY(-50%) translateX(-6px);\n}\n\n@keyframes tooltipFadeIn {\n  to {\n    opacity: 1;\n    transform: translate(0, 0);\n  }\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .tooltip__content {\n    animation: none;\n    opacity: 1;\n  }\n}\n"],"names":[],"mappings":"AAAA;;;;;AAKA;;;;;;;;;;;;;AAaA;;;;;;AAMA;;;;;;AAMA;;;;;;AAMA;;;;;;AAMA;;;;;;;AAOA;EACE"}}]
-}
