@@ -7,7 +7,8 @@ export type Category =
   | "Infrastructure"
   | "Hacking"
   | "Networks"
-  | "Cybersecurity";
+  | "Cybersecurity"
+  | "General";
 
 type TooltipPosition = 'up' | 'down' | 'left' | 'right';
 

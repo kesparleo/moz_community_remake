@@ -5,7 +5,7 @@ import type { Category } from "../data/types";
 import { listaData } from "../data/community";
 import { CATEGORY_INFO } from "../data/category";
 
-const TARGET_CATEGORIES: Category[] = ["Coding", "Design", "Data", "Networks"];
+const TARGET_CATEGORIES: Category[] = ["Coding", "Design", "Data", "Networks", "General"];
 
 const Communities: React.FC = () => {
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
